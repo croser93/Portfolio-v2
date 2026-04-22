@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import i18n from './service/translation_service.ts'
+import './service/translation_service.ts'
 import './index.css'
 import App from './App.tsx'
 

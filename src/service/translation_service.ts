@@ -1,15 +1,16 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import HttpBackend from 'i18next-http-backend'
+import de from '../../public/assets/i18n/de.json'
+import en from '../../public/assets/i18n/en.json'
 
 i18n
-  .use(HttpBackend)
   .use(initReactI18next)
   .init({
-    lng: 'de',           // Standardsprache
-    fallbackLng: 'en',   // Fallback wenn Übersetzung fehlt
-    backend: {
-      loadPath: '/assets/i18n/{{lng}}.json',
+    lng: 'de',
+    fallbackLng: 'en',
+    resources: {
+      de: { translation: de },
+      en: { translation: en },
     },
   })
 
