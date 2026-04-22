@@ -1,5 +1,8 @@
+import { useTranslation } from "react-i18next"
+
 const Navbar = () => {
-  
+const { t, i18n } = useTranslation()
+
     const toggleTheme = () => {
     if (document.documentElement.classList.contains('dark')) {
       document.documentElement.classList.remove('dark')
@@ -33,19 +36,27 @@ const Navbar = () => {
           <a href="#" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Home</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">About Me</a>
+          <a href="#" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.ABOUT')}</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Skills</a>
+          <a href="#" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.SKILLS')}</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Projects</a>
+          <a href="#" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.PROJECTS')}</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Contact</a>
+          <a href="#" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.HELLO')}</a>
         </li>
+
+        <div className="relative flex items-center bg-gray-700 rounded-full p-1 text-xs font-mono cursor-pointer" onClick={() => i18n.changeLanguage(i18n.language === 'de' ? 'en' : 'de')}>
+          <div className={`absolute top-1 bottom-1 w-1/2 bg-blue-500 rounded-full transition-all duration-300 ${i18n.language === 'de' ? 'left-1' : 'left-[calc(50%-2px)]'}`}/>
+            <span className={`relative z-10 px-3 py-1 transition-colors duration-300 ${i18n.language === 'de' ? 'text-white' : 'text-gray-400'}`}>DE</span>
+            <span className={`relative z-10 px-3 py-1 transition-colors duration-300 ${i18n.language === 'en' ? 'text-white' : 'text-gray-400'}`}>EN</span>
+          </div>  
       </ul>
     </div>
+
+    
 
   </div>
 </nav>
