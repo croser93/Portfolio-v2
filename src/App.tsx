@@ -1,11 +1,13 @@
 import './App.css'
 import Navbar from './feature/shared/navbar.js'
+import HeroComponent from './feature/components/hero_component.js'
 
 function App() {
   return(
-  <div>
+  <main>
     <Navbar />
-  </div>
+    <HeroComponent />
+  </main>
   )
 }
 
