@@ -1,0 +1,10 @@
+section{
+background-color: rgba(0, 0, 0, 0.9);
+}
+
+.right{
+    width: 580px;
+    height: 640px;
+    background-color: rgb(57, 57, 59);
+    border-radius: 32px;
+}
