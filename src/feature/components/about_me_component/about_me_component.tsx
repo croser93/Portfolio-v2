@@ -5,7 +5,6 @@ import {IconRocket, IconCertificate, IconCode, IconBriefcase,
 
 const about_me_component = () => {
     const { t } = useTranslation()
-
     type TimelineItem = {date: string, title: string, description: string, icon: React.ReactNode, status: "done" | "active" | "upcoming" }
 
     const timeline: TimelineItem[] = [
@@ -16,19 +15,19 @@ const about_me_component = () => {
 ]
 
 const dotStyles: Record<TimelineItem["status"], string> = {
-    done:     "bg-purple-500/20 border border-purple-500/40 text-purple-400",
+    done:     "bg-blue-500/20 border border-blue-500/40 text-blue-400",
     active:   "bg-green-500/20 border border-green-500/40 text-green-500",
     upcoming: "bg-white/5 border border-white/10 text-white/25",
 }
 
 const lineStyles: Record<TimelineItem["status"], string> = {
-    done:     "bg-purple-500/25",
+    done:     "bg-blue-500/25",
     active:   "bg-green-500/20",
     upcoming: "bg-white/10",
 }
 
     return (
-        <section className="about-me bg-[#0f0a1e] border-t border-purple-500/20 px-10 py-16">
+        <section className="about-me border-t-4 border-blue-500/20 px-24 py-18">
             <h2 className="text-4xl py-6 font-Unbounded font-medium text-white">{t('ABOUT_ME.TITLE')}</h2>
             <div className="grid py-6 grid-cols-2 gap-14">
                 <div> 
@@ -44,7 +43,7 @@ const lineStyles: Record<TimelineItem["status"], string> = {
                                 )}
                             </div>
                             <div className="pb-8">
-                                <span className="text-xs text-purple-400 font-DM-Sans">{item.date}</span>
+                                <span className="text-s text-blue-400 font-DM-Sans">{item.date}</span>
                                 <h4 className="text-white font-Unbounded font-medium mt-1">{item.title}</h4>
                                 <p className="text-white/70 font-DM-Sans leading-relaxed">{item.description}</p>
                             </div>
