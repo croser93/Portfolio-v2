@@ -3,3 +3,16 @@
     background-color: rgba(0, 0, 0, 0.9);
 
 }
+
+.singleCard{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.singleCard:hover{
+    transform: scale(1.05);
+}
+
+.img_size{
+    height: 300px;
+}
