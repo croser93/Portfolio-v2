@@ -6,12 +6,12 @@ import { useState, useEffect } from 'react'
 import  ProjectsDialog  from './projects_Dialog'
 
 
-export type ProjectItem = { name: string; img: string; description: string; language: string[] }
+export type ProjectItem = { name: string; img: string; description: string; language: string[]; github:string; live:string }
 
 const Projects: ProjectItem[] = [
-    { name: 'Hellgate Shadowfall', img: '/public/assets/img/projects_img/Hellgate Shadowfall.png', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['HTML', 'CSS', 'Javascript'] },
-    { name: 'Code à Cuisine', img: 'public/assets/img/projects_img/CodeaCuisine.jpg', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['Angular', 'SASS', 'Typescript', 'n8n', 'Supabase'] },
-    { name: 'Join', img: 'public/assets/img/projects_img/Join.jpg', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['HTML', 'CSS', 'Javascript', 'Firebase'] },
+    { name: 'Hellgate Shadowfall', img: '/public/assets/img/projects_img/Hellgate Shadowfall.png', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['HTML', 'CSS', 'Javascript'], github: 'https://github.com/croser93/2d-Game.git', live: 'https://hellgate-shadowfall.maik-groth.com' },
+    { name: 'Code à Cuisine', img: 'public/assets/img/projects_img/CodeaCuisine.jpg', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['Angular', 'SASS', 'Typescript', 'n8n', 'Supabase'], github: 'https://github.com/croser93/Code-a-Cuisine.git', live: 'https://code-a-cuisine.maik-groth.com' },
+    { name: 'Join', img: 'public/assets/img/projects_img/Join.jpg', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['HTML', 'CSS', 'Javascript', 'Firebase'], github: 'https://github.com/croser93/Join_Kanban_Manager.git', live: 'https://join.maik-groth.com' },
 ]
 
 const Card = ({ item, onClick }: { item: ProjectItem; onClick: () => void }) => (

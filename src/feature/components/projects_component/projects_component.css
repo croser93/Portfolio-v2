@@ -29,7 +29,7 @@ z-index: 10;
 .dialogCard{
     width: 80%;
     height: 80%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(86, 86, 95, 0.651);
 }
 
 .dialogimg{
@@ -51,4 +51,16 @@ z-index: 10;
 .closebtn:hover{
     background-color: rgba(240, 238, 238, 0.8);
 
+}
+
+.link{
+background-color: rgba(240, 238, 238, 0.527);
+width: 120px;
+border-radius: 16px;
+transition: transform 0.3s ease;
+}
+
+.link:hover{
+        transform: scale(1.05);
+        background-color: rgba(240, 238, 238, 0.8);
 }

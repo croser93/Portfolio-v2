@@ -1,5 +1,7 @@
 import './projects_component.css'
 import { type ProjectItem } from './projects_component'
+import { GithubIcon } from "@dev.icons/react"
+
 
 const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
     onClose: () => void
@@ -22,6 +24,10 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
                 </div>
                 <div className="flex justify-between p-4">
                     <button className="closebtn"  onClick={onPrev}>◀</button>
+                    <div className="flex gap-4">
+                        <a className="link flex justify-center items-center" href={project.github} target="_blank"><GithubIcon size={24} /></a>
+                        <a className="link flex justify-center items-center font-DM-Sans text-m" href={project.live} target="_blank">Live</a>
+                    </div>
                     <button className="closebtn" onClick={onNext}>▶</button>
                 </div>
             </div>
