@@ -46,10 +46,16 @@ const projects_component = () => {
     }, [emblaApi])
 
     useEffect(() => {
-        if (!emblaApi) return
+        if (!emblaApi || dialogOpen) return
         const interval = setInterval(() => emblaApi.scrollNext(), 5000)
         return () => clearInterval(interval)
-    }, [emblaApi])
+    }, [emblaApi, dialogOpen])
+
+    useEffect(() => {
+        if(dialogOpen)
+        document.body.style.overflow = 'hidden'
+        return () => { document.body.style.overflow = '' }
+    }, [dialogOpen])
 
     return (
         <section className="projects border-t border-white/10 px-24 py-16">
@@ -61,7 +67,7 @@ const projects_component = () => {
                 <div ref={emblaRef} className="overflow-hidden">
                     <div className="flex">
                         {Projects.map((item, index) => (
-                            <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-300 ${index === selectedIndex ? 'opacity-100' : 'opacity-25 pointer-events-none'}`}>
+                            <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-300 ${index === selectedIndex ? 'opacity-100' : 'opacity-25 pointer-events-none '}`}>
                                 <Card item={item} onClick={() => setDialogOpen(true)} />
                             </div>
                         ))}
@@ -85,8 +91,8 @@ const projects_component = () => {
                 ))}
             </div>
 
-            {dialogOpen && (<ProjectsDialog onClose={() => setDialogOpen(false)} project={Projects[selectedIndex]} />)}
-                
+            {dialogOpen && (<ProjectsDialog onClose={() => setDialogOpen(false)} project={Projects[selectedIndex]} onPrev={() => emblaApi?.scrollPrev()} onNext={() => emblaApi?.scrollNext()} />)}
+
         </section>
 
     )
