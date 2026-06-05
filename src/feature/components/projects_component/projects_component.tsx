@@ -9,7 +9,7 @@ type ProjectItem = { name: string; img: string; description: string; language: s
 const Projects: ProjectItem[] = [
     { name: 'Hellgate Shadowfall', img: '/public/assets/img/projects_img/Hellgate Shadowfall.png', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['HTML', 'CSS', 'Javascript'] },
     { name: 'Code à Cuisine', img: 'public/assets/img/projects_img/CodeaCuisine.jpg', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['Angular', 'SASS', 'Typescript', 'n8n', 'Supabase'] },
-    { name: 'Join', img: 'public/assets/img/projects_img/Join.jpg', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['Angular', 'SASS', 'Typescript'] },
+    { name: 'Join', img: 'public/assets/img/projects_img/Join.jpg', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['HTML', 'CSS', 'Javascript', 'Firebase'] },
 ]
 
 const Card = ({ item }: { item: ProjectItem }) => (
@@ -23,8 +23,8 @@ const Card = ({ item }: { item: ProjectItem }) => (
             {item.language.map((lang, i) => {
                 const Icon = skillIconMap[lang]
                 return Icon
-                    ? <Icon key={i} size={40} />
-                    : <span key={i} className="text-white/50 text-sm">#{lang}</span>
+                    ? <div key={i} className={lang === 'HTML' ? 'text-orange-500' : ''}><Icon size={40} /></div>
+                    : <div key={i} className="text-white/50 text-sm">#{lang}</div>
             })}
         </div>
     </div>
@@ -58,7 +58,7 @@ const projects_component = () => {
                 <div ref={emblaRef} className="overflow-hidden">
                     <div className="flex">
                         {Projects.map((item, index) => (
-                            <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-300 ${index === selectedIndex ? 'opacity-100' : 'opacity-25'}`}>
+                            <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-300 ${index === selectedIndex ? 'opacity-100' : 'opacity-25 pointer-events-none'}`}>
                                 <Card item={item} />
                             </div>
                         ))}
