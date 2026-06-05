@@ -81,7 +81,13 @@ const projects_component = () => {
                     />
                 ))}
             </div>
+
+        <div className="dialog">
+            <h1>hello</h1>
+        </div>
+        
         </section>
+
     )
 }
 
