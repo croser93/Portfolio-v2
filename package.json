@@ -13,6 +13,7 @@
     "@dev.icons/react": "^1.1.0",
     "@tabler/icons-react": "^3.44.0",
     "@tailwindcss/vite": "^4.2.4",
+    "embla-carousel-react": "^8.6.0",
     "i18next-http-backend": "^3.0.5",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",

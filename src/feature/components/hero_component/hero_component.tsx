@@ -15,7 +15,7 @@ const hero_component = () => {
           </p>
         </div>
         <div className="right flex items-center justify-center">
-            <img src="../../../../public/assets/img/profile_img/Profile-Avatar.png" alt="" />
+            <img className="hero-avatar" src="../../../../public/assets/img/profile_img/Profile-Avatar.png" alt="" />
         </div>
       </div>
     </section>

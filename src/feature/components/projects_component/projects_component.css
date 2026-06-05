@@ -1,0 +1,66 @@
+.projects{
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.singleCard{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.singleCard:hover{
+    transform: scale(1.05);
+}
+
+.img_size{
+    height: 300px;
+}
+
+.dialogbackdropt{
+width: 100vw;
+height: 100vh;
+background-color: rgba(0, 0, 0, 0.9);
+position: fixed;
+top: 0;
+left: 0;
+z-index: 10;
+}
+
+.dialogCard{
+    width: 80%;
+    height: 80%;
+    background-color: rgba(86, 86, 95, 0.651);
+}
+
+.dialogimg{
+    width: 50%;
+    border-radius: 16px;
+}
+
+.closebtn{
+    background-color: rgba(240, 238, 238, 0.527);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closebtn:hover{
+    background-color: rgba(240, 238, 238, 0.8);
+
+}
+
+.link{
+background-color: rgba(240, 238, 238, 0.527);
+width: 120px;
+border-radius: 16px;
+transition: transform 0.3s ease;
+}
+
+.link:hover{
+        transform: scale(1.05);
+        background-color: rgba(240, 238, 238, 0.8);
+}
