@@ -3,8 +3,10 @@ import { useTranslation } from "react-i18next"
 import { skillIconMap } from '../../shared/skills'
 import useEmblaCarousel from 'embla-carousel-react'
 import { useState, useEffect } from 'react'
+import  ProjectsDialog  from './projects_Dialog'
 
-type ProjectItem = { name: string; img: string; description: string; language: string[] }
+
+export type ProjectItem = { name: string; img: string; description: string; language: string[] }
 
 const Projects: ProjectItem[] = [
     { name: 'Hellgate Shadowfall', img: '/public/assets/img/projects_img/Hellgate Shadowfall.png', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['HTML', 'CSS', 'Javascript'] },
@@ -12,8 +14,8 @@ const Projects: ProjectItem[] = [
     { name: 'Join', img: 'public/assets/img/projects_img/Join.jpg', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['HTML', 'CSS', 'Javascript', 'Firebase'] },
 ]
 
-const Card = ({ item }: { item: ProjectItem }) => (
-    <div className="singleCard w-full rounded-lg border border-white/10 bg-white/5 overflow-hidden shadow-lg">
+const Card = ({ item, onClick }: { item: ProjectItem; onClick: () => void }) => (
+    <div className="singleCard w-full rounded-lg border border-white/10 bg-white/5 overflow-hidden shadow-lg cursor-pointer" onClick={onClick}>
         <img className="w-full img_size object-cover" src={item.img} alt={item.name} />
         <div className="px-6 py-4">
             <div className="text-white font-DM-Sans text-xl mb-2">{item.name}</div>
@@ -34,6 +36,7 @@ const projects_component = () => {
     const { t } = useTranslation()
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
     const [selectedIndex, setSelectedIndex] = useState(0)
+    const [dialogOpen, setDialogOpen] = useState(false)
 
     useEffect(() => {
         if (!emblaApi) return
@@ -59,7 +62,7 @@ const projects_component = () => {
                     <div className="flex">
                         {Projects.map((item, index) => (
                             <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-300 ${index === selectedIndex ? 'opacity-100' : 'opacity-25 pointer-events-none'}`}>
-                                <Card item={item} />
+                                <Card item={item} onClick={() => setDialogOpen(true)} />
                             </div>
                         ))}
                     </div>
@@ -82,10 +85,8 @@ const projects_component = () => {
                 ))}
             </div>
 
-        <div className="dialog">
-            <h1>hello</h1>
-        </div>
-        
+            {dialogOpen && (<ProjectsDialog onClose={() => setDialogOpen(false)} project={Projects[selectedIndex]} />)}
+                
         </section>
 
     )

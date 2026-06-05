@@ -19,15 +19,36 @@
 .dialogbackdropt{
 width: 100vw;
 height: 100vh;
-background-color: rgba(0, 0, 0, 0.5)
+background-color: rgba(0, 0, 0, 0.9);
+position: fixed;
+top: 0;
+left: 0;
+z-index: 10;
 }
 
 .dialogCard{
     width: 80%;
     height: 80%;
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .dialogimg{
     width: 60%;
     border-radius: 16px;
+}
+
+.closebtn{
+    background-color: rgba(240, 238, 238, 0.527);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closebtn:hover{
+    background-color: rgba(240, 238, 238, 0.8);
+
 }
