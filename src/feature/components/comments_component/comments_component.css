@@ -1,0 +1,25 @@
+.commentsCard{
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote{
+position: absolute;
+color: rgba(0, 0, 0, 0.4);
+z-index: -1;
+}
+
+
+
+.commentsContainer{
+width: 70%;
+}
+
+@keyframes progress {
+    from { width: 0% }
+    to   { width: 100% }
+}
+
+.animate-progress {
+    animation: progress 7s linear forwards;
+}
