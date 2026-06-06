@@ -2,6 +2,8 @@ import './comments_component.css'
 import { useTranslation } from "react-i18next"
 import useEmblaCarousel from 'embla-carousel-react'
 import { useState, useEffect } from 'react'
+import { IconQuote } from '@tabler/icons-react';
+import { GithubIcon } from "@dev.icons/react"
 
 
 
@@ -14,11 +16,14 @@ const Projects: CommentsItem[] = [
 ]
 
 const Card = ({ item, t }: { item: CommentsItem; t: (key: string) => string }) => (
-    <div className="w-full rounded-lg border border-white/10 bg-white/5 overflow-hidden shadow-lg">
-        <img className="w-full img_size object-cover" />
-        <div className="px-6 py-4">
+  <div className="w-full rounded-lg border border-white/10 bg-white/5 overflow-hidden shadow-lg">
+        <div className="quote"><IconQuote size={108}/></div>
+        <div className="pt-12 px-12 pb-6">
             <div className="text-white font-DM-Sans text-xl mb-2">{item.name}</div>
             <p className="text-gray-400 font-DM-Sans text-sm">{t(item.comment)}</p>
+        </div>
+        <div className="flex justify-center pb-6">
+          <a href={item.github} target='_blank' ><GithubIcon size={40}/></a>
         </div>
     </div>
 )
