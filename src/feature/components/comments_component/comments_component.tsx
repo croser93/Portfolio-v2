@@ -65,9 +65,18 @@ const projects_component = () => {
                     <button
                         key={i}
                         onClick={() => emblaApi?.scrollTo(i)}
-                        className={`h-1 rounded-full transition-all duration-300 ${i === selectedIndex ? 'w-8 bg-white' : 'w-2 bg-white/30'}`}
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${i === selectedIndex ? ' w-2 bg-white ring-2 ring-blue-500/70' : 'w-2 bg-white/30'}`}
                     />
                 ))}
+            </div>
+
+            <div className='flex justify-center'>
+                <div className="w-100 h-1 bg-white/10 mt-6 overflow-hidden">
+                  <div
+                      key={selectedIndex}
+                      className="h-full bg-blue-500/70 animate-progress"
+                  />
+                </div>
             </div>
         </section>
     )
