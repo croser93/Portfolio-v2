@@ -7,8 +7,8 @@
       "HELLO":"Contact"
     }
   }, 
-   "HERO"
-   : {
+  "HERO"
+  : {
     "TITLE": "Frontend",
     "TITLE1": "Developer",
     "SCROLL": "Scroll",
@@ -43,12 +43,12 @@
     "2": "Working with you was a great experience. You collaborate well within a team and consistently show strong dedication. Your solid understanding of CSS stood out, especially when you successfully resolved a challenging issue. Your code was always clean and well-structured, making it easy to understand and maintain. You also contributed positively to the team’s productivity by fostering a supportive and motivating work environment."
   },
   "CONTACT": {
-    "TITLE": "Say Hi!",
-    "DESCRIPTION": "Want to discuss a new project?",
-    "DESCRIPTION_TEXT": "say hello! let's discuss your ideas and make it happen.",
+    "TITLE": "Contact",
+    "DESCRIPTION": "You would like to get in touch with me.",
+    "DESCRIPTION_TEXT": "Let's talk about ideas and possibilities together.",
     "NAME": "Your firstname and lastname",
     "EMAIL": "Your email",
-    "MESSAGE": "enter your message",
+    "MESSAGE": "Enter your message",
     "PRIVACY_POLICY": "privacy policy",
     "PRIVACY_POLICY_TEXT_1": "I've read the",
     "PRIVACY_POLICY_TEXT_2": "and agree to the processing of my data as outlined.",

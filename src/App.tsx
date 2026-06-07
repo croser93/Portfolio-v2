@@ -5,6 +5,7 @@ import AboutMeComponent from './feature/components/about_me_component/about_me_c
 import SkillsComponent from './feature/components/skills_component/skills_component.js'
 import ProjectsComponent from './feature/components/projects_component/projects_component.js'
 import CommentsComponent from './feature/components/comments_component/comments_component.js'
+import ContactComponent from './feature/components/contact_component/contact_component.js'
 
 function App() {
   return(
@@ -15,7 +16,7 @@ function App() {
     <SkillsComponent />
     <ProjectsComponent />
     <CommentsComponent />
-
+    <ContactComponent />
   </main>
   )
 }
