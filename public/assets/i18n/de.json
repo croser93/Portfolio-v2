@@ -41,11 +41,11 @@
     "2": "Die Arbeit mit dir war sehr gut. Du arbeitest zuverlässig, fleißig und bist ein echter Teamplayer. Besonders dein starkes CSS-Verständnis ist aufgefallen, vor allem bei der erfolgreichen Lösung eines kniffligen Fehlers. Dein Code war stets sauber und gut strukturiert, sodass man sich schnell einarbeiten konnte. Außerdem hast du durch deine positive Art zur Produktivität und einer guten Teamatmosphäre beigetragen."
   },
   "CONTACT": {
-    "TITLE": "Sag Hallo",
-    "DESCRIPTION": "Möchten Sie ein neues Projekt besprechen?",
+    "TITLE": "Kontakt",
+    "DESCRIPTION": "Sie möchten mit mir Kontakt aufnehmen?",
     "DESCRIPTION_TEXT": "Lass uns gemeinsam über Ideen und Möglichkeiten Sprechen.",
     "NAME": "Vorname und Nachname",
-    "EMAIL": "deine Email",
+    "EMAIL": "E-Mail-Adresse",
     "MESSAGE": "Gib deine Nachricht ein",
     "PRIVACY_POLICY_TEXT_1": "Ich habe die ",
     "PRIVACY_POLICY_TEXT_2": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",

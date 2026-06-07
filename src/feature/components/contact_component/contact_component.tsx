@@ -51,97 +51,82 @@ const contact_component = () => {
     }
 
     return (
-        <section className="contact">
-            <div className="content-beg">
-                <div className="contactHeader">
-                    <h2>{t('CONTACT.TITLE')}</h2>
+        <section className="border-t contact border-white/10 px-24 py-16">
+
+            {mailSent && (
+                <div className="success-overlay">
+                    <div className="success-box">
+                        <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                            <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                            <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                        </svg>
+                        <span className="text-white font-Unbounded text-2xl">{t('CONTACT.SUCCESS')}</span>
+                    </div>
                 </div>
-                <div className="formTextContainer">
-                    <h4>{t('CONTACT.DESCRIPTION')}</h4>
-                    <span>{t('CONTACT.DESCRIPTION_TEXT')}</span>
-                </div>
+            )}
 
-                <div className="form-container">
-                    <form onSubmit={handleSubmit} autoComplete="off">
+            <h2 className="text-4xl py-6 font-Unbounded font-medium text-white">{t('CONTACT.TITLE')}</h2>
 
-                        {mailSent && (
-                            <div className="success-overlay">
-                                <div className="success-box">
-                                    <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                                        <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-                                        <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                                    </svg>
-                                    <span>{t('CONTACT.SUCCESS')}</span>
-                                </div>
-                            </div>
-                        )}
-
-                        <div className="formInput">
-                            <div className="form-group">
-                                <input
-                                    type="text" name="name" value={contactData.name}
-                                    onChange={handleChange} onBlur={() => handleBlur('name')}
-                                    placeholder={t('CONTACT.NAME')} minLength={1} maxLength={40}
-                                    pattern="[a-zA-Z\s\-äöüÄÖÜß]*"
-                                />
-                            </div>
-                            <div className="errorContainer">
-                                {!isValid.name && touched.name && (
-                                    <span className="errorMassage">{t('CONTACT.ERR_NAME')}</span>
-                                )}
-                            </div>
-
-                            <div className="form-group">
-                                <input
-                                    type="email" name="email" value={contactData.email}
-                                    onChange={handleChange} onBlur={() => handleBlur('email')}
-                                    placeholder={t('CONTACT.EMAIL')} minLength={5} maxLength={40}
-                                />
-                            </div>
-                            <div className="errorContainer">
-                                {!isValid.email && touched.email && (
-                                    <span className="errorMassage">{t('CONTACT.ERR_EMAIL')}</span>
-                                )}
-                            </div>
-
-                            <div className="form-group">
-                                <textarea
-                                    name="message" value={contactData.message}
-                                    onChange={handleChange} onBlur={() => handleBlur('message')}
-                                    placeholder={t('CONTACT.MESSAGE')} minLength={5} maxLength={500}
-                                />
-                            </div>
-                            <div className="errorContainer">
-                                {!isValid.message && touched.message && (
-                                    <span className="errorMassage">{t('CONTACT.ERR_MESSAGE')}</span>
-                                )}
-                            </div>
-
-                            <div className="checkbox-container">
-                                <input
-                                    type="checkbox" id="privacy" name="checkBox"
-                                    checked={contactData.checkBox}
-                                    onChange={handleChange} onBlur={() => handleBlur('checkBox')}
-                                />
-                                <label htmlFor="privacy" className="checkbox-label">
-                                    {t('CONTACT.PRIVACY_POLICY_TEXT_1')} <a href="/privacy-policy" className="privacy-link">{t('CONTACT.PRIVACY_POLICY')}</a> {t('CONTACT.PRIVACY_POLICY_TEXT_2')}
-                                </label>
-                            </div>
-                            <div className="errorContainer">
-                                {!isValid.checkBox && touched.checkBox && (
-                                    <span className="errorMassage">{t('CONTACT.ERR_PRIVACY_POLICY')}</span>
-                                )}
-                            </div>
-                        </div>
-
-                        <div className="button-container">
-                            <button disabled={isSending || (!isValid.name || !isValid.email || !isValid.message)} type="submit">
-                                {isSending ? '...' : t('CONTACT.BUTTON')}
-                            </button>
-                        </div>
-                    </form>
-                </div>
+            <div className="flex flex-col items-center gap-2 py-6">
+                <h4 className="text-xl font-medium text-white/80 font-DM-Sans">{t('CONTACT.DESCRIPTION')}</h4>
+                <span className="text-white/50 font-DM-Sans">{t('CONTACT.DESCRIPTION_TEXT')}</span>
             </div>
+
+            <form onSubmit={handleSubmit} autoComplete="off" className="flex mx-auto flex-col items-center gap-1 max-w-2xl">
+
+                <input
+                    className="contact-input" type="text" name="name" value={contactData.name}
+                    onChange={handleChange} onBlur={() => handleBlur('name')}
+                    placeholder={t('CONTACT.NAME')} minLength={1} maxLength={40}
+                    pattern="[a-zA-Z\s\-äöüÄÖÜß]*"
+                />
+                <div className="h-4 mb-2">
+                    {!isValid.name && touched.name && <span className="text-red-400 text-sm">{t('CONTACT.ERR_NAME')}</span>}
+                </div>
+
+                <input
+                    className="contact-input" type="email" name="email" value={contactData.email}
+                    onChange={handleChange} onBlur={() => handleBlur('email')}
+                    placeholder={t('CONTACT.EMAIL')} minLength={5} maxLength={40}
+                />
+                <div className="h-4 mb-2">
+                    {!isValid.email && touched.email && <span className="text-red-400 text-sm">{t('CONTACT.ERR_EMAIL')}</span>}
+                </div>
+
+                <textarea
+                    className="contact-input" name="message" value={contactData.message}
+                    onChange={handleChange} onBlur={() => handleBlur('message')}
+                    placeholder={t('CONTACT.MESSAGE')} minLength={5} maxLength={500}
+                />
+                <div className="h-4 mb-2">
+                    {!isValid.message && touched.message && <span className="text-red-400 text-sm">{t('CONTACT.ERR_MESSAGE')}</span>}
+                </div>
+
+                <div className="flex items-start gap-3 py-2">
+                    <input
+                        type="checkbox" id="privacy" name="checkBox"
+                        checked={contactData.checkBox}
+                        onChange={handleChange} onBlur={() => handleBlur('checkBox')}
+                        className="mt-1 w-4 h-4 cursor-pointer accent-blue-500"
+                    />
+                    <label htmlFor="privacy" className="text-white/50 text-sm font-DM-Sans cursor-pointer">
+                        {t('CONTACT.PRIVACY_POLICY_TEXT_1')} <a href="/privacy-policy" className="text-blue-400 hover:underline">{t('CONTACT.PRIVACY_POLICY')}</a> {t('CONTACT.PRIVACY_POLICY_TEXT_2')}
+                    </label>
+                </div>
+                <div className="h-4 mb-4">
+                    {!isValid.checkBox && touched.checkBox && <span className="text-red-400 text-sm">{t('CONTACT.ERR_PRIVACY_POLICY')}</span>}
+                </div>
+
+                <div className="flex justify-center mt-4">
+                    <button
+                        type="submit"
+                        disabled={isSending || !isValid.name || !isValid.email || !isValid.message}
+                        className="contact-btn"
+                    >
+                        {isSending ? '...' : t('CONTACT.BUTTON')}
+                    </button>
+                </div>
+            </form>
         </section>
     )
 }

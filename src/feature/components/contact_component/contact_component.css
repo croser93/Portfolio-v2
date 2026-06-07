@@ -1,196 +1,73 @@
-.contact {
-    margin-top: 120px;
-    background-color: black;
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-    padding-top: 120px;
-    display: flex;
-    justify-content: center;
+.contact{
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-.contact > div {
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-}
-
-.contactHeader {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.contactHeader > h2 {
-    color: white;
-}
-
-.contactHeader > h2:hover {
-    color: #4a47ff;
-}
-
-.formTextContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: white;
-    padding: 48px 0px;
-}
-
-.formTextContainer > h4 {
-    font-size: clamp(1.5rem, 6vw, 2rem);
-    color: #4a47ff;
-    text-align: center;
-}
-
-.formTextContainer > span {
-    font-size: clamp(1rem, 6vw, 1.375rem);
-    text-align: center;
-}
-
-.form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.form-container > form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.form-container > form > .formInput {
-    width: clamp(18.75rem, 80vw, 38.75rem);
-    color: white;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
+.contact-input {
     width: 100%;
     background: transparent;
-    border: 4px solid transparent;
-    border-bottom: 2px solid #fff;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
-    padding: 0px 24px;
-    height: 54px;
+    padding: 12px 0;
     font-size: 1rem;
     outline: none;
-    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: border-color 0.2s;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border: 4px solid white;
+.contact-input:focus {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-input[type="text"]:not(:placeholder-shown):not(:focus):valid,
-input[type="email"]:not(:placeholder-shown):not(:focus):valid,
-textarea:not(:placeholder-shown):not(:focus):valid {
-    border: 2px solid rgb(17, 243, 9);
+.contact-input:not(:placeholder-shown):valid {
+    border-bottom: 1px solid rgb(17, 243, 9);
 }
 
-input[type="text"]:not(:placeholder-shown):not(:focus):invalid,
-input[type="email"]:not(:placeholder-shown):not(:focus):invalid,
-textarea:not(:placeholder-shown):not(:focus):invalid {
-    border: 2px solid rgb(245, 9, 1);
+.contact-input:not(:placeholder-shown):invalid {
+    border-bottom: 1px solid rgb(245, 9, 1);
 }
 
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-textarea::placeholder {
-    color: #fff;
+.contact-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
-input[type="text"]:hover,
-input[type="email"]:hover,
-textarea:hover {
-    border: 4px solid white;
-}
-
-textarea {
+textarea.contact-input {
     resize: vertical;
     min-height: 120px;
     max-height: 220px;
-    padding: 12px 24px;
+    padding: 12px 0;
 }
 
-.checkbox-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    cursor: pointer;
-    padding: 8px;
-}
-
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.checkbox-label {
-    font-size: 1rem;
-    color: white;
-}
-
-.privacy-link {
-    color: #4a47ff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.privacy-link:hover {
-    text-decoration: underline;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 16px;
-}
-
-button {
+.contact-btn {
     background: transparent;
     color: #fff;
-    border: 4px solid #fff;
-    padding: 15px 60px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 48px;
     font-size: 1rem;
-    font-weight: 700;
-    transition: width 0.3s ease;
-    width: 240px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
 }
 
-button:hover {
-    background: rgba(74, 71, 255, 0.4);
-    color: #fff;
-    width: 280px;
+.contact-btn:hover {
+    background: rgba(74, 71, 255, 0.2);
+    border-color: rgba(74, 71, 255, 0.6);
+    width: 240px;
 }
 
-button:disabled {
-    background-color: black;
-    border: 4px solid gray;
-    color: grey;
+.contact-btn:disabled {
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.3);
     cursor: not-allowed;
 }
 
-button:disabled:hover {
-    color: gray;
-    width: 240px;
-}
-
-.errorContainer {
-    height: 16px;
-    width: 100%;
-    margin-bottom: 16px;
-    margin-top: 4px;
-}
-
-.errorMassage {
-    color: red;
-    font-size: 1rem;
+.contact-btn:disabled:hover {
+    background: transparent;
+    width: 200px;
 }
 
 .success-overlay {
@@ -207,21 +84,15 @@ button:disabled:hover {
 }
 
 .success-box {
-    background: black;
-    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 40px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 24px;
     align-items: center;
-    box-shadow: 0 0 20px rgba(74, 71, 255, 0.4);
-}
-
-.success-box > span {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 700;
+    box-shadow: 0 0 20px rgba(74, 71, 255, 0.2);
 }
 
 .checkmark {
@@ -262,20 +133,4 @@ button:disabled:hover {
 
 @keyframes fill {
     100% { box-shadow: inset 0px 0px 0px 40px rgba(0, 188, 143, 0.1); }
-}
-
-@media (max-width: 1250px) {
-    .contact {
-        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
-    }
-}
-
-@media (max-width: 850px) {
-    .errorContainer {
-        margin-top: 8px;
-    }
-
-    .formInput {
-        height: 500px;
-    }
 }
