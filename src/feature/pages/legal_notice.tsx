@@ -6,7 +6,7 @@ import './legal.css'
 const legal_notice = () => {
 const { t } = useTranslation()
 
-  return (
+return (
     <section className="font-DM-Sans text-white/70">
     <div className="content">
     <h2 className="font-Unbounded text-4xl">{t('IMPRINT.TITLE')}</h2>
