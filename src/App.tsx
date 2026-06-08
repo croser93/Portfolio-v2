@@ -9,6 +9,7 @@ import ContactComponent from './feature/components/contact_component/contact_com
 
 import { Routes, Route, Navigate } from 'react-router-dom'
 import LegalNotice from './feature/pages/legal_notice.js'
+import PrivacyPolicy from './feature/pages/privacy_policy.js'
 
 function PortfolioPage() {
   return(
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<PortfolioPage />} />
         <Route path="/legal-notice" element={<LegalNotice />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
