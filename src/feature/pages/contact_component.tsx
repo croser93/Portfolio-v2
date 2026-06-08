@@ -1,6 +1,7 @@
 import './pages_css/contact_component.css'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
+import { IconMail, IconMapPin  } from '@tabler/icons-react';
 
 const contact_component = () => {
     const { t } = useTranslation()
@@ -127,6 +128,27 @@ const contact_component = () => {
                     </button>
                 </div>
             </form>
+
+            <div>
+                <h3 className='text-xl py-6 font-Unbounded font-medium text-white'>Contact Information</h3>
+                <div>
+                    <div className='flex items-center'>
+                        <div className='bg-blue-500/40 rounded-xl p-2 text-blue-400'><IconMail size={32}/> </div>
+                        <div className="flex flex-col justify-center p-2">
+                            <span className="font-medium text-white/80">Email</span>
+                            <a className='text-white/80' href="mailto:contact@maik-groth.com">contact@maik-groth.com</a>
+                        </div>
+                    </div>
+                    <div className='flex items-center'>
+                        <div className='bg-blue-500/40 rounded-xl p-2 text-blue-400'><IconMapPin size={32}/> </div>
+                        <div className="flex flex-col justify-center p-2">
+                            <span className="font-medium text-white/80">Location</span>
+                            <span className='text-white/80' >Krummesse near Lübeck, Deutschland</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
     )
 }

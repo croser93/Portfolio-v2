@@ -16,14 +16,14 @@ const Projects: CommentsItem[] = [
 ]
 
 const Card = ({ item, t }: { item: CommentsItem; t: (key: string) => string }) => (
-  <div className="w-full rounded-lg border border-white/10 bg-white/5 overflow-hidden shadow-lg">
+    <div className="w-full rounded-lg border border-white/10 bg-white/5 overflow-hidden shadow-lg">
         <div className="quote"><IconQuote size={108}/></div>
         <div className="pt-12 px-12 pb-6">
             <div className="text-white font-DM-Sans text-xl mb-2">{item.name}</div>
             <p className="text-gray-400 font-DM-Sans text-sm">{t(item.comment)}</p>
         </div>
         <div className="flex justify-center pb-6">
-          <a href={item.github} target='_blank' ><GithubIcon size={40}/></a>
+            <a href={item.github} target='_blank' ><GithubIcon size={40}/></a>
         </div>
     </div>
 )
@@ -77,10 +77,10 @@ const projects_component = () => {
 
             <div className='flex justify-center'>
                 <div className="w-100 h-1 bg-white/10 mt-6 overflow-hidden">
-                  <div
-                      key={selectedIndex}
-                      className="h-full bg-blue-500/70 animate-progress"
-                  />
+                    <div
+                        key={selectedIndex}
+                        className="h-full bg-blue-500/70 animate-progress"
+                    />
                 </div>
             </div>
         </section>
