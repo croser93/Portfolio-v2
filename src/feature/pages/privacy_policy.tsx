@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import './legal.css'
+import './pages_css/legal.css'
 
 const privacy_policy = () => { 
 const { t } = useTranslation()

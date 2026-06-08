@@ -1,4 +1,4 @@
-import './contact_component.css'
+import './pages_css/contact_component.css'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 

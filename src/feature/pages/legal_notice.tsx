@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { Link } from 'react-router-dom'
-import './legal.css'
+import './pages_css/legal.css'
 
 
 const legal_notice = () => {

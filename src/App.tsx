@@ -5,11 +5,11 @@ import AboutMeComponent from './feature/components/about_me_component/about_me_c
 import SkillsComponent from './feature/components/skills_component/skills_component.js'
 import ProjectsComponent from './feature/components/projects_component/projects_component.js'
 import CommentsComponent from './feature/components/comments_component/comments_component.js'
-import ContactComponent from './feature/components/contact_component/contact_component.js'
 
 import { Routes, Route, Navigate } from 'react-router-dom'
 import LegalNotice from './feature/pages/legal_notice.js'
 import PrivacyPolicy from './feature/pages/privacy_policy.js'
+import ContactComponent from './feature/pages/contact_component.js'
 
 function PortfolioPage() {
   return(
@@ -19,7 +19,6 @@ function PortfolioPage() {
     <SkillsComponent />
     <ProjectsComponent />
     <CommentsComponent />
-    <ContactComponent />
   </main>
   )
 }
@@ -27,11 +26,12 @@ function PortfolioPage() {
 function App() {
   return (
     <>
-      <Navbar />  {/* Navbar immer sichtbar */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<PortfolioPage />} />
         <Route path="/legal-notice" element={<LegalNotice />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
+        <Route path='/contact' element={<ContactComponent/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
