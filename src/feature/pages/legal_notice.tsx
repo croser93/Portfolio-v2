@@ -1,14 +1,15 @@
 import { useTranslation } from "react-i18next"
 import { Link } from 'react-router-dom'
+import './legal.css'
 
 
 const legal_notice = () => {
 const { t } = useTranslation()
 
   return (
-    <section>
+    <section className="font-DM-Sans text-white/70">
     <div className="content">
-    <h2>{t('IMPRINT.TITLE')}</h2>
+    <h2 className="font-Unbounded text-4xl">{t('IMPRINT.TITLE')}</h2>
         <div>
             <h4>{t('IMPRINT.IMPRINT')}</h4>
             <ul>
@@ -39,9 +40,6 @@ const { t } = useTranslation()
                     <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link>{t('IMPRINT.SECTION_2_TEXT_1')} <a href="https://developerakademie.com">Developer Akademie GmbH</a>. 
                     {t('IMPRINT.SECTION_2_TEXT_2')}
                 </span>
-                <span>
-                    {t('IMPRINT.SECTION_2_TEXT_3')} <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link> {t('IMPRINT.SECTION_2_TEXT_4')} <a href="https://developerakademie.com">Developer Akademie GmbH</a>. {t('IMPRINT.SECTION_2_TEXT_5')}
-                </span>
             </div>
         </div>
 
@@ -49,7 +47,7 @@ const { t } = useTranslation()
             <h4>{t( 'IMPRINT.SECTION_3_TITLE')}</h4>
                 <div>
                     <span>
-                        {t('IMPRINT.SECTION_3_TEXT_1')}<a href="https://developerakademie.com">Developer Akademie GmbH</a>{t('IMPRINT.SECTION_3_TEXT_2')}<Link to="/">{t('IMPRINT.PORTFOLIO')}</Link>{t('IMPRINT.SECTION_3_TEXT_3')}
+                        {t('IMPRINT.SECTION_3_TEXT_2')}<Link to="/">{t('IMPRINT.PORTFOLIO')}</Link>{t('IMPRINT.SECTION_3_TEXT_3')}
                     </span>
                 </div>
             </div>
