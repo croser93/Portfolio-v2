@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next"
+import { Link } from 'react-router-dom'
 
 
 const legal_notice = () => {
@@ -26,7 +27,7 @@ const { t } = useTranslation()
         <h4>{t( 'IMPRINT.SECTION_1_TITLE')}</h4>
             <div>
                 <span>
-                    {t('IMPRINT.SECTION_1_TEXT_1')} <a routerLink="">{t('IMPRINT.PORTFOLIO')}</a> {t('IMPRINT.SECTION_1_TEXT_2')}
+                    {t('IMPRINT.SECTION_1_TEXT_1')} <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link> {t('IMPRINT.SECTION_1_TEXT_2')}
                 </span>
             </div>
         </div>
@@ -35,11 +36,11 @@ const { t } = useTranslation()
         <h4>{t( 'IMPRINT.SECTION_2_TITLE')}</h4>
             <div className="indemnity">
                 <span>
-                    <a routerLink="">{t('IMPRINT.PORTFOLIO')}</a>{t('IMPRINT.SECTION_2_TEXT_1')} <a href="https://developerakademie.com">Developer Akademie GmbH</a>. 
+                    <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link>{t('IMPRINT.SECTION_2_TEXT_1')} <a href="https://developerakademie.com">Developer Akademie GmbH</a>. 
                     {t('IMPRINT.SECTION_2_TEXT_2')}
                 </span>
                 <span>
-                    {t('IMPRINT.SECTION_2_TEXT_3')} <a routerLink="">{t('IMPRINT.PORTFOLIO')}</a> {t('IMPRINT.SECTION_2_TEXT_4')} <a href="https://developerakademie.com">Developer Akademie GmbH</a>. {t('IMPRINT.SECTION_2_TEXT_5')}
+                    {t('IMPRINT.SECTION_2_TEXT_3')} <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link> {t('IMPRINT.SECTION_2_TEXT_4')} <a href="https://developerakademie.com">Developer Akademie GmbH</a>. {t('IMPRINT.SECTION_2_TEXT_5')}
                 </span>
             </div>
         </div>
@@ -48,7 +49,7 @@ const { t } = useTranslation()
             <h4>{t( 'IMPRINT.SECTION_3_TITLE')}</h4>
                 <div>
                     <span>
-                        {t('IMPRINT.SECTION_3_TEXT_1')}<a href="https://developerakademie.com">Developer Akademie GmbH</a>{t('IMPRINT.SECTION_3_TEXT_2')}<a routerLink="">{t('IMPRINT.PORTFOLIO')}</a>{t('IMPRINT.SECTION_3_TEXT_3')}
+                        {t('IMPRINT.SECTION_3_TEXT_1')}<a href="https://developerakademie.com">Developer Akademie GmbH</a>{t('IMPRINT.SECTION_3_TEXT_2')}<Link to="/">{t('IMPRINT.PORTFOLIO')}</Link>{t('IMPRINT.SECTION_3_TEXT_3')}
                     </span>
                 </div>
             </div>
@@ -57,7 +58,7 @@ const { t } = useTranslation()
             <h4>{t( 'IMPRINT.SECTION_4_TITLE')}</h4>
                 <div>
                     <span>
-                        <a routerLink="">{t('IMPRINT.PORTFOLIO')}</a> {t('IMPRINT.SECTION_4_TEXT_1')}<a routerLink="">{t('IMPRINT.PORTFOLIO')}</a> {t('IMPRINT.SECTION_4_TEXT_2')} <a routerLink="">{t('IMPRINT.PORTFOLIO')}</a>.
+                        <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link> {t('IMPRINT.SECTION_4_TEXT_1')}<Link to="/">{t('IMPRINT.PORTFOLIO')}</Link> {t('IMPRINT.SECTION_4_TEXT_2')} <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link>.
                     </span>
                 </div>
             </div>
@@ -66,7 +67,7 @@ const { t } = useTranslation()
             <h4>{t( 'IMPRINT.SECTION_5_TITLE')}</h4>
                 <div>
                     <span>
-                        <a routerLink="">{t('IMPRINT.PORTFOLIO')}</a> {t( 'IMPRINT.SECTION_5_TEXT_1')} <a href="https://developerakademie.com">Developer Akademie</a>{t('IMPRINT.SECTION_5_TEXT_2')} <a routerLink="">{t('IMPRINT.PORTFOLIO')}</a>.
+                        <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link> {t( 'IMPRINT.SECTION_5_TEXT_1')} <a href="https://developerakademie.com">Developer Akademie</a>{t('IMPRINT.SECTION_5_TEXT_2')} <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link>.
                     </span>
                 </div>
         </div>
@@ -75,7 +76,7 @@ const { t } = useTranslation()
             <h4>{t( 'IMPRINT.SECTION_6_TITLE')}</h4>
                 <div className="indemnity">
                     <span>
-                        {t('IMPRINT.SECTION_6_TEXT_1')} <a href="https://developerakademie.com">Developer Akademie</a>{t('IMPRINT.SECTION_6_TEXT_2')} <a routerLink="">{t( 'IMPRINT.PORTFOLIO')}</a> {t('IMPRINT.SECTION_6_TEXT_3')}
+                        {t('IMPRINT.SECTION_6_TEXT_1')} <a href="https://developerakademie.com">Developer Akademie</a>{t('IMPRINT.SECTION_6_TEXT_2')} <Link to="/">{t( 'IMPRINT.PORTFOLIO')}</Link> {t('IMPRINT.SECTION_6_TEXT_3')}
                     </span>
                     <span>
                         {t('IMPRINT.CONTACT_TEXT')}<a href="mailto:contact@maik-groth.com">contact@Maik-Groth.com</a>

@@ -7,10 +7,12 @@ import ProjectsComponent from './feature/components/projects_component/projects_
 import CommentsComponent from './feature/components/comments_component/comments_component.js'
 import ContactComponent from './feature/components/contact_component/contact_component.js'
 
-function App() {
+import { Routes, Route, Navigate } from 'react-router-dom'
+import LegalNotice from './feature/pages/legal_notice.js'
+
+function PortfolioPage() {
   return(
   <main>
-    <Navbar />
     <HeroComponent />
     <AboutMeComponent />
     <SkillsComponent />
@@ -18,6 +20,19 @@ function App() {
     <CommentsComponent />
     <ContactComponent />
   </main>
+  )
+}
+
+function App() {
+  return (
+    <>
+      <Navbar />  {/* Navbar immer sichtbar */}
+      <Routes>
+        <Route path="/" element={<PortfolioPage />} />
+        <Route path="/legal-notice" element={<LegalNotice />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </>
   )
 }
 
