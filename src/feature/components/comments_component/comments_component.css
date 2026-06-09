@@ -1,15 +1,9 @@
-.commentsCard{
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.9);
-}
 
 .quote{
 position: absolute;
 color: rgba(0, 0, 0, 0.4);
 z-index: -1;
 }
-
-
 
 .commentsContainer{
 width: 70%;

@@ -10,8 +10,10 @@ const [isDark, setIsDark] = useState(document.documentElement.classList.contains
     const toggleTheme = () => {
         if (isDark) {
             document.documentElement.classList.remove('dark')
+            document.documentElement.classList.add('light')
             localStorage.setItem('color-theme', 'light')
         } else {
+            document.documentElement.classList.remove('light')
             document.documentElement.classList.add('dark')
             localStorage.setItem('color-theme', 'dark')
         }
@@ -19,15 +21,15 @@ const [isDark, setIsDark] = useState(document.documentElement.classList.contains
     }
   return (
     
-<nav className="bg-neutral-primary p-4 z-20 top-0 start-0 border-b border-default">
-  <div className="flex flex-wrap items-center justify-between px-10">
+<nav className="p-4 sticky top-0 z-50 border-b border-default backdrop-blur-md bg-black/70 light:bg-white/70">
+  <div className="flex items-center justify-between px-10">
     <a href="/">
       <img className="block dark:hidden w-10 h-10" src="/public/assets/svg/logo_dark.svg" alt="" />
       <img className="hidden dark:block w-10 h-10" src="/public/assets/svg/logo_light.svg" alt="" />
     </a>
 
-    <div className="hidden bg-white/40 rounded-4xl w-full md:block md:w-auto" id="navbar-default">
-      <ul className="font-medium items-center flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+    <div className="hidden md:block" id="navbar-default">
+      <ul className="font-medium flex items-center gap-8">
         <li>
           <a href="#" className=" font-DM-Sans dark:text-white block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Home</a>
         </li>
@@ -43,7 +45,6 @@ const [isDark, setIsDark] = useState(document.documentElement.classList.contains
         <li>
           <a href="#" className=" font-DM-Sans dark:text-white block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.HELLO')}</a>
         </li>
-
       </ul>
     </div>
 
@@ -70,8 +71,8 @@ const [isDark, setIsDark] = useState(document.documentElement.classList.contains
         </div>
 
           <div className="flex gap-2"> 
-            <a href="/" className="hover:text-blue-400"><IconBrandGithub size={32}/></a>
-            <a href="/" className="hover:text-blue-400"><IconBrandLinkedin size={32}/></a>
+            <a href="https://github.com/croser93" target='_blank' className="hover:text-blue-400"><IconBrandGithub size={32}/></a>
+            <a href="https://in/maik-groth" target='_blank' className="hover:text-blue-400"><IconBrandLinkedin size={32}/></a>
           </div>
 
     </div>
