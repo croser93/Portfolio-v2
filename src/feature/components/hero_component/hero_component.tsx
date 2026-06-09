@@ -1,4 +1,5 @@
 import './hero_component.css'
+import { IconMessageCircle } from '@tabler/icons-react';
 
 const hero_component = () => {
   return (
@@ -13,6 +14,13 @@ const hero_component = () => {
           <p className="font-DM-Sans max-w-2xl mb-6 font-medium text-gray-500 lg:mb-8 md:text-xl lg:text-2xl">
             I care about the details, the kind that make the difference between good and great.
           </p>
+          <div className='flex justify-start hover:no-underline'>
+            <a href="/contact" className="w-32  no-underline">
+              <div className='contactBtn hover:bg-blue-500/25 w-32 hover:text-blue-400 flex text-white/50 border-2 rounded-lg items-center gap-2 p-2 '>
+              <IconMessageCircle size={32}/>
+              <span className='font-DM-Sans  hover:no-underline'>Contact</span></div>
+            </a>
+          </div>
         </div>
         <div className="right flex items-center justify-center">
             <img className="hero-avatar" src="../../../../public/assets/img/profile_img/Profile-Avatar.png" alt="" />

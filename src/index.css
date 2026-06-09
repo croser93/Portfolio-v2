@@ -1,5 +1,9 @@
-@import "tailwindcss"; 
+@import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+a, a:hover, a:visited, a:focus {
+  text-decoration: none;
+}
 
 body{
   font-family: 'Inter', sans-serif;
