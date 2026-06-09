@@ -48,7 +48,7 @@ const projects_component = () => {
     }, [emblaApi])
 
     return (
-        <section className="commentsCard border-t border-white/10 px-24 py-16">
+        <section className="commentsCard border-t-4 border-white/20 px-24 py-16">
             <h2 className="text-4xl py-6 font-Unbounded font-medium dark:text-white">
                 {t('REFERENCES.TITLE')}
             </h2>

@@ -24,7 +24,7 @@ const skills_component = () => {
     )
 
     return (
-        <section className="skills border-t border-white/10 px-24 py-16">
+        <section className="skills border-t-4 border-white/20 px-24 py-16">
             <h2 className="text-4xl py-8 font-Unbounded font-medium dark:text-white">{t('SKILLS.TITLE')}</h2>
             <div className="flex flex-col gap-10 py-6">
                 <SkillRow items={Frontend} label="Front - End" />

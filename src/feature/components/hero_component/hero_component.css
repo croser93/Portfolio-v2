@@ -1,3 +1,6 @@
+.hero{
+    height: calc(100vh - 89px - 4px);
+}
 
 .right{
     width: 500px;
