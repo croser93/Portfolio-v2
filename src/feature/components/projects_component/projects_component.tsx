@@ -9,17 +9,17 @@ import  ProjectsDialog  from './projects_Dialog'
 export type ProjectItem = { name: string; img: string; description: string; language: string[]; github:string; live:string }
 
 const Projects: ProjectItem[] = [
-    { name: 'Hellgate Shadowfall', img: '/public/assets/img/projects_img/Hellgate Shadowfall.png', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['HTML', 'CSS', 'Javascript'], github: 'https://github.com/croser93/2d-Game.git', live: 'https://hellgate-shadowfall.maik-groth.com' },
-    { name: 'Code à Cuisine', img: 'public/assets/img/projects_img/CodeaCuisine.jpg', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['Angular', 'SASS', 'Typescript', 'n8n', 'Supabase'], github: 'https://github.com/croser93/Code-a-Cuisine.git', live: 'https://code-a-cuisine.maik-groth.com' },
-    { name: 'Join', img: 'public/assets/img/projects_img/Join.jpg', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', language: ['HTML', 'CSS', 'Javascript', 'Firebase'], github: 'https://github.com/croser93/Join_Kanban_Manager.git', live: 'https://join.maik-groth.com' },
+    { name: 'Join', img: 'public/assets/img/projects_img/Join.jpg', description: 'PORTFOLIO.1', language: ['HTML', 'CSS', 'Javascript', 'Firebase'], github: 'https://github.com/croser93/Join_Kanban_Manager.git', live: 'https://join.maik-groth.com' },
+    { name: 'Hellgate Shadowfall', img: '/public/assets/img/projects_img/Hellgate Shadowfall.png', description: 'PORTFOLIO.2' , language: ['HTML', 'CSS', 'Javascript'], github: 'https://github.com/croser93/2d-Game.git', live: 'https://hellgate-shadowfall.maik-groth.com' },
+    { name: 'Code à Cuisine', img: 'public/assets/img/projects_img/CodeaCuisine.jpg', description: 'PORTFOLIO.3', language: ['Angular', 'SASS', 'Typescript', 'n8n', 'Supabase'], github: 'https://github.com/croser93/Code-a-Cuisine.git', live: 'https://code-a-cuisine.maik-groth.com' },
 ]
 
-const Card = ({ item, onClick }: { item: ProjectItem; onClick: () => void }) => (
+const Card = ({ item, t, onClick }: { item: ProjectItem; t: (key: string)=> string ; onClick: () => void }) => (
     <div className="singleCard w-full rounded-lg border border-white/10 light:bg-black/80 dark:bg-white/5 overflow-hidden shadow-lg cursor-pointer" onClick={onClick}>
         <img className="w-full img_size object-cover" src={item.img} alt={item.name} />
         <div className="px-6 py-4">
             <div className="text-white font-medium font-DM-Sans text-xl mb-2">{item.name}</div>
-            <p className="text-gray-400 font-DM-Sans text-sm">{item.description}</p>
+            <p className="text-gray-400 font-DM-Sans text-sm">{t(item.description)}</p>
         </div>
         <div className="px-6 pt-2 pb-4 flex justify-end gap-3">
             {item.language.map((lang, i) => {
@@ -68,7 +68,7 @@ const projects_component = () => {
                     <div className="flex">
                         {Projects.map((item, index) => (
                             <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-300 ${index === selectedIndex ? 'opacity-100' : 'opacity-25 pointer-events-none '}`}>
-                                <Card item={item} onClick={() => setDialogOpen(true)} />
+                                <Card item={item} t={t} onClick={() => setDialogOpen(true)} />
                             </div>
                         ))}
                     </div>

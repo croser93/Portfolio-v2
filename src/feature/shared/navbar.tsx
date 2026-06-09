@@ -31,7 +31,7 @@ const [isDark, setIsDark] = useState(document.documentElement.classList.contains
     <div className="hidden md:block" id="navbar-default">
       <ul className="font-medium flex items-center gap-8">
         <li>
-          <a href="#" className=" font-DM-Sans light:text-black block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Home</a>
+          <a href="#" className=" font-DM-Sans light:text-black block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.HOME')}</a>
         </li>
         <li>
           <a href="#" className=" font-DM-Sans light:text-black block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.ABOUT')}</a>

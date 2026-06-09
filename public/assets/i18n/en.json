@@ -1,18 +1,20 @@
 {
   "HEADER": {
     "NAV": {
+      "HOME":"Home",
       "ABOUT": "About me",
-      "SKILLS": "My Skills",
-      "PROJECTS": "My Projects",
+      "SKILLS": "Skills",
+      "PROJECTS": "Projects",
       "HELLO":"Contact"
     }
   }, 
   "HERO"
   : {
-    "TITLE": "Frontend",
+    "INTRODUCTION": "Hey, I'm Maik and a",
+    "TITLE": "Front-End",
     "TITLE1": "Developer",
-    "SCROLL": "Scroll",
-    "DOWN": "Down"
+    "DESCRIPTION": "I care about the details, the kind that make the difference between good and great.",
+    "BUTTON": "Contact"
   },
 
   "ABOUT_ME": {
@@ -23,7 +25,7 @@
     "BUTTON": "Let's Talk"
   },
   "SKILLS": {
-    "TITLE": "MY SKILLS",
+    "TITLE": "My Skills",
     "DESCRIPTION-1": "Don't see the skill your need? ",
     "DESCRIPTION-2": "I'm always ready to learn!",
     "CONTACT": "Contact me",
