@@ -19,7 +19,7 @@ const Card = ({ item, t }: { item: CommentsItem; t: (key: string) => string }) =
     <div className="w-full rounded-lg border border-white/10 bg-white/5 overflow-hidden shadow-lg">
         <div className="quote"><IconQuote size={108}/></div>
         <div className="pt-12 px-12 pb-6">
-            <div className="text-white font-DM-Sans text-xl mb-2">{item.name}</div>
+            <div className="dark:text-white font-semibold font-DM-Sans text-xl mb-2">{item.name}</div>
             <p className="text-gray-400 font-DM-Sans text-sm">{t(item.comment)}</p>
         </div>
         <div className="flex justify-center pb-6">
@@ -49,7 +49,7 @@ const projects_component = () => {
 
     return (
         <section className="commentsCard border-t border-white/10 px-24 py-16">
-            <h2 className="text-4xl py-6 font-Unbounded font-medium text-white">
+            <h2 className="text-4xl py-6 font-Unbounded font-medium dark:text-white">
                 {t('REFERENCES.TITLE')}
             </h2>
 

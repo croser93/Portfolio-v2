@@ -27,7 +27,7 @@ const lineStyles: Record<TimelineItem["status"], string> = {
 
     return (
         <section className="about-me border-t-4 border-blue-500/20 px-24 py-18">
-            <h2 className="text-4xl py-6 font-Unbounded font-medium text-white">{t('ABOUT_ME.TITLE')}</h2>
+            <h2 className="text-4xl py-6 font-Unbounded font-medium dark:text-white">{t('ABOUT_ME.TITLE')}</h2>
             <div className="grid py-6 grid-cols-2 gap-14">
                 <div> 
                     <h3 className="text-xl font-DM-Sans text-white/70">{t('ABOUT_ME.DESCRIPTION')}</h3>

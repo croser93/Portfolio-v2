@@ -17,7 +17,7 @@ const hero_component = () => {
           </p>
           <div className='flex justify-start hover:no-underline'>
             <a href="/contact" className="w-32  no-underline">
-              <div className='contactBtn hover:bg-blue-500/25 w-32 hover:text-blue-400 flex text-white/50 border-2 rounded-lg items-center gap-2 p-2 '>
+              <div className='contactBtn light:text-black hover:bg-blue-500/25 hover:text-blue-400 w-32 flex text-white/50 border-2 rounded-lg items-center gap-2 p-2 '>
               <IconMessageCircle size={32}/>
               <span className='font-DM-Sans  hover:no-underline'>Contact</span></div>
             </a>

@@ -15,10 +15,10 @@ const Projects: ProjectItem[] = [
 ]
 
 const Card = ({ item, onClick }: { item: ProjectItem; onClick: () => void }) => (
-    <div className="singleCard w-full rounded-lg border border-white/10 bg-white/5 overflow-hidden shadow-lg cursor-pointer" onClick={onClick}>
+    <div className="singleCard w-full rounded-lg border border-white/10 light:bg-black/80 dark:bg-white/5 overflow-hidden shadow-lg cursor-pointer" onClick={onClick}>
         <img className="w-full img_size object-cover" src={item.img} alt={item.name} />
         <div className="px-6 py-4">
-            <div className="text-white font-DM-Sans text-xl mb-2">{item.name}</div>
+            <div className="text-white font-medium font-DM-Sans text-xl mb-2">{item.name}</div>
             <p className="text-gray-400 font-DM-Sans text-sm">{item.description}</p>
         </div>
         <div className="px-6 pt-2 pb-4 flex justify-end gap-3">
@@ -59,7 +59,7 @@ const projects_component = () => {
 
     return (
         <section className="projects border-t border-white/10 px-24 py-16">
-            <h2 className="text-4xl py-6 font-Unbounded font-medium text-white">
+            <h2 className="text-4xl py-6 font-Unbounded font-medium light:text-black dark:text-white">
                 {t('PORTFOLIO.TITLE')}
             </h2>
 
@@ -86,7 +86,7 @@ const projects_component = () => {
                     <button
                         key={i}
                         onClick={() => emblaApi?.scrollTo(i)}
-                        className={`h-1 rounded-full transition-all duration-300 ${i === selectedIndex ? 'w-8 bg-white' : 'w-2 bg-white/30'}`}
+                        className={`h-1 rounded-full transition-all duration-300 ${i === selectedIndex ? 'w-8 dark:bg-white light:bg-black' : 'w-2 dark:bg-white/30 light:bg-black/30 '}`}
                     />
                 ))}
             </div>
