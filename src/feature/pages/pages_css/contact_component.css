@@ -4,6 +4,7 @@
     background: transparent;
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
     padding: 12px 0;
     font-size: 1rem;
     outline: none;
@@ -25,6 +26,19 @@
 
 .contact-input::placeholder {
     color: rgba(255, 255, 255, 0.4);
+}
+
+.light .contact-input {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.light .contact-input:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.light .contact-input::placeholder {
+    color: rgba(0, 0, 0, 0.35);
 }
 
 textarea.contact-input {
@@ -62,6 +76,15 @@ textarea.contact-input {
     width: 200px;
 }
 
+.light .contact-btn {
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.light .contact-btn:disabled {
+    border-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .success-overlay {
     position: fixed;
     top: 0;
@@ -84,7 +107,17 @@ textarea.contact-input {
     flex-direction: column;
     gap: 24px;
     align-items: center;
-    box-shadow: 0 0 20px rgba(74, 71, 255, 0.2);
+    box-shadow: 0 0 20px rgba(34, 87, 233, 0.2);
+}
+
+.light .success-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.light .success-box {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(34, 87, 233, 0.2);
 }
 
 .checkmark {
@@ -92,7 +125,7 @@ textarea.contact-input {
     height: 80px;
     border-radius: 50%;
     stroke-width: 2;
-    stroke: #00bc8f;
+    stroke: #00a0bc;
     stroke-miterlimit: 10;
     animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
 }
@@ -102,7 +135,7 @@ textarea.contact-input {
     stroke-dashoffset: 166;
     stroke-width: 2;
     stroke-miterlimit: 10;
-    stroke: #00bc8f;
+    stroke: #00a0bc;
     fill: none;
     animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
 }

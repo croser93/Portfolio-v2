@@ -61,13 +61,13 @@ const contact_component = () => {
                             <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
                             <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
                         </svg>
-                        <span className="text-white font-Unbounded text-2xl">{t('CONTACT.SUCCESS')}</span>
+                        <span className="dark:text-white light:text-black/80 font-Unbounded text-2xl">{t('CONTACT.SUCCESS')}</span>
                     </div>
                 </div>
             )}
 
             <h2 className="text-4xl font-Unbounded font-medium dark:text-white/70 light:text-black">{t('CONTACT.TITLE')}</h2>
-            <div className='flex p-16 gap-16'>
+            <div className='flex place-content-around p-16 gap-16'>
 
             <div>
                 <div className="flex flex-col items-center gap-2 py-6">
@@ -133,9 +133,8 @@ const contact_component = () => {
             </div>
 
             <div className='w-px self-stretch dark:bg-white/10 light:bg-black'></div>
-
-            <div>
-                <h3 className='text-xl py-6 font-Unbounded font-medium dark:text-white/70 light:text-black '>Contact Information</h3>
+            <div className='flex flex-col'>
+                <h3 className='text-xl py-6 font-Unbounded font-medium dark:text-white/70 light:text-black'>{t('CONTACT.CONTACT_INFORMATION')}</h3>
                 <div>
                     <div className='flex items-center'>
                         <div className='dark:bg-blue-500/40 light:bg-black/10 dark:text-blue-400 light:text-black rounded-xl p-2'><IconMail size={32}/> </div>
@@ -147,12 +146,13 @@ const contact_component = () => {
                     <div className='flex items-center'>
                         <div className='dark:bg-blue-500/40 light:bg-black/10 dark:text-blue-400 light:text-black rounded-xl p-2'><IconMapPin size={32}/> </div>
                         <div className="flex flex-col justify-center p-2">
-                            <span className="font-medium dark:text-white/70 light:text-black">Location</span>
+                            <span className="font-medium dark:text-white/70 light:text-black">{t('CONTACT.LOCATION')}</span>
                             <span className='dark:text-white/70 light:text-black/70 ' >Krummesse near Lübeck, Deutschland</span>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             </div>
         </section>

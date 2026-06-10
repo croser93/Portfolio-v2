@@ -59,7 +59,9 @@
     "ERR_EMAIL": "please enter a email",
     "ERR_MESSAGE": "please enter a message",
     "ERR_PRIVACY_POLICY": "You need to accept the privacy policy before submitting.",
-    "SUCCESS": "Message sent successfully!"
+    "SUCCESS": "Message sent successfully!",
+    "CONTACT_INFORMATION":"Contact Information",
+    "LOCATION":"Location"
   },
   "LEGALNOTICE": {
     "LEGALNOTICE": "LegalNotice"
