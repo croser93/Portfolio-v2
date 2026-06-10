@@ -20,7 +20,7 @@ const hero_component = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative dark:bg-[#0e0e0e] light:bg-[#ebe8e8]">
       <div className="absolute inset-0">
         <FloatingLines
           enabledWaves={["bottom", "top"]}

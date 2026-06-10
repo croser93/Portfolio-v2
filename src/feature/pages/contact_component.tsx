@@ -66,19 +66,19 @@ const contact_component = () => {
                 </div>
             )}
 
-            <h2 className="text-4xl font-Unbounded font-medium text-white">{t('CONTACT.TITLE')}</h2>
+            <h2 className="text-4xl font-Unbounded font-medium dark:text-white/70 light:text-black">{t('CONTACT.TITLE')}</h2>
             <div className='flex p-16 gap-16'>
 
             <div>
                 <div className="flex flex-col items-center gap-2 py-6">
-                    <h4 className="text-xl font-medium text-white/80 font-DM-Sans">{t('CONTACT.DESCRIPTION')}</h4>
-                    <span className="text-white/50 font-DM-Sans">{t('CONTACT.DESCRIPTION_TEXT')}</span>
+                    <h4 className="text-xl font-medium dark:text-white/70 light:text-black/70 font-DM-Sans">{t('CONTACT.DESCRIPTION')}</h4>
+                    <span className="dark:text-white/70 light:text-black/70 font-DM-Sans">{t('CONTACT.DESCRIPTION_TEXT')}</span>
                 </div>
 
                 <form onSubmit={handleSubmit} autoComplete="off" className="flex mx-auto flex-col items-center gap-1 max-w-2xl">
 
                     <input
-                        className="contact-input" type="text" name="name" value={contactData.name}
+                        className="contact-input " type="text" name="name" value={contactData.name}
                         onChange={handleChange} onBlur={() => handleBlur('name')}
                         placeholder={t('CONTACT.NAME')} minLength={1} maxLength={40}
                         pattern="[a-zA-Z\s\-äöüÄÖÜß]*"
@@ -112,7 +112,7 @@ const contact_component = () => {
                             onChange={handleChange} onBlur={() => handleBlur('checkBox')}
                             className="mt-1 w-4 h-4 cursor-pointer accent-blue-500"
                         />
-                        <label htmlFor="privacy" className="text-white/50 text-sm font-DM-Sans cursor-pointer">
+                        <label htmlFor="privacy" className="dark:text-white/70 light:text-black/70 text-sm font-DM-Sans cursor-pointer">
                             {t('CONTACT.PRIVACY_POLICY_TEXT_1')} <a href="/privacy-policy" className="text-blue-400 hover:underline">{t('CONTACT.PRIVACY_POLICY')}</a> {t('CONTACT.PRIVACY_POLICY_TEXT_2')}
                         </label>
                     </div>
@@ -124,7 +124,7 @@ const contact_component = () => {
                         <button
                             type="submit"
                             disabled={isSending || !isValid.name || !isValid.email || !isValid.message}
-                            className="contact-btn"
+                            className="contact-btn dark:text-white/70 light:text-black/70"
                         >
                             {isSending ? '...' : t('CONTACT.BUTTON')}
                         </button>
@@ -132,23 +132,23 @@ const contact_component = () => {
                 </form>
             </div>
 
-            <div className='w-px self-stretch bg-white/10'></div>
+            <div className='w-px self-stretch dark:bg-white/10 light:bg-black'></div>
 
             <div>
-                <h3 className='text-xl py-6 font-Unbounded font-medium text-white'>Contact Information</h3>
+                <h3 className='text-xl py-6 font-Unbounded font-medium dark:text-white/70 light:text-black '>Contact Information</h3>
                 <div>
                     <div className='flex items-center'>
-                        <div className='bg-blue-500/40 rounded-xl p-2 text-blue-400'><IconMail size={32}/> </div>
+                        <div className='dark:bg-blue-500/40 light:bg-black/10 dark:text-blue-400 light:text-black rounded-xl p-2'><IconMail size={32}/> </div>
                         <div className="flex flex-col justify-center p-2">
-                            <span className="font-medium text-white/50">Email</span>
-                            <a className='text-white' href="mailto:contact@maik-groth.com">contact@maik-groth.com</a>
+                            <span className="font-medium dark:text-white/70 light:text-black">Email</span>
+                            <a className='dark:text-white/70 light:text-black/70 ' href="mailto:contact@maik-groth.com">contact@maik-groth.com</a>
                         </div>
                     </div>
                     <div className='flex items-center'>
-                        <div className='bg-blue-500/40 rounded-xl p-2 text-blue-400'><IconMapPin size={32}/> </div>
+                        <div className='dark:bg-blue-500/40 light:bg-black/10 dark:text-blue-400 light:text-black rounded-xl p-2'><IconMapPin size={32}/> </div>
                         <div className="flex flex-col justify-center p-2">
-                            <span className="font-medium text-white/50">Location</span>
-                            <span className='text-white' >Krummesse near Lübeck, Deutschland</span>
+                            <span className="font-medium dark:text-white/70 light:text-black">Location</span>
+                            <span className='dark:text-white/70 light:text-black/70 ' >Krummesse near Lübeck, Deutschland</span>
                         </div>
                     </div>
                 </div>

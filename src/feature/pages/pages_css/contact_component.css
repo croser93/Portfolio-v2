@@ -4,7 +4,6 @@
     background: transparent;
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
     padding: 12px 0;
     font-size: 1rem;
     outline: none;
@@ -37,7 +36,6 @@ textarea.contact-input {
 
 .contact-btn {
     background: transparent;
-    color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 12px 48px;
     font-size: 1rem;
@@ -50,8 +48,6 @@ textarea.contact-input {
 }
 
 .contact-btn:hover {
-    background: rgba(74, 71, 255, 0.2);
-    border-color: rgba(74, 71, 255, 0.6);
     width: 240px;
 }
 
