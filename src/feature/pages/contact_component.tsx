@@ -52,7 +52,7 @@ const contact_component = () => {
     }
 
     return (
-        <section className="border-t contact border-white/10 px-24 py-16">
+        <section id="contact" className="border-t contact border-white/10 px-24 py-16">
 
             {mailSent && (
                 <div className="success-overlay">

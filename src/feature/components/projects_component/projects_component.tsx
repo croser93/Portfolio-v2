@@ -58,7 +58,7 @@ const projects_component = () => {
     }, [dialogOpen])
 
     return (
-        <section className="projects border-t-4 border-white/20 px-24 py-16">
+        <section id="projects" className="projects border-t-4 border-white/20 px-24 py-16">
             <h2 className="text-4xl py-6 font-Unbounded font-medium light:text-black dark:text-white">
                 {t('PORTFOLIO.TITLE')}
             </h2>

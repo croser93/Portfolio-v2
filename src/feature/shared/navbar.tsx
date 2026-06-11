@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { useTranslation } from "react-i18next"
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
+import { HashLink } from 'react-router-hash-link';
 import './navbar.css'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 const { t, i18n } = useTranslation()
@@ -31,19 +33,22 @@ const [isDark, setIsDark] = useState(document.documentElement.classList.contains
     <div className="hidden md:block" id="navbar-default">
       <ul className="font-medium flex items-center gap-8">
         <li>
-          <a href="#" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.HOME')}</span></a>
+          <HashLink to="/#home" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.HOME')}</span></HashLink>
         </li>
         <li>
-          <a href="#" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.ABOUT')}</span></a>
+          <HashLink to="/#about" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.ABOUT')}</span></HashLink>
         </li>
         <li>
-          <a href="#" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.SKILLS')}</span></a>
+          <HashLink to="/#skills" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.SKILLS')}</span></HashLink>
         </li>
         <li>
-          <a href="#" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.PROJECTS')}</span></a>
+          <HashLink to="/#projects" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.PROJECTS')}</span></HashLink>
         </li>
         <li>
-          <a href="#" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.HELLO')}</span></a>
+          <HashLink to="/#references" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.REFERENCES')}</span></HashLink>
+        </li>
+        <li>
+          <Link to="contact" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.CONTACT')}</span></Link>
         </li>
       </ul>
     </div>

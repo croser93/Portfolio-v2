@@ -36,7 +36,7 @@ const hero_component = () => {
         />
 
       </div>
-      <section className="hero flex items-center relative z-10">
+      <section id="home" className="hero flex items-center relative z-10">
         <div className="grid px-14 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-10 lg:justify-between">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h4 className="font-DM-Sans max-w-xl mb-4 text-xl font-extrabold tracking-tight leading-none md:text-2xl xl:text-4xl dark:text-white">
