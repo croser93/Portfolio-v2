@@ -86,7 +86,6 @@ const { t } = useTranslation()
                         <li>Maik Groth</li>
                         <li>Lange Reihe 50</li>
                         <li>23628 Krumesse</li>
-                        <li>Phone: 017668032734</li>
                         <li>E-Mail: <a href="mailto:contact@maik-groth.com">contact@maik-groth.com</a></li>
                     </ul>
 
