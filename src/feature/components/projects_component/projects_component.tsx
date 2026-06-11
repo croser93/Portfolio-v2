@@ -59,40 +59,41 @@ const projects_component = () => {
 
     return (
         <section id="projects" className="projects border-t-4 border-white/20 px-24 py-16">
-            <h2 className="text-4xl py-6 font-Unbounded font-medium light:text-black dark:text-white">
-                {t('PORTFOLIO.TITLE')}
-            </h2>
+            <div className='mx-auto content-beg '> 
+                <h2 className="text-4xl py-6 font-Unbounded font-medium light:text-black dark:text-white">
+                    {t('PORTFOLIO.TITLE')}
+                </h2>
 
-            <div className="relative">
-                <div ref={emblaRef} className="overflow-hidden">
-                    <div className="flex">
-                        {Projects.map((item, index) => (
-                            <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-300 ${index === selectedIndex ? 'opacity-100' : 'opacity-25 pointer-events-none '}`}>
-                                <Card item={item} t={t} onClick={() => setDialogOpen(true)} />
-                            </div>
-                        ))}
+                <div className="relative">
+                    <div ref={emblaRef} className="overflow-hidden">
+                        <div className="flex">
+                            {Projects.map((item, index) => (
+                                <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-300 ${index === selectedIndex ? 'opacity-100' : 'opacity-25 pointer-events-none '}`}>
+                                    <Card item={item} t={t} onClick={() => setDialogOpen(true)} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
+                    <button onClick={() => emblaApi?.scrollPrev()}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition"> ◀
+                    </button>
+                    <button onClick={() => emblaApi?.scrollNext()}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition"> ▶
+                    </button>
                 </div>
-                <button onClick={() => emblaApi?.scrollPrev()}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition"> ◀
-                </button>
-                <button onClick={() => emblaApi?.scrollNext()}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition"> ▶
-                </button>
+
+                <div className="flex justify-center gap-2 mt-4">
+                    {Projects.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => emblaApi?.scrollTo(i)}
+                            className={`h-1 rounded-full transition-all duration-300 ${i === selectedIndex ? 'w-8 dark:bg-white light:bg-black' : 'w-2 dark:bg-white/30 light:bg-black/30 '}`}
+                        />
+                    ))}
+                </div>
+
+                {dialogOpen && (<ProjectsDialog onClose={() => setDialogOpen(false)} project={Projects[selectedIndex]} onPrev={() => emblaApi?.scrollPrev()} onNext={() => emblaApi?.scrollNext()} />)}
             </div>
-
-            <div className="flex justify-center gap-2 mt-4">
-                {Projects.map((_, i) => (
-                    <button
-                        key={i}
-                        onClick={() => emblaApi?.scrollTo(i)}
-                        className={`h-1 rounded-full transition-all duration-300 ${i === selectedIndex ? 'w-8 dark:bg-white light:bg-black' : 'w-2 dark:bg-white/30 light:bg-black/30 '}`}
-                    />
-                ))}
-            </div>
-
-            {dialogOpen && (<ProjectsDialog onClose={() => setDialogOpen(false)} project={Projects[selectedIndex]} onPrev={() => emblaApi?.scrollPrev()} onNext={() => emblaApi?.scrollNext()} />)}
-
         </section>
 
     )

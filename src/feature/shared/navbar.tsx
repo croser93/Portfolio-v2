@@ -31,7 +31,7 @@ const [isDark, setIsDark] = useState(document.documentElement.classList.contains
     
     
 <nav className="p-4 sticky top-0 z-50 border-b border-default backdrop-blur-md bg-black/70 light:bg-white/70">
-  <div className="flex items-center justify-between px-10">
+  <div className="flex items-center justify-between px-10 mx-auto content-beg">
     <a href="/">
       <img className="block dark:hidden w-10 h-10" src="/public/assets/svg/logo_dark.svg" alt="" />
       <img className="hidden dark:block w-10 h-10" src="/public/assets/svg/logo_light.svg" alt="" />

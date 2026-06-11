@@ -5,7 +5,7 @@ const privacy_policy = () => {
 const { t } = useTranslation()
     return (
         <section className="contentContainer font-DM-Sans dark:text-white/70 light:text-black/70">
-            <div className="content">
+            <div className="content mx-auto content-beg">
                 <div className="privacy_header">
                 <h2 className="font-Unbounded text-4xl dark:text-white/70 light:text-black/70">{t( "PRIVACY.HEADLINE")}</h2>
                 </div>
