@@ -6,11 +6,21 @@ import AboutMeComponent from './feature/components/about_me_component/about_me_c
 import SkillsComponent from './feature/components/skills_component/skills_component.js'
 import ProjectsComponent from './feature/components/projects_component/projects_component.js'
 import CommentsComponent from './feature/components/comments_component/comments_component.js'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import { Routes, Route, Navigate } from 'react-router-dom'
 import LegalNotice from './feature/pages/legal_notice.js'
 import PrivacyPolicy from './feature/pages/privacy_policy.js'
 import ContactComponent from './feature/pages/contact_component.js'
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
 
 function PortfolioPage() {
   return(
@@ -28,6 +38,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<PortfolioPage />} />
           <Route path="/legal-notice" element={<LegalNotice />} />

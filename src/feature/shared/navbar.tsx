@@ -21,7 +21,14 @@ const [isDark, setIsDark] = useState(document.documentElement.classList.contains
         }
         setIsDark(!isDark)
     }
+    const scrollWithOffset = (el: HTMLElement) => {
+      const navbarHeight = 90
+      const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight
+      window.scrollTo({ top })
+  }
   return (
+
+    
     
 <nav className="p-4 sticky top-0 z-50 border-b border-default backdrop-blur-md bg-black/70 light:bg-white/70">
   <div className="flex items-center justify-between px-10">
@@ -33,20 +40,20 @@ const [isDark, setIsDark] = useState(document.documentElement.classList.contains
     <div className="hidden md:block" id="navbar-default">
       <ul className="font-medium flex items-center gap-8">
         <li>
-          <HashLink to="/#home" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.HOME')}</span></HashLink>
+          <HashLink to="/#home" scroll={scrollWithOffset} className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.HOME')}</span></HashLink>
         </li>
         <li>
-          <HashLink to="/#about" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.ABOUT')}</span></HashLink>
+          <HashLink to="/#about" scroll={scrollWithOffset} className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.ABOUT')}</span></HashLink>
         </li>
         <li>
-          <HashLink to="/#skills" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.SKILLS')}</span></HashLink>
+          <HashLink to="/#skills" scroll={scrollWithOffset} className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.SKILLS')}</span></HashLink>
         </li>
         <li>
-          <HashLink to="/#projects" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.PROJECTS')}</span></HashLink>
+          <HashLink to="/#projects" scroll={scrollWithOffset} className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.PROJECTS')}</span></HashLink>
         </li>
-        <li>
-          <HashLink to="/#references" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.REFERENCES')}</span></HashLink>
-        </li>
+        {/* <li>
+          <HashLink to="/#references" scroll={scrollWithOffset} className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.REFERENCES')}</span></HashLink>
+        </li> */}
         <li>
           <Link to="contact" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.CONTACT')}</span></Link>
         </li>
