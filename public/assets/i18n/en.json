@@ -52,7 +52,7 @@
     "NAME": "Your firstname and lastname",
     "EMAIL": "Your email",
     "MESSAGE": "Enter your message",
-    "PRIVACY_POLICY": "privacy policy",
+    "PRIVACY_POLICY": "Privacy Policy",
     "PRIVACY_POLICY_TEXT_1": "I've read the",
     "PRIVACY_POLICY_TEXT_2": "and agree to the processing of my data as outlined.",
     "BUTTON": "Send message",
@@ -65,7 +65,7 @@
     "LOCATION":"Location"
   },
   "LEGALNOTICE": {
-    "LEGALNOTICE": "LegalNotice"
+    "LEGALNOTICE": "Legal-Notice"
   },
   "PRIVACYPOLICY": {
     "TITLE": "Sag Hallo"
