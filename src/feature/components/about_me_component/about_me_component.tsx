@@ -14,15 +14,15 @@ const about_me_component = () => {
 ]
 
 const dotStyles: Record<TimelineItem["status"], string> = {
-    done:     "bg-blue-500/20 border border-blue-500/40 text-blue-400",
-    active:   "bg-green-500/20 border border-green-500/40 text-green-500",
-    upcoming: "bg-white/5 border border-white/10 text-white/25",
+    done:     "bg-blue-500/20 border dark:border-blue-500/40 text-blue-400 dark:bg-blue-500/20 dark:border-blue-500/40 dark:text-blue-400 light:text-blue-800",
+    active:   "bg-green-500/20 border dark:border-green-500/40 text-green-500 dark:bg-green-500/20 dark:border-green-500/40 dark:text-green-500 light:text-green-700",
+    upcoming: "bg-gray-200/50 border dark:border-gray-400/40 text-gray-400 dark:bg-white/5 dark:border-white/10 dark:text-white/25 light:text-grey-800",
 }
 
 const lineStyles: Record<TimelineItem["status"], string> = {
-    done:     "bg-blue-500/25",
-    active:   "bg-green-500/20",
-    upcoming: "bg-white/10",
+    done:     "bg-blue-500/25 dark:bg-blue-500/25 light:bg-blue-800",
+    active:   "bg-green-500/20 dark:bg-green-500/20 light:bg-green-700",
+    upcoming: "bg-gray-300/50 dark:bg-white/10 light:bg-gray-800/50",
 }
 
     return (
@@ -30,7 +30,7 @@ const lineStyles: Record<TimelineItem["status"], string> = {
             <h2 className="text-4xl py-6 font-Unbounded font-medium dark:text-white">{t('ABOUT_ME.TITLE')}</h2>
             <div className="grid py-6 grid-cols-2 gap-14">
                 <div> 
-                    <h3 className="text-xl font-DM-Sans text-white/70">{t('ABOUT_ME.DESCRIPTION')}</h3>
+                    <h3 className="text-xl font-DM-Sans dark:text-white/70 light:text-gray-800">{t('ABOUT_ME.DESCRIPTION')}</h3>
                 </div>
                 <div className="flex flex-col">
                     {timeline.map((item, index) => (
@@ -38,13 +38,13 @@ const lineStyles: Record<TimelineItem["status"], string> = {
                             <div className="flex flex-col items-center">
                                 <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${dotStyles[item.status]}`}>{item.icon}</div>
                                 {index < timeline.length - 1 && (
-                                    <div className={`w-px flex-1 my-1 ${lineStyles[item.status]}`} />
+                                    <div className={`w-1 flex-1 my-1 rounded-4xl  ${lineStyles[item.status]}`} />
                                 )}
                             </div>
                             <div className="pb-8">
-                                <span className="text-s text-blue-400 font-DM-Sans">{item.date}</span>
-                                <h4 className="text-white font-Unbounded font-medium mt-1">{item.title}</h4>
-                                <p className="text-white/70 font-DM-Sans leading-relaxed">{item.description}</p>
+                                <span className="text-s dark:text-blue-400 light:text-blue-800 light:font-medium font-DM-Sans">{item.date}</span>
+                                <h4 className="dark:text-white light:text-black font-Unbounded font-medium mt-1">{item.title}</h4>
+                                <p className="dark:text-white/70 light:text-gray-800 font-DM-Sans leading-relaxed">{item.description}</p>
                             </div>
                         </div>
                     ))}
