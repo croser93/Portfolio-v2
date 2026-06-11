@@ -1,6 +1,6 @@
 import {IconBrandGithub, IconBrandLinkedin, IconMail  } from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
-import './navbar.css'
+import './navbar_footer.css'
 import { useTranslation } from "react-i18next"
 import { HashLink } from 'react-router-hash-link';
 
@@ -10,12 +10,12 @@ const footer = () => {
     const { t } = useTranslation()
     return (
     <section className='footer border-t flex justify-between items-center px-16 py-4 bg-white/10'>
-        <div>
+        <div className='flex flex-col items-center'>
         <HashLink to="/#home">
             <img className="block dark:hidden w-10 h-10" src="/public/assets/svg/logo_dark.svg" alt="" />
             <img className="hidden dark:block w-10 h-10" src="/public/assets/svg/logo_light.svg" alt="" />
         </HashLink>
-
+        <span className='dark:text-white light:text-black font-semibold'>© 2026 Maik Groth</span>
         </div>
         <div>
             <div className='flex gap-5'>
@@ -29,7 +29,7 @@ const footer = () => {
             <div className="flex gap-4"> 
                 <a href="https://github.com/croser93" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub size={42}/></div></a>
                 <a href="https://in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={42}/></div></a>
-                <a href="https://in/maik-groth" target='_blank'><div className='icon-mail light:text-black hover:text-blue-400'><IconMail size={42}/></div></a>
+                <a href="mailto:contact@maik-groth.com" target='_blank'><div className='icon-mail light:text-black hover:text-blue-400'><IconMail size={42}/></div></a>
 
             </div>
         </div>

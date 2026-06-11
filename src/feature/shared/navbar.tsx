@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from "react-i18next"
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import { HashLink } from 'react-router-hash-link';
-import './navbar.css'
+import './navbar_footer.css'
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
