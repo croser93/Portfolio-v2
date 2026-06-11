@@ -1,5 +1,5 @@
-.hero {
-background-color: rgba(0, 0, 0, 0.9);
+.hero{
+    height: calc(100vh - 89px - 4px);
 }
 
 .right{
@@ -12,3 +12,4 @@ background-color: rgba(0, 0, 0, 0.9);
     width: 460px;
     border-radius: 50%;
 }
+

@@ -52,7 +52,10 @@
 .font-Unbounded {
   font-family: 'Unbounded', sans-serif;
 }
-
 button{
   cursor: pointer;
+}
+
+a, a:hover, a:visited, a:focus {
+  text-decoration: none;
 }

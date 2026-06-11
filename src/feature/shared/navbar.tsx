@@ -1,62 +1,86 @@
+import { useState } from 'react'
 import { useTranslation } from "react-i18next"
+import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
+import { HashLink } from 'react-router-hash-link';
+import './navbar.css'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 const { t, i18n } = useTranslation()
+const [isDark, setIsDark] = useState(document.documentElement.classList.contains('dark'))
 
     const toggleTheme = () => {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('color-theme', 'light')
-    } else {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('color-theme', 'dark')
+        if (isDark) {
+            document.documentElement.classList.remove('dark')
+            document.documentElement.classList.add('light')
+            localStorage.setItem('color-theme', 'light')
+        } else {
+            document.documentElement.classList.remove('light')
+            document.documentElement.classList.add('dark')
+            localStorage.setItem('color-theme', 'dark')
+        }
+        setIsDark(!isDark)
     }
-  }
   return (
     
-<nav className="bg-neutral-primary z-20 top-0 start-0 border-b border-default">
-  <div className="flex flex-wrap items-center justify-between mx-auto py-4 px-10">
+<nav className="p-4 sticky top-0 z-50 border-b border-default backdrop-blur-md bg-black/70 light:bg-white/70">
+  <div className="flex items-center justify-between px-10">
     <a href="/">
       <img className="block dark:hidden w-10 h-10" src="/public/assets/svg/logo_dark.svg" alt="" />
       <img className="hidden dark:block w-10 h-10" src="/public/assets/svg/logo_light.svg" alt="" />
     </a>
 
-    <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-default" aria-expanded="false">
-        <span className="sr-only">Open main menu</span>
-        <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
-    </button>
-
-    <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
-          <button onClick={toggleTheme} id="theme-toggle" type="button" className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-            <svg id="theme-toggle-dark-icon" className="block dark:hidden w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" className="hidden dark:block w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fillRule="evenodd" clipRule="evenodd"></path></svg>
-          </button>
+    <div className="hidden md:block" id="navbar-default">
+      <ul className="font-medium flex items-center gap-8">
         <li>
-          <a href="#" className="dark:text-white block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Home</a>
+          <HashLink to="/#home" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.HOME')}</span></HashLink>
         </li>
         <li>
-          <a href="#" className="dark:text-white block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.ABOUT')}</a>
+          <HashLink to="/#about" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.ABOUT')}</span></HashLink>
         </li>
         <li>
-          <a href="#" className="dark:text-white block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.SKILLS')}</a>
+          <HashLink to="/#skills" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.SKILLS')}</span></HashLink>
         </li>
         <li>
-          <a href="#" className="dark:text-white block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.PROJECTS')}</a>
+          <HashLink to="/#projects" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.PROJECTS')}</span></HashLink>
         </li>
         <li>
-          <a href="#" className="dark:text-white block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">{t('HEADER.NAV.HELLO')}</a>
+          <HashLink to="/#references" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.REFERENCES')}</span></HashLink>
         </li>
-
-        <div className="relative flex items-center bg-gray-700 rounded-full p-1 text-xs font-mono cursor-pointer" onClick={() => i18n.changeLanguage(i18n.language === 'de' ? 'en' : 'de')}>
-          <div className={`absolute top-1 bottom-1 w-1/2 bg-blue-500 rounded-full transition-all duration-300 ${i18n.language === 'de' ? 'left-1' : 'left-[calc(50%-2px)]'}`}/>
-            <span className={`relative z-10 px-3 py-1 transition-colors duration-300 ${i18n.language === 'de' ? 'text-white' : 'text-gray-400'}`}>DE</span>
-            <span className={`relative z-10 px-3 py-1 transition-colors duration-300 ${i18n.language === 'en' ? 'text-white' : 'text-gray-400'}`}>EN</span>
-          </div>  
+        <li>
+          <Link to="contact" className="block aUnderline py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.CONTACT')}</span></Link>
+        </li>
       </ul>
     </div>
 
-    
+    <div className="flex items-center gap-4">
+
+        <div className="relative flex items-center dark:bg-gray-900 light:bg-gray-300 rounded-full cursor-pointer overflow-hidden" onClick={toggleTheme}>
+            <div className={`absolute top-0 left-0 w-1/2 h-full bg-gray-500 rounded-full transition-transform duration-300 ease-in-out ${isDark ? 'translate-x-full' : 'translate-x-0'}`} />
+            <span className={`relative z-10 px-1 py-2 transition-opacity duration-300 ${!isDark ? 'opacity-100' : 'opacity-0'}`}>
+                <svg className="w-4 h-2 scale-150 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" clipRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" /></svg>
+            </span>
+            <span className={`relative z-10 px-1 transition-opacity duration-300 ${isDark ? 'opacity-100' : 'opacity-0'}`}>
+                <svg className="w-3 h-2 scale-150 text-blue-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg>
+            </span>
+        </div>
+
+        <div className="relative flex items-center dark:bg-gray-900 light:bg-gray-300 rounded-full cursor-pointer overflow-hidden" onClick={() => i18n.changeLanguage(i18n.language === 'de' ? 'en' : 'de')}>
+            <div className={`absolute top-0 left-0 w-1/2 h-full bg-gray-500 rounded-full transition-transform duration-300 ease-in-out ${i18n.language === 'en' ? 'translate-x-full' : 'translate-x-0'}`} />
+            <span className={`relative z-10 px-1 transition-opacity duration-300 ${i18n.language === 'de' ? 'opacity-100' : 'opacity-0'}`}>
+                <img className="flag" src="public/assets/svg/german_flag.svg" alt="DE" />
+            </span>
+            <span className={`relative z-10 px-1 transition-opacity duration-300 ${i18n.language === 'en' ? 'opacity-100' : 'opacity-0'}`}>
+                <img className="flag" src="public/assets/svg/kingdom_flag.svg" alt="EN" />
+            </span>
+        </div>
+
+          <div className="flex gap-2"> 
+            <a href="https://github.com/croser93" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub size={32}/></div></a>
+            <a href="https://in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={32}/></div></a>
+          </div>
+
+    </div>
 
   </div>
 </nav>

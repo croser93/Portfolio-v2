@@ -1,18 +1,21 @@
 {
   "HEADER": {
     "NAV": {
+      "HOME":"Home",
       "ABOUT": "About me",
-      "SKILLS": "My Skills",
-      "PROJECTS": "My Projects",
-      "HELLO":"Contact"
+      "SKILLS": "Skills",
+      "PROJECTS": "Projects",
+      "REFERENCES": "References",
+      "CONTACT":"Contact"
     }
   }, 
   "HERO"
   : {
-    "TITLE": "Frontend",
+    "INTRODUCTION": "Hey, I'm Maik and a",
+    "TITLE": "Front-End",
     "TITLE1": "Developer",
-    "SCROLL": "Scroll",
-    "DOWN": "Down"
+    "DESCRIPTION": "I care about the details, the kind that make the difference between good and great.",
+    "BUTTON": "Contact"
   },
 
   "ABOUT_ME": {
@@ -23,7 +26,7 @@
     "BUTTON": "Let's Talk"
   },
   "SKILLS": {
-    "TITLE": "MY SKILLS",
+    "TITLE": "My Skills",
     "DESCRIPTION-1": "Don't see the skill your need? ",
     "DESCRIPTION-2": "I'm always ready to learn!",
     "CONTACT": "Contact me",
@@ -57,7 +60,9 @@
     "ERR_EMAIL": "please enter a email",
     "ERR_MESSAGE": "please enter a message",
     "ERR_PRIVACY_POLICY": "You need to accept the privacy policy before submitting.",
-    "SUCCESS": "Message sent successfully!"
+    "SUCCESS": "Message sent successfully!",
+    "CONTACT_INFORMATION":"Contact Information",
+    "LOCATION":"Location"
   },
   "LEGALNOTICE": {
     "LEGALNOTICE": "LegalNotice"
