@@ -67,7 +67,7 @@ const contact_component = () => {
             )}
 
             <h2 className="text-4xl font-Unbounded font-medium dark:text-white/70 light:text-black">{t('CONTACT.TITLE')}</h2>
-            <div className='flex place-content-around p-16 gap-16'>
+            <div className='flex place-content-around p-8 gap-16'>
 
             <div>
                 <div className="flex flex-col items-center gap-2 py-6">

@@ -16,21 +16,21 @@ const Projects: CommentsItem[] = [
 ]
 
 const Card = ({ item, t }: { item: CommentsItem; t: (key: string) => string }) => (
-    <div className="w-full rounded-lg border border-white/10 bg-white/5 overflow-hidden shadow-lg">
-        <div className="quote"><IconQuote size={108}/></div>
+    <div className="w-full rounded-lg border border-white/20 bg-white/10 overflow-hidden shadow-lg">
+        <div className="quote"><div className='light:text-gray-200/50'><IconQuote size={108}/></div></div>
         <div className="pt-12 px-12 pb-6">
             <div className="dark:text-white font-semibold font-DM-Sans text-xl mb-2">{item.name}</div>
-            <p className="text-gray-400 font-DM-Sans text-sm">{t(item.comment)}</p>
+            <p className="dark:text-gray-400 light:text-gray-800 font-semibold DM-Sans text-sm">{t(item.comment)}</p>
         </div>
         <div className="flex justify-center pb-6">
-            <a href={item.github} target='_blank' ><GithubIcon size={40}/></a>
+            <a href={item.github} target='_blank'><GithubIcon size={40}/></a>
         </div>
     </div>
 )
 
 const projects_component = () => {
     const { t } = useTranslation()
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' })
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: 'center', containScroll: false })
     const [selectedIndex, setSelectedIndex] = useState(0)
 
 
@@ -43,7 +43,10 @@ const projects_component = () => {
 
     useEffect(() => {
         if (!emblaApi) return
-        const interval = setInterval(() => emblaApi.scrollNext(), 7000)
+        const interval = setInterval(() => {
+            const next = (emblaApi.selectedScrollSnap() + 1) % Projects.length
+            emblaApi.scrollTo(next)
+        }, 7000)
         return () => clearInterval(interval)
     }, [emblaApi])
 
@@ -70,13 +73,13 @@ const projects_component = () => {
                     <button
                         key={i}
                         onClick={() => emblaApi?.scrollTo(i)}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${i === selectedIndex ? ' w-2 bg-white ring-2 ring-blue-500/70' : 'w-2 bg-white/30'}`}
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${i === selectedIndex ? ' w-2 dark:bg-white light:bg-black ring-2 dark:ring-blue-500/70 light:ring-white/70' : 'w-2 bg-white/50'}`}
                     />
                 ))}
             </div>
 
             <div className='flex justify-center'>
-                <div className="w-100 h-1 bg-white/10 mt-6 overflow-hidden">
+                <div className="w-100 h-1 dark:bg-white/10 light:bg-white/50 mt-6 overflow-hidden">
                     <div
                         key={selectedIndex}
                         className="h-full bg-blue-500/70 animate-progress"
