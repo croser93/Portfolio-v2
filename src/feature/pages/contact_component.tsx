@@ -52,8 +52,8 @@ const contact_component = () => {
     }
 
     return (
-        <section id="contact" className="border-white/10 ">
-            <div className="mx-auto content-beg contact px-24 py-16">
+        <section id="contact" className="border-white/10">
+            <div className="mx-auto content-beg contact padding-resp px-24 py-16">
 
                 {mailSent && (
                     <div className="success-overlay">
@@ -68,7 +68,7 @@ const contact_component = () => {
                 )}
 
                 <h2 className="text-4xl font-Unbounded font-medium dark:text-white/70 light:text-black">{t('CONTACT.TITLE')}</h2>
-                <div className='flex place-content-around p-8 gap-16'>
+                <div className='flex place-content-around flex-col-resp  padding0-resp p-8 gap-16'>
 
                 <div>
                     <div className="flex flex-col items-center gap-2 py-6">
