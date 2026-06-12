@@ -12,6 +12,12 @@
     height: 300px;
 }
 
+@media (max-width: 59.375rem) {
+    .img_size {
+        height: auto;
+    }
+}
+
 .dialogbackdropt{
 width: 100vw;
 height: 100vh;
@@ -26,11 +32,22 @@ z-index: 10;
     width: 80%;
     height: 80%;
     background-color: rgba(86, 86, 95, 0.651);
+    overflow-y: auto;
 }
 
 .dialogimg{
     width: 50%;
     border-radius: 16px;
+}
+
+@media (max-width: 59.375rem) {
+    .dialogCard {
+        width: 95%;
+        height: 90%;
+    }
+    .dialogimg {
+        width: 90%;
+    }
 }
 
 .closebtn{

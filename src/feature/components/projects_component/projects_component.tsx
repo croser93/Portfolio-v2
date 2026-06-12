@@ -16,16 +16,16 @@ const Projects: ProjectItem[] = [
 
 const Card = ({ item, t, onClick }: { item: ProjectItem; t: (key: string)=> string ; onClick: () => void }) => (
     <div className="singleCard w-full rounded-lg border border-white/10 light:bg-black/80 dark:bg-white/5 overflow-hidden shadow-lg cursor-pointer" onClick={onClick}>
-        <img className="w-full img_size object-top object-cover" src={item.img} alt={item.name} />
+        <img className="w-full img_size object-cover navbar:object-top" src={item.img} alt={item.name} />
         <div className="px-6 py-4">
             <div className="text-white font-medium font-DM-Sans text-xl mb-2">{item.name}</div>
             <p className="text-gray-400 font-DM-Sans text-sm">{t(item.description)}</p>
         </div>
-        <div className="px-6 pt-2 pb-4 flex justify-end gap-3">
+        <div className="px-6 pt-2 pb-4 flex justify-center navbar:justify-end gap-3 flex-wrap">
             {item.language.map((lang, i) => {
                 const Icon = skillIconMap[lang]
                 return Icon
-                    ? <div key={i} className={lang === 'HTML' ? 'text-orange-500' : ''}><Icon size={40} /></div>
+                    ? <div key={i} className={lang === 'HTML' ? 'text-orange-500' : ''}><Icon className="w-6 h-6 navbar:w-9 navbar:h-9" /></div>
                     : <div key={i} className="text-white/50 text-sm">#{lang}</div>
             })}
         </div>
@@ -58,9 +58,9 @@ const projects_component = () => {
     }, [dialogOpen])
 
     return (
-        <section id="projects" className="projects border-t-4 border-white/20 px-24 py-16">
-            <div className='mx-auto content-beg '> 
-                <h2 className="text-4xl py-6 font-Unbounded font-medium light:text-black dark:text-white">
+        <section id="projects" className="projects border-t-4 border-white/20 px-4 navbar:px-24 py-10 navbar:py-16">
+            <div className='mx-auto content-beg'>
+                <h2 className="text-3xl navbar:text-4xl py-6 font-Unbounded font-medium light:text-black dark:text-white text-center navbar:text-left">
                     {t('PORTFOLIO.TITLE')}
                 </h2>
 
@@ -68,17 +68,17 @@ const projects_component = () => {
                     <div ref={emblaRef} className="overflow-hidden">
                         <div className="flex">
                             {Projects.map((item, index) => (
-                                <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-300 ${index === selectedIndex ? 'opacity-100' : 'opacity-25 pointer-events-none '}`}>
+                                <div key={index} className={`flex-[0_0_100%] navbar:flex-[0_0_50%] min-w-0 py-6 navbar:px-4 transition-opacity duration-300 ${index === selectedIndex ? 'opacity-100' : 'opacity-25 pointer-events-none'}`}>
                                     <Card item={item} t={t} onClick={() => setDialogOpen(true)} />
                                 </div>
                             ))}
                         </div>
                     </div>
                     <button onClick={() => emblaApi?.scrollPrev()}
-                        className="absolute left-0 bottom mt-4 -translate-y-1/2 dark:text-white light:text-black dark:bg-white/10 light:bg-black/10 hover:bg-white/20 rounded-full p-3 transition"> ◀
+                        className="hidden navbar:flex absolute left-0 bottom mt-4 -translate-y-1/2 dark:text-white light:text-black dark:bg-white/10 light:bg-black/10 hover:bg-white/20 rounded-full p-3 transition"> ◀
                     </button>
                     <button onClick={() => emblaApi?.scrollNext()}
-                        className="absolute right-0 bottom mt-4 -translate-y-1/2 dark:text-white light:text-black dark:bg-white/10 light:bg-black/10 hover:bg-white/20 rounded-full p-3 transition"> ▶
+                        className="hidden navbar:flex absolute right-0 bottom mt-4 -translate-y-1/2 dark:text-white light:text-black dark:bg-white/10 light:bg-black/10 hover:bg-white/20 rounded-full p-3 transition"> ▶
                     </button>
                 </div>
 
