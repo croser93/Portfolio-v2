@@ -75,10 +75,10 @@ const projects_component = () => {
                         </div>
                     </div>
                     <button onClick={() => emblaApi?.scrollPrev()}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition"> ◀
+                        className="absolute left-0 bottom mt-4 -translate-y-1/2 dark:text-white light:text-black dark:bg-white/10 light:bg-black/10 hover:bg-white/20 rounded-full p-3 transition"> ◀
                     </button>
                     <button onClick={() => emblaApi?.scrollNext()}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition"> ▶
+                        className="absolute right-0 bottom mt-4 -translate-y-1/2 dark:text-white light:text-black dark:bg-white/10 light:bg-black/10 hover:bg-white/20 rounded-full p-3 transition"> ▶
                     </button>
                 </div>
 
