@@ -52,108 +52,110 @@ const contact_component = () => {
     }
 
     return (
-        <section id="contact" className="border-t contact border-white/10 px-24 py-16">
+        <section id="contact" className="border-white/10">
+            <div className="mx-auto content-beg contact padding-resp px-24 py-16">
 
-            {mailSent && (
-                <div className="success-overlay">
-                    <div className="success-box">
-                        <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                            <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-                            <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                        </svg>
-                        <span className="dark:text-white light:text-black/80 font-Unbounded text-2xl">{t('CONTACT.SUCCESS')}</span>
+                {mailSent && (
+                    <div className="success-overlay">
+                        <div className="success-box">
+                            <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                            </svg>
+                            <span className="dark:text-white light:text-black/80 font-Unbounded text-2xl">{t('CONTACT.SUCCESS')}</span>
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
 
-            <h2 className="text-4xl font-Unbounded font-medium dark:text-white/70 light:text-black">{t('CONTACT.TITLE')}</h2>
-            <div className='flex place-content-around p-8 gap-16'>
+                <h2 className="text-4xl font-Unbounded font-medium dark:text-white/70 light:text-black">{t('CONTACT.TITLE')}</h2>
+                <div className='flex place-content-around flex-col-resp  padding0-resp p-8 gap-16'>
 
-            <div>
-                <div className="flex flex-col items-center gap-2 py-6">
-                    <h4 className="text-xl font-medium dark:text-white/70 light:text-black/70 font-DM-Sans">{t('CONTACT.DESCRIPTION')}</h4>
-                    <span className="dark:text-white/70 light:text-black/70 font-DM-Sans">{t('CONTACT.DESCRIPTION_TEXT')}</span>
-                </div>
-
-                <form onSubmit={handleSubmit} autoComplete="off" className="flex mx-auto flex-col items-center gap-1 max-w-2xl">
-
-                    <input
-                        className="contact-input " type="text" name="name" value={contactData.name}
-                        onChange={handleChange} onBlur={() => handleBlur('name')}
-                        placeholder={t('CONTACT.NAME')} minLength={1} maxLength={40}
-                        pattern="[a-zA-Z\s\-äöüÄÖÜß]*"
-                    />
-                    <div className="h-4 mb-2">
-                        {!isValid.name && touched.name && <span className="text-red-400 text-sm">{t('CONTACT.ERR_NAME')}</span>}
-                    </div>
-
-                    <input
-                        className="contact-input" type="email" name="email" value={contactData.email}
-                        onChange={handleChange} onBlur={() => handleBlur('email')}
-                        placeholder={t('CONTACT.EMAIL')} minLength={5} maxLength={40}
-                    />
-                    <div className="h-4 mb-2">
-                        {!isValid.email && touched.email && <span className="text-red-400 text-sm">{t('CONTACT.ERR_EMAIL')}</span>}
-                    </div>
-
-                    <textarea
-                        className="contact-input" name="message" value={contactData.message}
-                        onChange={handleChange} onBlur={() => handleBlur('message')}
-                        placeholder={t('CONTACT.MESSAGE')} minLength={5} maxLength={500}
-                    />
-                    <div className="h-4 mb-2">
-                        {!isValid.message && touched.message && <span className="text-red-400 text-sm">{t('CONTACT.ERR_MESSAGE')}</span>}
-                    </div>
-
-                    <div className="flex items-start gap-3 py-2">
-                        <input
-                            type="checkbox" id="privacy" name="checkBox"
-                            checked={contactData.checkBox}
-                            onChange={handleChange} onBlur={() => handleBlur('checkBox')}
-                            className="mt-1 w-4 h-4 cursor-pointer accent-blue-500"
-                        />
-                        <label htmlFor="privacy" className="dark:text-white/70 light:text-black/70 text-sm font-DM-Sans cursor-pointer">
-                            {t('CONTACT.PRIVACY_POLICY_TEXT_1')} <a href="/privacy-policy" className="text-blue-400 hover:underline">{t('CONTACT.PRIVACY_POLICY')}</a> {t('CONTACT.PRIVACY_POLICY_TEXT_2')}
-                        </label>
-                    </div>
-                    <div className="h-4 mb-4">
-                        {!isValid.checkBox && touched.checkBox && <span className="text-red-400 text-sm">{t('CONTACT.ERR_PRIVACY_POLICY')}</span>}
-                    </div>
-
-                    <div className="flex justify-center mt-4">
-                        <button
-                            type="submit"
-                            disabled={isSending || !isValid.name || !isValid.email || !isValid.message}
-                            className="contact-btn dark:text-white/70 light:text-black/70"
-                        >
-                            {isSending ? '...' : t('CONTACT.BUTTON')}
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <div className='w-px self-stretch dark:bg-white/10 light:bg-black'></div>
-            <div className='flex flex-col'>
-                <h3 className='text-xl py-6 font-Unbounded font-medium dark:text-white/70 light:text-black'>{t('CONTACT.CONTACT_INFORMATION')}</h3>
                 <div>
-                    <div className='flex items-center'>
-                        <div className='dark:bg-blue-500/40 light:bg-black/10 dark:text-blue-400 light:text-black rounded-xl p-2'><IconMail size={32}/> </div>
-                        <div className="flex flex-col justify-center p-2">
-                            <span className="font-medium dark:text-white/70 light:text-black">Email</span>
-                            <a className='dark:text-white/70 light:text-black/70 ' href="mailto:contact@maik-groth.com">contact@maik-groth.com</a>
-                        </div>
+                    <div className="flex flex-col items-center gap-2 py-6">
+                        <h4 className="text-xl font-medium dark:text-white/70 light:text-black/70 font-DM-Sans">{t('CONTACT.DESCRIPTION')}</h4>
+                        <span className="dark:text-white/70 light:text-black/70 font-DM-Sans">{t('CONTACT.DESCRIPTION_TEXT')}</span>
                     </div>
-                    <div className='flex items-center'>
-                        <div className='dark:bg-blue-500/40 light:bg-black/10 dark:text-blue-400 light:text-black rounded-xl p-2'><IconMapPin size={32}/> </div>
-                        <div className="flex flex-col justify-center p-2">
-                            <span className="font-medium dark:text-white/70 light:text-black">{t('CONTACT.LOCATION')}</span>
-                            <span className='dark:text-white/70 light:text-black/70 ' >Krummesse near Lübeck, Deutschland</span>
+
+                    <form onSubmit={handleSubmit} autoComplete="off" className="flex mx-auto flex-col items-center gap-1 max-w-2xl">
+
+                        <input
+                            className="contact-input " type="text" name="name" value={contactData.name}
+                            onChange={handleChange} onBlur={() => handleBlur('name')}
+                            placeholder={t('CONTACT.NAME')} minLength={1} maxLength={40}
+                            pattern="[a-zA-Z\s\-äöüÄÖÜß]*"
+                        />
+                        <div className="h-4 mb-2">
+                            {!isValid.name && touched.name && <span className="text-red-400 text-sm">{t('CONTACT.ERR_NAME')}</span>}
+                        </div>
+
+                        <input
+                            className="contact-input" type="email" name="email" value={contactData.email}
+                            onChange={handleChange} onBlur={() => handleBlur('email')}
+                            placeholder={t('CONTACT.EMAIL')} minLength={5} maxLength={40}
+                        />
+                        <div className="h-4 mb-2">
+                            {!isValid.email && touched.email && <span className="text-red-400 text-sm">{t('CONTACT.ERR_EMAIL')}</span>}
+                        </div>
+
+                        <textarea
+                            className="contact-input" name="message" value={contactData.message}
+                            onChange={handleChange} onBlur={() => handleBlur('message')}
+                            placeholder={t('CONTACT.MESSAGE')} minLength={5} maxLength={500}
+                        />
+                        <div className="h-4 mb-2">
+                            {!isValid.message && touched.message && <span className="text-red-400 text-sm">{t('CONTACT.ERR_MESSAGE')}</span>}
+                        </div>
+
+                        <div className="flex items-start gap-3 py-2">
+                            <input
+                                type="checkbox" id="privacy" name="checkBox"
+                                checked={contactData.checkBox}
+                                onChange={handleChange} onBlur={() => handleBlur('checkBox')}
+                                className="mt-1 w-4 h-4 cursor-pointer accent-blue-500"
+                            />
+                            <label htmlFor="privacy" className="dark:text-white/70 light:text-black/70 text-sm font-DM-Sans cursor-pointer">
+                                {t('CONTACT.PRIVACY_POLICY_TEXT_1')} <a href="/privacy-policy" className="text-blue-400 hover:underline">{t('CONTACT.PRIVACY_POLICY')}</a> {t('CONTACT.PRIVACY_POLICY_TEXT_2')}
+                            </label>
+                        </div>
+                        <div className="h-4 mb-4">
+                            {!isValid.checkBox && touched.checkBox && <span className="text-red-400 text-sm">{t('CONTACT.ERR_PRIVACY_POLICY')}</span>}
+                        </div>
+
+                        <div className="flex justify-center mt-4">
+                            <button
+                                type="submit"
+                                disabled={isSending || !isValid.name || !isValid.email || !isValid.message}
+                                className="contact-btn dark:text-white/70 light:text-black/70"
+                            >
+                                {isSending ? '...' : t('CONTACT.BUTTON')}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div className='w-px self-stretch dark:bg-white/10 light:bg-black'></div>
+                <div className='flex flex-col'>
+                    <h3 className='text-xl py-6 font-Unbounded font-medium dark:text-white/70 light:text-black'>{t('CONTACT.CONTACT_INFORMATION')}</h3>
+                    <div>
+                        <div className='flex items-center'>
+                            <div className='dark:bg-blue-500/40 light:bg-black/10 dark:text-blue-400 light:text-black rounded-xl p-2'><IconMail size={32}/> </div>
+                            <div className="flex flex-col justify-center p-2">
+                                <span className="font-medium dark:text-white/70 light:text-black">Email</span>
+                                <a className='dark:text-white/70 light:text-black/70 ' href="mailto:contact@maik-groth.com">contact@maik-groth.com</a>
+                            </div>
+                        </div>
+                        <div className='flex items-center'>
+                            <div className='dark:bg-blue-500/40 light:bg-black/10 dark:text-blue-400 light:text-black rounded-xl p-2'><IconMapPin size={32}/> </div>
+                            <div className="flex flex-col justify-center p-2">
+                                <span className="font-medium dark:text-white/70 light:text-black">{t('CONTACT.LOCATION')}</span>
+                                <span className='dark:text-white/70 light:text-black/70 ' >Krummesse near Lübeck, Deutschland</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
+                </div>
             </div>
         </section>
     )

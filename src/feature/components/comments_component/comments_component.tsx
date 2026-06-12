@@ -52,38 +52,40 @@ const projects_component = () => {
 
     return (
         <section id="references" className="commentsCard border-t-4 border-white/20 px-24 py-16">
-            <h2 className="text-4xl py-6 font-Unbounded font-medium dark:text-white">
-                {t('REFERENCES.TITLE')}
-            </h2>
+            <div className='mx-auto content-beg '>
+                <h2 className="text-4xl py-6 font-Unbounded font-medium dark:text-white">
+                    {t('REFERENCES.TITLE')}
+                </h2>
 
-            <div className="relative flex justify-center">
-                <div ref={emblaRef} className="overflow-hidden commentsContainer">
-                    <div className="flex">
-                        {Projects.map((item, index) => (
-                            <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-360 ${index === selectedIndex ? 'opacity-100' : 'opacity-25'}`}>
-                                <Card item={item} t={t} />
-                            </div>
-                        ))}
+                <div className="relative flex justify-center">
+                    <div ref={emblaRef} className="overflow-hidden commentsContainer">
+                        <div className="flex">
+                            {Projects.map((item, index) => (
+                                <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-360 ${index === selectedIndex ? 'opacity-100' : 'opacity-25'}`}>
+                                    <Card item={item} t={t} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="flex justify-center gap-2 mt-4">
-                {Projects.map((_, i) => (
-                    <button
-                        key={i}
-                        onClick={() => emblaApi?.scrollTo(i)}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${i === selectedIndex ? ' w-2 dark:bg-white light:bg-black ring-2 dark:ring-blue-500/70 light:ring-white/70' : 'w-2 bg-white/50'}`}
-                    />
-                ))}
-            </div>
+                <div className="flex justify-center gap-2 mt-4">
+                    {Projects.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => emblaApi?.scrollTo(i)}
+                            className={`w-3 h-3 rounded-full transition-all duration-300 ${i === selectedIndex ? ' w-2 dark:bg-white light:bg-black ring-2 dark:ring-blue-500/70 light:ring-white/70' : 'w-2 bg-white/50'}`}
+                        />
+                    ))}
+                </div>
 
-            <div className='flex justify-center'>
-                <div className="w-100 h-1 dark:bg-white/10 light:bg-white/50 mt-6 overflow-hidden">
-                    <div
-                        key={selectedIndex}
-                        className="h-full bg-blue-500/70 animate-progress"
-                    />
+                <div className='flex justify-center'>
+                    <div className="w-100 h-1 dark:bg-white/10 light:bg-white/50 mt-6 overflow-hidden">
+                        <div
+                            key={selectedIndex}
+                            className="h-full bg-blue-500/70 animate-progress"
+                        />
+                    </div>
                 </div>
             </div>
         </section>

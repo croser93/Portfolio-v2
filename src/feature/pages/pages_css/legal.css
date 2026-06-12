@@ -19,13 +19,6 @@ ul{
         max-width: 1680px;
 }
 
-/* a{
-    color: var(--highlight2-color); 
-    font-size: 1rem;
-    font-weight: 500; 
-    color:white
-} */
-
 a:hover{
     text-decoration: underline;
 }
@@ -40,9 +33,18 @@ h4{
 font-size: 1.25rem;
 }
 
+
 @media (max-width: 1250px) {
-    section{
-    padding:120px 24px;
+    .contentContainer{
+    padding:120px 48px;
+    }
 }
 
+@media (max-width: 650px) {
+    .contentContainer{
+    padding:120px 16px;
+    }
+    h2{
+        font-size: 32px;
+    }
 }

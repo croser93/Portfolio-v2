@@ -2,6 +2,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant light (&:where(.light, .light *));
 
+@theme {
+  --breakpoint-navbar: 59.375rem;
+}
+
 @layer base {
   a, a:hover, a:visited, a:focus {
     text-decoration: none !important;
@@ -25,11 +29,16 @@ body {
 
 .light {
   color-scheme: light;
-  background: radial-gradient(105% 125% at 50% 20%, #ebe8e8 40%, #2da1cf 100%);
+  background: radial-gradient(105% 125% at 50% 50%, #ebe8e8 40%, #2da1cf 100%);
 }
 
 main {
   display: flex;
   flex-direction: column;
 }
+
+.content-beg{
+  max-width: 1920px;
+  width: 100%;
+} 
 

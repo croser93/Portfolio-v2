@@ -37,7 +37,7 @@ const hero_component = () => {
 
       </div>
       <section id="home" className="hero flex items-center relative z-10">
-        <div className="grid px-14 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-10 lg:justify-between">
+        <div className="grid px-14 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-10 lg:justify-between mx-auto content-beg">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h4 className="font-DM-Sans max-w-xl mb-4 text-xl font-extrabold tracking-tight leading-none md:text-2xl xl:text-4xl dark:text-white">
               {t('HERO.INTRODUCTION')}
@@ -58,7 +58,11 @@ const hero_component = () => {
             </div>
           </div>
           <div className="right flex items-center justify-center">
-            <img className="hero-avatar" src="../../../../public/assets/img/profile_img/Profile-Avatar.png" alt="" />
+            <div className="avatar-wrapper">
+              <div className="arc arc-1" />
+              <div className="arc arc-2" />
+              <img className="hero-avatar" src="/public/assets/img/profile_img/Profilimg.png" alt="" />
+            </div>
           </div>
         </div>
       </section>

@@ -8,7 +8,7 @@ const { t } = useTranslation()
 
 return (
     <section className="contentContainer font-DM-Sans dark:text-white/70 light:text-black/70">
-        <div className="content front-medium">
+        <div className="content front-medium mx-auto content-beg ">
             <h2 className="font-Unbounded text-4xl dark:text-white/70 light:text-black/70">{t('IMPRINT.TITLE')}</h2>
             <div>
                 <h4>{t('IMPRINT.IMPRINT')}</h4>
