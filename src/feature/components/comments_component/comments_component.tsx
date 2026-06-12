@@ -18,7 +18,7 @@ const Projects: CommentsItem[] = [
 const Card = ({ item, t }: { item: CommentsItem; t: (key: string) => string }) => (
     <div className="w-full rounded-lg border border-white/20 bg-white/10 overflow-hidden shadow-lg">
         <div className="quote"><div className='light:text-gray-200/50'><IconQuote size={108}/></div></div>
-        <div className="pt-12 px-12 pb-6">
+        <div className="pt-12 px-6 navbar:px-12 pb-6">
             <div className="dark:text-white font-semibold font-DM-Sans text-xl mb-2">{item.name}</div>
             <p className="dark:text-gray-400 light:text-gray-800 font-semibold DM-Sans text-sm">{t(item.comment)}</p>
         </div>
@@ -51,9 +51,9 @@ const projects_component = () => {
     }, [emblaApi])
 
     return (
-        <section id="references" className="commentsCard border-t-4 border-white/20 px-24 py-16">
-            <div className='mx-auto content-beg '>
-                <h2 className="text-4xl py-6 font-Unbounded font-medium dark:text-white">
+        <section id="references" className="commentsCard border-t-4 border-white/20 px-4 navbar:px-24 py-10 navbar:py-16 overflow-x-hidden">
+            <div className='mx-auto content-beg'>
+                <h2 className="text-3xl navbar:text-4xl py-6 font-Unbounded font-medium dark:text-white text-center navbar:text-left">
                     {t('REFERENCES.TITLE')}
                 </h2>
 
@@ -61,7 +61,7 @@ const projects_component = () => {
                     <div ref={emblaRef} className="overflow-hidden commentsContainer">
                         <div className="flex">
                             {Projects.map((item, index) => (
-                                <div key={index} className={`flex-[0_0_50%] min-w-0 py-6 px-4 transition-opacity duration-360 ${index === selectedIndex ? 'opacity-100' : 'opacity-25'}`}>
+                                <div key={index} className={`flex-[0_0_100%] navbar:flex-[0_0_50%] min-w-0 py-6 navbar:px-4 transition-opacity duration-360 ${index === selectedIndex ? 'opacity-100' : 'opacity-25'}`}>
                                     <Card item={item} t={t} />
                                 </div>
                             ))}

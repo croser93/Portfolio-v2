@@ -15,11 +15,13 @@
 html {
   scroll-behavior: smooth;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .dark {
