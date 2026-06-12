@@ -26,10 +26,10 @@ const lineStyles: Record<TimelineItem["status"], string> = {
 }
 
     return (
-        <section id="about" className="about-me border-t-4 border-white/20 px-24 py-18">
-            <div className='mx-auto content-beg '>
-                <h2 className="text-4xl py-6 font-Unbounded font-medium dark:text-white">{t('ABOUT_ME.TITLE')}</h2>
-                <div className="grid py-6 grid-cols-2 gap-14">
+        <section id="about" className="about-me border-t-4 border-white/20 px-4 navbar:px-24 py-10 navbar:py-18">
+            <div className='mx-auto content-beg'>
+                <h2 className="text-3xl navbar:text-4xl py-6 font-Unbounded font-medium dark:text-white">{t('ABOUT_ME.TITLE')}</h2>
+                <div className="grid py-6 grid-cols-1 gap-8 navbar:grid-cols-2 navbar:gap-14">
                     <div> 
                         <h3 className="text-xl font-DM-Sans dark:text-white/70 light:text-gray-800">{t('ABOUT_ME.DESCRIPTION')}</h3>
                     </div>
@@ -37,9 +37,9 @@ const lineStyles: Record<TimelineItem["status"], string> = {
                         {timeline.map((item, index) => (
                             <div key={index} className="flex gap-4">
                                 <div className="flex flex-col items-center">
-                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${dotStyles[item.status]}`}>{item.icon}</div>
+                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${dotStyles[item.status]} ${index === 0 ? 'pulse-line' : ''}`}>{item.icon}</div>
                                     {index < timeline.length - 1 && (
-                                        <div className={`w-1 flex-1 my-1 rounded-4xl  ${lineStyles[item.status]}`} />
+                                        <div className={`w-1 flex-1 my-1 rounded-4xl ${lineStyles[item.status]} ${index === 0 ? 'pulse-line' : ''}`} />
                                     )}
                                 </div>
                                 <div className="pb-8">

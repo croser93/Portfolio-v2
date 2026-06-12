@@ -55,3 +55,18 @@
     from { transform: rotate(0deg); }
     to   { transform: rotate(-360deg); }
 }
+
+@media (max-width: 59.375rem) {
+    .hero-avatar {
+        height: 220px;
+        width: 220px;
+    }
+    .avatar-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+    .right {
+        width: auto;
+        height: auto;
+    }
+}
