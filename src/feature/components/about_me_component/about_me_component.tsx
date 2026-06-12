@@ -7,10 +7,10 @@ const about_me_component = () => {
     type TimelineItem = {date: string, title: string, description: string, icon: React.ReactNode, status: "done" | "active" | "upcoming" }
 
     const timeline: TimelineItem[] = [
-        { date: "2026", title: "First Job", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo hic cum odit expedita, reiciendis, eos cupiditate necessitatibus culpa sed sequi quam harum repudiandae aliquam, maiores ullam consequuntur officia atque incidunt?", icon: <IconRocket size={16} />, status: "upcoming",},
-        { date: "03/2026", title: "Learning Fullstack", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo hic cum odit expedita, reiciendis, eos cupiditate necessitatibus culpa sed sequi quam harum repudiandae aliquam, maiores ullam consequuntur officia atque incidunt?", icon: <IconCode size={16} />, status: "active",},
-        { date: "03/2026", title: "Front-End Certificate", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo hic cum odit expedita, reiciendis, eos cupiditate necessitatibus culpa sed sequi quam harum repudiandae aliquam, maiores ullam consequuntur officia atque incidunt?", icon: <IconCertificate size={16} />, status: "done",},
-        { date: "08/2025", title: "Full-time Training Development", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo hic cum odit expedita, reiciendis, eos cupiditate necessitatibus culpa sed sequi quam harum repudiandae aliquam, maiores ullam consequuntur officia atque incidunt?", icon: <IconBriefcase size={16} />, status: "done",},
+        { date: "2026", title: "ABOUT_ME.FIRST_JOB", description: "ABOUT_ME.FIRST_JOB_TEXT", icon: <IconRocket size={16} />, status: "upcoming",},
+        { date: "03/2026", title: "ABOUT_ME.LEARNING_FULLSTACK", description: "ABOUT_ME.LEARNING_FULLSTACK_TEXT", icon: <IconCode size={16} />, status: "active",},
+        { date: "03/2026", title: "ABOUT_ME.FRONT_CERTIFICATE", description: "ABOUT_ME.FRONT_CERTIFICATE_TEXT", icon: <IconCertificate size={16} />, status: "done",},
+        { date: "08/2025", title: "ABOUT_ME.FULL_TIME", description: "ABOUT_ME.FULL_TIME_TEXT", icon: <IconBriefcase size={16} />, status: "done",},
 ]
 
 const dotStyles: Record<TimelineItem["status"], string> = {
@@ -44,8 +44,8 @@ const lineStyles: Record<TimelineItem["status"], string> = {
                                 </div>
                                 <div className="pb-8">
                                     <span className="text-s dark:text-blue-400 light:text-blue-800 light:font-medium font-DM-Sans">{item.date}</span>
-                                    <h4 className="dark:text-white light:text-black font-Unbounded font-medium mt-1">{item.title}</h4>
-                                    <p className="dark:text-white/70 light:text-gray-800 font-DM-Sans leading-relaxed">{item.description}</p>
+                                    <h4 className="dark:text-white light:text-black font-Unbounded font-medium mt-1">{t(item.title)}</h4>
+                                    <p className="dark:text-white/70 light:text-gray-800 font-DM-Sans leading-relaxed">{t(item.description)}</p>
                                 </div>
                             </div>
                         ))}

@@ -1,5 +1,5 @@
 .hero{
-    height: calc(100vh - 89px - 4px);
+    min-height: calc(100vh - 89px - 4px);
 }
 
 .right{
@@ -57,6 +57,9 @@
 }
 
 @media (max-width: 59.375rem) {
+    .hero{
+    min-height: calc(100vh - 72px - 4px);
+    }
     .hero-avatar {
         height: 220px;
         width: 220px;

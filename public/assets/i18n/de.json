@@ -20,17 +20,16 @@
   "ABOUT_ME": {
     "TITLE": "Über Mich",
     "DESCRIPTION": "Hey, ich bin Maik & Front-End Entwickler mit Leidenschaft für Fehlersuche und Problemlösung.Als Kfz-Mechatroniker habe ich gelernt, Systeme zu verstehen, Fehler zu finden und Lösungen zu entwickeln. Genau das mache ich jetzt weiter, nur statt an Fahrzeugen arbeite ich jetzt an Code.Aktuell baue ich meine Skills Richtung Full-Stack aus, Backend folgt als nächstes. Für neue Technologien und Systeme kann ich mich immer begeistern.",
-    "LOCATION": "Ich Wohne in Lübeck / Krummesse",
-    "REMOTE": "Bin offen für remotes Arbeiten",
-    "BUTTON": "Lass uns Schreiben"
+    "FIRST_JOB": "Erstes Arbeitsverhälntiss ",
+    "LEARNING_FULLSTACK": "Ausbildung zum FullStack Enwtickler",
+    "FRONT_CERTIFICATE": "Front-End Zertifikat",
+    "FULL_TIME": "Vollzeit Ausbildung zum Entwickler",
+    "FIRST_JOB_TEXT": "Start in das erste Arbeitsverhälntiss um das gerlernte zu festigen und weiteres wissen zu sammeln. ",
+    "LEARNING_FULLSTACK_TEXT": "Nach dem Front-End Zertifikat folgt das Back-End Zertifikat um Fullstack Entwickler zu werden",
+    "FRONT_CERTIFICATE_TEXT": "Am xxx erfolgreich das Front-End Zertifikat abgeschlossen",
+    "FULL_TIME_TEXT": "Ich habe mich bewusst dazu entschieden die Ausbildung in Vollzeit abzuschließen"
   },
-  "SKILLS": {
-    "TITLE": "Fähigkeiten",
-    "DESCRIPTION-1": "Fähigkeit ist nicht dabei? ",
-    "DESCRIPTION-2": "bin immer offen für neues.",
-    "CONTACT": "Kontaktiere mich",
-    "LEARNING": "Bin ich auch interessiert"
-  },
+
   "PORTFOLIO": {
     "TITLE": "Projekte",
     "DESCRIPTION": "Hier finden Sie eine Auswahl meiner Projekte um meine Fähigkeiten in der Praxis zu erleben.",
