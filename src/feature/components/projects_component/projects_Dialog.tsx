@@ -12,7 +12,7 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
     onNext: () => void
 }) => {    return (
         <section className='dialogbackdropt flex justify-center items-center'>
-            <div className="dialogCard rounded-lg border border-white/10 bg-white/5 overflow-hidden shadow-lg">
+            <div className="dialogCard rounded-lg border border-white/ bg-white overflow-hidden shadow-lg mx-auto content-beg">
                 <div className="justify-end flex p-4">
                     <button className="closebtn" onClick={onClose}><IconX/></button>
                 </div>

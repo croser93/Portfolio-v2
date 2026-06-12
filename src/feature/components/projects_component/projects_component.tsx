@@ -10,13 +10,13 @@ export type ProjectItem = { name: string; img: string; description: string; lang
 
 const Projects: ProjectItem[] = [
     { name: 'Join', img: 'public/assets/img/projects_img/Join.jpg', description: 'PORTFOLIO.1', language: ['HTML', 'CSS', 'Javascript', 'Firebase'], github: 'https://github.com/croser93/Join_Kanban_Manager.git', live: 'https://join.maik-groth.com' },
-    { name: 'Hellgate Shadowfall', img: '/public/assets/img/projects_img/Hellgate Shadowfall.png', description: 'PORTFOLIO.2' , language: ['HTML', 'CSS', 'Javascript'], github: 'https://github.com/croser93/2d-Game.git', live: 'https://hellgate-shadowfall.maik-groth.com' },
+    { name: 'Hellgate Shadowfall', img: '/public/assets/img/projects_img/Hellgate Shadowfall.jpg', description: 'PORTFOLIO.2' , language: ['HTML', 'CSS', 'Javascript'], github: 'https://github.com/croser93/2d-Game.git', live: 'https://hellgate-shadowfall.maik-groth.com' },
     { name: 'Code à Cuisine', img: 'public/assets/img/projects_img/CodeaCuisine.jpg', description: 'PORTFOLIO.3', language: ['Angular', 'SASS', 'Typescript', 'n8n', 'Supabase'], github: 'https://github.com/croser93/Code-a-Cuisine.git', live: 'https://code-a-cuisine.maik-groth.com' },
 ]
 
 const Card = ({ item, t, onClick }: { item: ProjectItem; t: (key: string)=> string ; onClick: () => void }) => (
     <div className="singleCard w-full rounded-lg border border-white/10 light:bg-black/80 dark:bg-white/5 overflow-hidden shadow-lg cursor-pointer" onClick={onClick}>
-        <img className="w-full img_size object-cover" src={item.img} alt={item.name} />
+        <img className="w-full img_size object-top object-cover" src={item.img} alt={item.name} />
         <div className="px-6 py-4">
             <div className="text-white font-medium font-DM-Sans text-xl mb-2">{item.name}</div>
             <p className="text-gray-400 font-DM-Sans text-sm">{t(item.description)}</p>
