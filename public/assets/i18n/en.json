@@ -25,10 +25,14 @@
     "LEARNING_FULLSTACK": "Learning Fullstack",
     "FRONT_CERTIFICATE": "Front-End Certificate",
     "FULL_TIME": "Full-time Training Development",
+    "SERVICE_TECHNICIAN ": "Service Technician",
+    "MASTER_AUTOMOTIVE": "Master Automotive Technician",
     "FIRST_JOB_TEXT": "Start in das erste Arbeitsverhälntiss um das gerlernte zu festigen und weiteres wissen zu sammeln. ",
     "LEARNING_FULLSTACK_TEXT": "Full-Stack foundation completed – ready for real-world application.",
     "FRONT_CERTIFICATE_TEXT": "First milestone reached – a solid foundation in modern Front-End Development.",
-    "FULL_TIME_TEXT": "A deliberate career change – full-time, to make the transition as fast and solid as possible."
+    "FULL_TIME_TEXT": "A deliberate career change – full-time, to make the transition as fast and solid as possible.",
+    "SERVICE_TECHNICIAN_TEXT ": "Ersten Meilenstein erreicht, solide Grundlage in modernem Front-End Development",
+    "MASTER_AUTOMOTIVE_TEXT": "Bewusster Karrierewechsel in Vollzeit, um den Einstieg so schnell und solide wie möglich zu verwirklichen"
   },
   "PORTFOLIO": {
     "TITLE": "Portfolio",

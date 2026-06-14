@@ -1,6 +1,6 @@
 import './about_me_component.css'
 import { useTranslation } from "react-i18next"
-import {IconRocket, IconCertificate, IconCode, IconBriefcase,} from "@tabler/icons-react"
+import {IconRocket, IconCertificate, IconCode, IconBriefcase, IconTool, IconBook2 } from "@tabler/icons-react"
 
 const about_me_component = () => {
     const { t } = useTranslation()
@@ -11,6 +11,8 @@ const about_me_component = () => {
         { date: "03/2026", title: "ABOUT_ME.LEARNING_FULLSTACK", description: "ABOUT_ME.LEARNING_FULLSTACK_TEXT", icon: <IconCode size={16} />, status: "active",},
         { date: "03/2026", title: "ABOUT_ME.FRONT_CERTIFICATE", description: "ABOUT_ME.FRONT_CERTIFICATE_TEXT", icon: <IconCertificate size={16} />, status: "done",},
         { date: "08/2025", title: "ABOUT_ME.FULL_TIME", description: "ABOUT_ME.FULL_TIME_TEXT", icon: <IconBriefcase size={16} />, status: "done",},
+        { date: "10/2023", title: "ABOUT_ME.SERVICE_TECHNICIAN", description: "ABOUT_ME.SERVICE_TECHNICIAN_TEXT", icon: <IconTool size={16} />, status: "done",},
+        { date: "09/2021", title: "ABOUT_ME.MASTER_AUTOMOTIVE", description: "ABOUT_ME.MASTER_AUTOMOTIVE_TEXT", icon: <IconBook2  size={16} />, status: "done",},
 ]
 
 const dotStyles: Record<TimelineItem["status"], string> = {
