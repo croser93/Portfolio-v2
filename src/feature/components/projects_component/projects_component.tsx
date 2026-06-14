@@ -6,12 +6,12 @@ import { useState, useEffect } from 'react'
 import  ProjectsDialog  from './projects_Dialog'
 
 
-export type ProjectItem = { name: string; img: string; description: string; language: string[]; github: string; live: string; category: string; learned: string }
+export type ProjectItem = { name: string; img: string; description: string; language: string[]; github: string; live: string; category: string; dialog_text: string }
 
 const Projects: ProjectItem[] = [
-    { name: 'Join', img: 'public/assets/img/projects_img/Join.jpg', description: 'PORTFOLIO.1', language: ['HTML', 'CSS', 'Javascript', 'Firebase'], github: 'https://github.com/croser93/Join_Kanban_Manager.git', live: 'https://join.maik-groth.com', category: 'Web App', learned: 'PORTFOLIO.1_LEARNED' },
-    { name: 'Hellgate Shadowfall', img: '/public/assets/img/projects_img/Hellgate Shadowfall.jpg', description: 'PORTFOLIO.2', language: ['HTML', 'CSS', 'Javascript'], github: 'https://github.com/croser93/2d-Game.git', live: 'https://hellgate-shadowfall.maik-groth.com', category: '2D Game', learned: 'PORTFOLIO.2_LEARNED' },
-    { name: 'Code à Cuisine', img: 'public/assets/img/projects_img/CodeaCuisine.jpg', description: 'PORTFOLIO.3', language: ['Angular', 'SASS', 'Typescript', 'n8n', 'Supabase'], github: 'https://github.com/croser93/Code-a-Cuisine.git', live: 'https://code-a-cuisine.maik-groth.com', category: 'Web App' , learned: 'PORTFOLIO.3_LEARNED' },
+    { name: 'Join', img: 'public/assets/img/projects_img/Join.jpg', description: 'PORTFOLIO.1', language: ['HTML', 'CSS', 'Javascript', 'Firebase'], github: 'https://github.com/croser93/Join_Kanban_Manager.git', live: 'https://join.maik-groth.com', category: 'Web App', dialog_text: 'PORTFOLIO.1_DIALOG' },
+    { name: 'Hellgate Shadowfall', img: '/public/assets/img/projects_img/Hellgate Shadowfall.jpg', description: 'PORTFOLIO.2', language: ['HTML', 'CSS', 'Javascript'], github: 'https://github.com/croser93/2d-Game.git', live: 'https://hellgate-shadowfall.maik-groth.com', category: '2D Game', dialog_text: 'PORTFOLIO.2_DIALOG' },
+    { name: 'Code à Cuisine', img: 'public/assets/img/projects_img/CodeaCuisine.jpg', description: 'PORTFOLIO.3', language: ['Angular', 'SASS', 'Typescript', 'n8n', 'Supabase'], github: 'https://github.com/croser93/Code-a-Cuisine.git', live: 'https://code-a-cuisine.maik-groth.com', category: 'Web App' , dialog_text: 'PORTFOLIO.3_DIALOG' },
 ]
 
 const Card = ({ item, t, onClick }: { item: ProjectItem; t: (key: string)=> string ; onClick: () => void }) => (

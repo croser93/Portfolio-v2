@@ -41,8 +41,12 @@
     "DESCRIPTION": "Explore a selection of my work here - Interact with projects to see my skills in action",
     "LIVE":"Go live",
     "1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "1_DIALOG": "Join is a Kanban-based task manager that helps teams organize tasks and track progress. Tasks can be created, edited and broken down into subtasks, assigned to contacts and given due dates. The project was built as a collaborative group effort with a focus on teamwork and agile workflows. Built with HTML, CSS and JavaScript – data management runs through Firebase Realtime Database.",
     "2": "A simple Jump-and-Run game based on object-oriented approach. Help Elvoron to find coins and mana to fight against the Hellknight.",
-    "3": "Never wonder what to cook again! This smart app suggests recipes based on ingredients you already have saving time, reducing waste, and sparking fresh cooking inspiration."
+    "2_DIALOG": "Hellgate: Shadowfall is a 2D side-scrolling platformer built entirely without an external game engine. You play as a Night Elf warrior fighting through hostile realms, defeating multiple enemy types and ultimately facing the Lord of Hellgate himself. The game features a full combat system with health, energy and coins to collect, sound effects, fullscreen support and a final boss fight. Built from scratch using HTML, CSS and JavaScript.",
+    "3": "Never wonder what to cook again! This smart app suggests recipes based on ingredients you already have saving time, reducing waste, and sparking fresh cooking inspiration.",
+    "3_DIALOG": "Code à Cuisine is an AI-powered web app that generates three recipe suggestions based on an ingredient you provide. You can filter by portions, cooking time, cuisine type and dietary preferences. Every generated recipe gets saved automatically to a global cookbook. Built with Angular, TypeScript and Supabase for user management – the AI logic runs through an n8n workflow powered by Groq AI."
+
   },
   "REFERENCES": {
     "TITLE": "References",
