@@ -1,11 +1,11 @@
 .hero{
-    height: calc(100vh - 89px - 4px);
+    min-height: calc(100vh - 89px - 4px);
 }
 
 .right{
-    width: 500px;
-    height: 500px;
-    border-radius: 32px;
+    min-width: 320px;
+    height: 320px;
+    border-radius: 50%;
 }
 .hero-avatar {
     height: 320px;
@@ -54,4 +54,25 @@
 @keyframes spin-ccw {
     from { transform: rotate(0deg); }
     to   { transform: rotate(-360deg); }
+}
+
+@media (max-width: 59.375rem) {
+    .hero{
+    min-height: calc(100vh - 72px - 4px);
+    }
+    .contactBtn{
+        display: none;
+    }
+    .hero-avatar {
+        height: 220px;
+        width: 220px;
+    }
+    .avatar-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+    .right {
+        width: auto;
+        height: auto;
+    }
 }

@@ -14,30 +14,39 @@
     "INTRODUCTION": "Hey, I'm Maik and a",
     "TITLE": "Front-End",
     "TITLE1": "Developer",
-    "DESCRIPTION": "I care about the details, the kind that make the difference between good and great.",
+    "DESCRIPTION": "on my way to becoming a Full-Stack Developer. What drives me? I want to understand things, not just use them.",
     "BUTTON": "Contact"
   },
 
   "ABOUT_ME": {
     "TITLE": "About Me",
-    "DESCRIPTION": "Hey, I'm Maik & a Front-End Developer with a passion for troubleshooting and problem-solving.As an automotive mechatronics technician, I learned to understand systems, find errors, and develop solutions. That's exactly what I'm doing now just working on code instead of vehicles.Currently, I'm expanding my skills toward Full-Stack, with backend coming next. I'm always excited about new technologies and systems.",
-    "LOCATION": "Based in Lübeck / Krummesse",
-    "REMOTE": "Open to work Remote",
-    "BUTTON": "Let's Talk"
+    "DESCRIPTION": "Hey, I'm Maik, a Front-End Developer with a passion for troubleshooting and problem solving. As an automotive technician I learned to understand systems, find faults and develop solutions. That is exactly what I want to do now, but in the form of code. I am currently in the middle of my Back-End course and will be completing it soon to kickstart my career as a Full-Stack Developer. I am always excited about new technologies and challenges",    "FIRST_JOB": "First Job",
+    "LEARNING_FULLSTACK": "Full-Stack Developer Training",
+    "FRONT_CERTIFICATE": "Front-End Certificate",
+    "FULL_TIME": "Full-Time Developer Training",
+    "SERVICE_TECHNICIAN": "Service Technician",
+    "MASTER_AUTOMOTIVE": "Master Automotive Technician",
+    "FIRST_JOB_TEXT": "Ready for the next step and actively looking for my first position as a developer.",
+    "LEARNING_FULLSTACK_TEXT": "Full-Stack foundation completed, ready for real-world application.",
+    "FRONT_CERTIFICATE_TEXT": "First milestone reached, solid foundation in modern Front-End Development.",
+    "FULL_TIME_TEXT": "A deliberate career change, going full-time to make the transition as fast and solid as possible.",
+    "SERVICE_TECHNICIAN_TEXT": "Independent diagnosis and repair of vehicles with a focus on fast and clean problem solving.",
+    "MASTER_AUTOMOTIVE_TEXT": "Successfully completed the Master Automotive Technician certification."
   },
   "SKILLS": {
-    "TITLE": "My Skills",
-    "DESCRIPTION-1": "Don't see the skill your need? ",
-    "DESCRIPTION-2": "I'm always ready to learn!",
-    "CONTACT": "Contact me",
-    "LEARNING": "I have a special interest in learning"
-  },
+  "TITLE": "Skills"
+    },
   "PORTFOLIO": {
     "TITLE": "Portfolio",
     "DESCRIPTION": "Explore a selection of my work here - Interact with projects to see my skills in action",
+    "LIVE":"Go live",
     "1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "1_DIALOG": "Join is a Kanban-based task manager that helps teams organize tasks and track progress. Tasks can be created, edited and broken down into subtasks, assigned to contacts and given due dates. The project was built as a collaborative group effort with a focus on teamwork and agile workflows. Built with HTML, CSS and JavaScript – data management runs through Firebase Realtime Database.",
     "2": "A simple Jump-and-Run game based on object-oriented approach. Help Elvoron to find coins and mana to fight against the Hellknight.",
-    "3": "Never wonder what to cook again! This smart app suggests recipes based on ingredients you already have saving time, reducing waste, and sparking fresh cooking inspiration."
+    "2_DIALOG": "Hellgate: Shadowfall is a 2D side-scrolling platformer built entirely without an external game engine. You play as a Night Elf warrior fighting through hostile realms, defeating multiple enemy types and ultimately facing the Lord of Hellgate himself. The game features a full combat system with health, energy and coins to collect, sound effects, fullscreen support and a final boss fight. Built from scratch using HTML, CSS and JavaScript.",
+    "3": "Never wonder what to cook again! This smart app suggests recipes based on ingredients you already have saving time, reducing waste, and sparking fresh cooking inspiration.",
+    "3_DIALOG": "Code à Cuisine is an AI-powered web app that generates three recipe suggestions based on an ingredient you provide. You can filter by portions, cooking time, cuisine type and dietary preferences. Every generated recipe gets saved automatically to a global cookbook. Built with Angular, TypeScript and Supabase for user management – the AI logic runs through an n8n workflow powered by Groq AI."
+
   },
   "REFERENCES": {
     "TITLE": "References",

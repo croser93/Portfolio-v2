@@ -6,7 +6,13 @@ z-index: -1;
 }
 
 .commentsContainer{
-width: 80%;
+    width: 80%;
+}
+
+@media (max-width: 59.375rem) {
+    .commentsContainer {
+        width: 100%;
+    }
 }
 
 @keyframes progress {

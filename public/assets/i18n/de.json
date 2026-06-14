@@ -13,30 +13,41 @@
     "INTRODUCTION": "Hey Ich bin Maik und ich bin",
     "TITLE": "Front-End",
     "TITLE1": "Entwickler",
-    "DESCRIPTION": "Mir sind diese Details wichtig, die den Unterschied zwischen gut und großartig ausmachen.",
+    "DESCRIPTION": "und auf dem Weg zum Full-Stack Entwickler. Was mich antreibt? Ich will Dinge verstehen, nicht nur anwenden.",
     "BUTTON": "Kontakt"
 
   },
   "ABOUT_ME": {
     "TITLE": "Über Mich",
-    "DESCRIPTION": "Hey, ich bin Maik & Front-End Entwickler mit Leidenschaft für Fehlersuche und Problemlösung.Als Kfz-Mechatroniker habe ich gelernt, Systeme zu verstehen, Fehler zu finden und Lösungen zu entwickeln. Genau das mache ich jetzt weiter, nur statt an Fahrzeugen arbeite ich jetzt an Code.Aktuell baue ich meine Skills Richtung Full-Stack aus, Backend folgt als nächstes. Für neue Technologien und Systeme kann ich mich immer begeistern.",
-    "LOCATION": "Ich Wohne in Lübeck / Krummesse",
-    "REMOTE": "Bin offen für remotes Arbeiten",
-    "BUTTON": "Lass uns Schreiben"
+    "DESCRIPTION": "Hey, ich bin Maik, Front-End Entwickler mit einer Leidenschaft für Fehlersuche und Problemlösungen. Als Kfz-Mechatroniker habe ich gelernt, Systeme zu verstehen, Fehler zu finden und Lösungen zu entwickeln. Genau das möchte ich jetzt in Form von Code umsetzen. Aktuell stecke ich mitten im Backend Kurs und werde diesen in Kürze abschließen, um als Full-Stack Entwickler durchzustarten. Für neue Technologien und Herausforderungen kann ich mich immer begeistern",
+    "FIRST_JOB": "Erstes Arbeitsverhälntis",
+    "LEARNING_FULLSTACK": "Ausbildung zum FullStack Enwtickler",
+    "FRONT_CERTIFICATE": "Front-End Zertifikat",
+    "FULL_TIME": "Vollzeit Ausbildung zum Entwickler",
+    "SERVICE_TECHNICIAN": "Service Techniker",
+    "MASTER_AUTOMOTIVE": "Kraftfahrzeug Techniker Meister",
+    "FIRST_JOB_TEXT": "Bereit für den nächsten Schritt und aktiv auf der Suche nach meiner ersten Stelle als Entwickler.",
+    "LEARNING_FULLSTACK_TEXT": "Full-Stack Grundlage abgeschlossen, bereit für den ersten echten Einsatz.",
+    "FRONT_CERTIFICATE_TEXT": "Ersten Meilenstein erreicht, solide Grundlage in modernem Front-End Development.",
+    "FULL_TIME_TEXT": "Bewusster Karrierewechsel in Vollzeit, um den Einstieg so schnell und solide wie möglich zu verwirklichen.",
+    "SERVICE_TECHNICIAN_TEXT": "Eigenverantwortliche Diagnose und Reparatur von Fahrzeugen mit dem Fokus auf schnelle und saubere Problemlösungen.",
+    "MASTER_AUTOMOTIVE_TEXT": "Erfolgreiche Weiterbildung zum Kraftfahrzeug Techniker Meister."
   },
-  "SKILLS": {
-    "TITLE": "Fähigkeiten",
-    "DESCRIPTION-1": "Fähigkeit ist nicht dabei? ",
-    "DESCRIPTION-2": "bin immer offen für neues.",
-    "CONTACT": "Kontaktiere mich",
-    "LEARNING": "Bin ich auch interessiert"
-  },
+    "SKILLS": {
+  "TITLE": "Fähigkeiten"
+    },
   "PORTFOLIO": {
     "TITLE": "Projekte",
     "DESCRIPTION": "Hier finden Sie eine Auswahl meiner Projekte um meine Fähigkeiten in der Praxis zu erleben.",
+    "LIVE":"Live ansehen",
     "1": "Ein moderner Aufgabenmanager nach dem Kanban-Prinzip. Erstellen Sie Aufgaben, priorisieren Sie diese ganz einfach per Drag & Drop und verwalten Sie zusätzliche Benutzer.",
+    "1_DIALOG": "Join ist ein Kanban-basierter Task Manager der Teams dabei hilft Aufgaben zu organisieren und den Fortschritt zu tracken. Aufgaben können erstellt, bearbeitet und mit Subtasks versehen werden, Kontakten zugewiesen und mit einem Fälligkeitsdatum versehen werden. Das Projekt entstand als Gruppenarbeit mit dem Fokus auf Teamarbeit und agiles Arbeiten. Gebaut mit HTML, CSS und JavaScript, die Datenverwaltung läuft über Firebase Realtime Database.",
     "2": "Ein simples Jump-and-Run-Spiel mit objektorientierter Grafik. Helfe Elvoron, Münzen und Energie zu sammeln, um gegen den Höllenkönig zu kämpfen.",
-    "3": "Nie mehr ratlos, was Sie kochen sollen! Diese clevere App schlägt Rezepte basierend auf Zutaten vor, die Sie bereits zu Hause haben. Das spart Zeit, reduziert Lebensmittelverschwendung und sorgt für neue Kochinspiration."
+    "2_DIALOG": "Hellgate Shadowfall ist ein 2D Side-Scrolling Platformer der komplett ohne externe Game Engine gebaut wurde. Du spielst einen Night Elf Krieger der sich durch feindliche Welten kämpft, verschiedene Gegnertypen besiegt und am Ende dem Lord of Hellgate gegenübersteht. Das Spiel hat ein vollständiges Kampfsystem mit Gesundheit, Energie und Münzen, Soundeffekte, Fullscreen-Unterstützung und einen finalen Boss Fight. Gebaut mit HTML, CSS und JavaScript von Grund auf.",
+    "3": "Nie mehr ratlos, was Sie kochen sollen! Diese clevere App schlägt Rezepte basierend auf Zutaten vor, die Sie bereits zu Hause haben. Das spart Zeit, reduziert Lebensmittelverschwendung und sorgt für neue Kochinspiration.",
+    "3_DIALOG": "Code à Cuisine ist eine KI-gestützte Web App die dir auf Basis einer Zutat drei passende Rezeptvorschläge generiert. Du kannst dabei genau einstellen wie viele Portionen du brauchst, wie viel Zeit du hast und welche Küche oder Ernährungsweise du bevorzugst. Alle generierten Rezepte werden automatisch in einem globalen Kochbuch gespeichert. Gebaut mit Angular, TypeScript und Supabase für die Nutzerverwaltung die KI-Logik läuft über einen n8n Workflow mit Groq AI im Hintergrund."
+
+
   },
   "REFERENCES": {
     "TITLE": "Referrenzen",

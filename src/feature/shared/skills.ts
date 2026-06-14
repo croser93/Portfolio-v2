@@ -1,8 +1,8 @@
 import { _React, AngularIcon, Css3, DjangoIcon, DockerIcon, Figma, FirebaseIcon, GithubIcon, Javascript, N8nIcon, PostmanIcon, Python, Sass, SqliteIcon, SupabaseIcon, TailwindIcon, TypescriptIcon, GitIcon } from "@dev.icons/react"
 import { Html5 } from "@dev.icons/react/mono";
 
-export type SkillItem = { name: string; Icon: React.ComponentType<{ size?: number }>; color?: string; hoverColor: string }
-export const skillIconMap: Record<string, React.ComponentType<{ size?: number }>> = {
+export type SkillItem = { name: string; Icon: React.ComponentType<{ size?: number; className?: string }>; color?: string; hoverColor: string }
+export const skillIconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
     
     'HTML':        Html5,
     'CSS':         Css3,
