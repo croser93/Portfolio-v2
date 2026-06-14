@@ -19,19 +19,19 @@
   },
   "ABOUT_ME": {
     "TITLE": "Über Mich",
-    "DESCRIPTION": "Hey, ich bin Maik & Front-End Entwickler mit Leidenschaft für Fehlersuche und Problemlösung.Als Kfz-Mechatroniker habe ich gelernt, Systeme zu verstehen, Fehler zu finden und Lösungen zu entwickeln. Genau das mache ich jetzt weiter, nur statt an Fahrzeugen arbeite ich jetzt an Code.Aktuell baue ich meine Skills Richtung Full-Stack aus, Backend folgt als nächstes. Für neue Technologien und Systeme kann ich mich immer begeistern.",
+    "DESCRIPTION": "Hey, ich bin Maik & Front-End Entwickler mit Leidenschaft für Fehlersuche und Problemlösung. Als Kfz-Mechatroniker habe ich gelernt, Systeme zu verstehen, Fehler zu finden und Lösungen zu entwickeln. Genau das mache ich jetzt weiter, nur statt an Fahrzeugen arbeite ich jetzt an Code. Aktuell baue ich meine Skills Richtung Full-Stack aus, Backend folgt als nächstes. Für neue Technologien und Systeme kann ich mich immer begeistern.",
     "FIRST_JOB": "Erstes Arbeitsverhälntis",
     "LEARNING_FULLSTACK": "Ausbildung zum FullStack Enwtickler",
     "FRONT_CERTIFICATE": "Front-End Zertifikat",
     "FULL_TIME": "Vollzeit Ausbildung zum Entwickler",
     "SERVICE_TECHNICIAN": "Service Techniker",
     "MASTER_AUTOMOTIVE": "Kraftfahrzeug Techniker Meister",
-    "FIRST_JOB_TEXT": "Start in das erste Arbeitsverhälntis um das gerlernte zu festigen und weiteres wissen zu sammeln.",
+    "FIRST_JOB_TEXT": "Bereit für den nächsten Schritt und aktiv auf der Suche nach meiner ersten Stelle als Entwickler.",
     "LEARNING_FULLSTACK_TEXT": "Full-Stack Grundlage abgeschlossen, bereit für den ersten echten Einsatz.",
     "FRONT_CERTIFICATE_TEXT": "Ersten Meilenstein erreicht, solide Grundlage in modernem Front-End Development.",
     "FULL_TIME_TEXT": "Bewusster Karrierewechsel in Vollzeit, um den Einstieg so schnell und solide wie möglich zu verwirklichen.",
-    "SERVICE_TECHNICIAN_TEXT": "Arbeitsverhälntis als Service Techniker.",
-    "MASTER_AUTOMOTIVE_TEXT": "Weiterbildung zum Kraftfahrzeug Techniker Meister."
+    "SERVICE_TECHNICIAN_TEXT": "Eigenverantwortliche Diagnose und Reparatur von Fahrzeugen mit dem Fokus auf schnelle und saubere Problemlösungen.",
+    "MASTER_AUTOMOTIVE_TEXT": "Erfolgreiche Weiterbildung zum Kraftfahrzeug Techniker Meister."
   },
 
   "PORTFOLIO": {

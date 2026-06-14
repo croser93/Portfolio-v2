@@ -44,10 +44,10 @@ const lineStyles: Record<TimelineItem["status"], string> = {
                                         <div className={`w-1 flex-1 my-1 rounded-4xl ${lineStyles[item.status]} ${index === 0 ? 'pulse-line' : ''}`} />
                                     )}
                                 </div>
-                                <div className="pb-8">
+                                <div className="pb-6">
                                     <span className="text-s dark:text-blue-400 light:text-blue-800 light:font-medium font-DM-Sans">{item.date}</span>
                                     <h4 className="dark:text-white light:text-black font-Unbounded font-medium mt-1">{t(item.title)}</h4>
-                                    <p className="dark:text-white/70 light:text-gray-800 font-DM-Sans leading-relaxed">{t(item.description)}</p>
+                                    <p className="dark:text-white/70 light:text-gray-800 font-DM-Sans leading-none">{t(item.description)}</p>
                                 </div>
                             </div>
                         ))}

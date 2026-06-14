@@ -20,19 +20,19 @@
 
   "ABOUT_ME": {
     "TITLE": "About Me",
-    "DESCRIPTION": "Hey, I'm Maik & a Front-End Developer with a passion for troubleshooting and problem-solving.As an automotive mechatronics technician, I learned to understand systems, find errors, and develop solutions. That's exactly what I'm doing now just working on code instead of vehicles.Currently, I'm expanding my skills toward Full-Stack, with backend coming next. I'm always excited about new technologies and systems.",
+    "DESCRIPTION": "Hey, I'm Maik & a Front-End Developer with a passion for troubleshooting and problem - solving. As an automotive mechatronics technician, I learned to understand systems, find errors, and develop solutions. That's exactly what I'm doing now just working on code instead of vehicles. Currently, I'm expanding my skills toward Full-Stack, with backend coming next. I'm always excited about new technologies and systems.",
     "FIRST_JOB": "First Job",
-    "LEARNING_FULLSTACK": "Learning Fullstack",
+    "LEARNING_FULLSTACK": "Full-Stack Developer Training",
     "FRONT_CERTIFICATE": "Front-End Certificate",
-    "FULL_TIME": "Full-time Training Development",
-    "SERVICE_TECHNICIAN ": "Service Technician",
+    "FULL_TIME": "Full-Time Developer Training",
+    "SERVICE_TECHNICIAN": "Service Technician",
     "MASTER_AUTOMOTIVE": "Master Automotive Technician",
-    "FIRST_JOB_TEXT": "Start in das erste Arbeitsverhälntiss um das gerlernte zu festigen und weiteres wissen zu sammeln. ",
-    "LEARNING_FULLSTACK_TEXT": "Full-Stack foundation completed – ready for real-world application.",
-    "FRONT_CERTIFICATE_TEXT": "First milestone reached – a solid foundation in modern Front-End Development.",
-    "FULL_TIME_TEXT": "A deliberate career change – full-time, to make the transition as fast and solid as possible.",
-    "SERVICE_TECHNICIAN_TEXT ": "Ersten Meilenstein erreicht, solide Grundlage in modernem Front-End Development",
-    "MASTER_AUTOMOTIVE_TEXT": "Bewusster Karrierewechsel in Vollzeit, um den Einstieg so schnell und solide wie möglich zu verwirklichen"
+    "FIRST_JOB_TEXT": "Ready for the next step and actively looking for my first position as a developer.",
+    "LEARNING_FULLSTACK_TEXT": "Full-Stack foundation completed, ready for real-world application.",
+    "FRONT_CERTIFICATE_TEXT": "First milestone reached, solid foundation in modern Front-End Development.",
+    "FULL_TIME_TEXT": "A deliberate career change, going full-time to make the transition as fast and solid as possible.",
+    "SERVICE_TECHNICIAN_TEXT": "Independent diagnosis and repair of vehicles with a focus on fast and clean problem solving.",
+    "MASTER_AUTOMOTIVE_TEXT": "Successfully completed the Master Automotive Technician certification."
   },
   "PORTFOLIO": {
     "TITLE": "Portfolio",
