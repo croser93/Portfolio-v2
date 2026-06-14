@@ -49,15 +49,6 @@ z-index: 10;
     border-radius: 16px;
 }
 
-@media (max-width: 59.375rem) {
-    .dialogCard {
-        width: 95%;
-        height: 90%;
-    }
-    .dialogimg {
-        width: 90%;
-    }
-}
 
 .closebtn{
     background-color: rgba(240, 238, 238, 0.527);
@@ -86,3 +77,24 @@ transition: transform 0.3s ease;
         transform: scale(1.05);
         background-color: rgba(240, 238, 238, 0.8);
 }
+    @media (max-width: 1000px) {
+        .dialogCard {
+            width: 95%;
+            height: 90%;
+        }
+        .dialogimg {
+            width: 90%;
+        }
+
+        .card_head{
+            flex-direction: column;
+        }
+
+        .card_head h2{
+            font-size: 24px;
+        }
+        .btn_right,
+        .btn_left{
+            display: none;
+        }
+    }

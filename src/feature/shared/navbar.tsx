@@ -32,13 +32,12 @@ const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <nav className="sticky top-0 z-50 border-b border-default backdrop-blur-md bg-black/70 light:bg-white/70">
-      <div className="flex items-center justify-between px-10 py-4 mx-auto content-beg">
+      <div className="flex justify-between navbar:grid navbar:grid-cols-[1fr_auto_1fr] items-center px-10 py-4 mx-auto content-beg">
         <a href="/">
           <img className="block dark:hidden w-10 h-10" src="/public/assets/svg/logo_dark.svg" alt="" />
           <img className="hidden dark:block w-10 h-10" src="/public/assets/svg/logo_light.svg" alt="" />
         </a>
 
-        {/* Desktop nav links */}
         <div className="hidden navbar:block" id="navbar-default">
           <ul className="font-medium flex items-center gap-8">
             <li>
@@ -59,7 +58,7 @@ const [menuOpen, setMenuOpen] = useState(false)
           </ul>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 navbar:justify-end">
 
             <div className="relative flex items-center dark:bg-gray-900 light:bg-gray-300 rounded-full cursor-pointer overflow-hidden" onClick={toggleTheme}>
                 <div className={`absolute top-0 left-0 w-1/2 h-full bg-gray-500 rounded-full transition-transform duration-300 ease-in-out ${isDark ? 'translate-x-full' : 'translate-x-0'}`} />

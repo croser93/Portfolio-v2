@@ -3,9 +3,9 @@
 }
 
 .right{
-    width: 500px;
-    height: 500px;
-    border-radius: 32px;
+    min-width: 320px;
+    height: 320px;
+    border-radius: 50%;
 }
 .hero-avatar {
     height: 320px;
@@ -59,6 +59,9 @@
 @media (max-width: 59.375rem) {
     .hero{
     min-height: calc(100vh - 72px - 4px);
+    }
+    .contactBtn{
+        display: none;
     }
     .hero-avatar {
         height: 220px;

@@ -28,7 +28,7 @@ const lineStyles: Record<TimelineItem["status"], string> = {
 }
 
     return (
-        <section id="about" className="about-me border-t-4 border-white/20 px-4 navbar:px-24 py-10 navbar:py-18">
+        <section id="about" className="about-me border-t-4 border-white/20 px-6 navbar:px-24 py-10 navbar:py-18">
             <div className='mx-auto content-beg'>
                 <h2 className="text-3xl navbar:text-4xl py-6 font-Unbounded font-medium dark:text-white text-center navbar:text-left">{t('ABOUT_ME.TITLE')}</h2>
                 <div className="grid py-6 grid-cols-1 gap-8 navbar:grid-cols-2 navbar:gap-14">
@@ -46,7 +46,7 @@ const lineStyles: Record<TimelineItem["status"], string> = {
                                 </div>
                                 <div className="pb-6">
                                     <span className="text-s dark:text-blue-400 light:text-blue-800 light:font-medium font-DM-Sans">{item.date}</span>
-                                    <h4 className="dark:text-white light:text-black font-Unbounded font-medium mt-1">{t(item.title)}</h4>
+                                    <h4 className="dark:text-white light:text-black font-Unbounded leading-5 font-medium py-2">{t(item.title)}</h4>
                                     <p className="dark:text-white/70 light:text-gray-800 font-DM-Sans leading-none">{t(item.description)}</p>
                                 </div>
                             </div>

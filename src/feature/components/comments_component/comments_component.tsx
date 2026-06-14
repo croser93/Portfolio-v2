@@ -51,7 +51,7 @@ const projects_component = () => {
     }, [emblaApi])
 
     return (
-        <section id="references" className="commentsCard border-t-4 border-white/20 px-4 navbar:px-24 py-10 navbar:py-16 overflow-x-hidden">
+        <section id="references" className="commentsCard border-t-4 border-white/20 px-6 navbar:px-24 py-10 navbar:py-16 overflow-x-hidden">
             <div className='mx-auto content-beg'>
                 <h2 className="text-3xl navbar:text-4xl py-6 font-Unbounded font-medium dark:text-white text-center navbar:text-left">
                     {t('REFERENCES.TITLE')}

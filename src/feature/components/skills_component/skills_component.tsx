@@ -24,7 +24,7 @@ const skills_component = () => {
     )
 
     return (
-        <section id="skills" className="skills border-t-4 border-white/20 px-4 navbar:px-24 py-10 navbar:py-16">
+        <section id="skills" className="skills border-t-4 border-white/20 px-6 navbar:px-24 py-10 navbar:py-16">
             <div className='mx-auto content-beg'>
                 <h2 className="text-3xl navbar:text-4xl py-8 font-Unbounded font-medium dark:text-white text-center navbar:text-left">{t('SKILLS.TITLE')}</h2>
                 <div className="flex flex-col gap-10 py-6">

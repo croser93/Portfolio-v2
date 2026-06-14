@@ -4,7 +4,7 @@ import { GithubIcon } from "@dev.icons/react"
 import { skillIconMap } from '../../shared/skills'
 import { IconArrowBigRightLines, IconArrowBigLeftLines, IconX, IconArrowUpRight } from '@tabler/icons-react';
 import { useTranslation } from "react-i18next"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
     onClose: () => void
@@ -13,6 +13,7 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
     onNext: () => void
 }) => {
     const { t } = useTranslation()
+    const touchStartX = useRef(0)
 
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
@@ -20,22 +21,35 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
         return () => window.removeEventListener('keydown', onKey)
     }, [onClose])
 
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX
+    }
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        const delta = e.changedTouches[0].clientX - touchStartX.current
+        if (Math.abs(delta) > 50) delta < 0 ? onNext() : onPrev()
+    }
+
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-5 bg-black/75 backdrop-blur-sm">
-            <button onClick={onPrev} className="fixed left-24 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
+            <button onClick={onPrev} className="hidden navbar:flex fixed left-24 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
                 <IconArrowBigLeftLines size={20} />
             </button>
-            <button onClick={onNext} className="fixed right-24 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
+            <button onClick={onNext} className="hidden navbar:flex fixed right-24 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
                 <IconArrowBigRightLines size={20} />
             </button>
-            <div className="dialog-slide-up relative w-full max-w-2xl bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl overflow-hidden shadow-2xl">
+            <div
+                className="dialog-slide-up relative w-full max-w-2xl bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl overflow-hidden shadow-2xl"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+            >
                 <button onClick={onClose} className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
                     <IconX size={18} />
                 </button>
-                <img className="w-full h-64 object-top object-cover" src={project.img} alt={project.name} />
-                <div className="px-8 py-7 overflow-y-auto max-h-[60vh]">
-                    <div className="flex items-center gap-3 mb-3">
-                        <h2 className="text-2xl font-bold text-white items-center font-Unbounded">{project.name}</h2>
+                <img className="w-full h-40 navbar:h-64 object-cover object-top-left" src={project.img} alt={project.name} />
+                <div className="px-6 navbar:px-8 py-7 overflow-y-auto max-h-[60vh]">
+                    <div className="card_head flex items-center gap-3 mb-3">
+                        <h2 className="text-xl navbar:text-2xl font-bold text-white items-center font-Unbounded">{project.name}</h2>
                         <span className="text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full font-DM-Sans">{project.category}</span>
                     </div>
                     <p className="text-sm text-white/50 leading-relaxed mb-6 font-DM-Sans">{t(project.dialog_text)}</p>
@@ -48,7 +62,7 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
                                     const Icon = skillIconMap[lang]
                                     return (
                                         <span key={i} className="flex items-center gap-1.5 text-xs text-white/70 bg-white/5 border border-white/10 px-3 py-1 rounded-md font-DM-Sans">
-                                            {Icon && <Icon className={`w-6 h-6 ${lang === 'HTML' ? 'text-orange-400' : ''}`} />}
+                                            {Icon && <Icon className={`w-5 h-5 ${lang === 'HTML' ? 'text-orange-400' : ''}`} />}
                                             {lang}
                                         </span>
                                     )
