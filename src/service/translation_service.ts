@@ -6,7 +6,7 @@ import en from '../../public//assets/i18n/en.json'
 i18n
   .use(initReactI18next)
   .init({
-    lng: 'de',
+    lng: localStorage.getItem('language') ?? 'en',
     fallbackLng: 'en',
     resources: {
       de: { translation: de },

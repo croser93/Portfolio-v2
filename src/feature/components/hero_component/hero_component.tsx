@@ -3,6 +3,7 @@ import './hero_component.css'
 import { IconMessageCircle } from '@tabler/icons-react';
 import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next"
+import { Link } from 'react-router-dom';
 
 const GRADIENT_DARK  = ["#f8f8f8", "#3B82F6", "#5a07eb"];
 const GRADIENT_LIGHT = ["#1e1e1e", "#1d4ed8", "#4c0fad"];
@@ -49,12 +50,12 @@ const hero_component = () => {
               {t('HERO.DESCRIPTION')}
             </p>
             <div className='flex justify-center navbar:justify-start'>
-              <a href="/contact" className="w-32 no-underline">
+              <Link to="contact" className="w-32 no-underline">
                 <div className='contactBtn light:text-black hover:bg-blue-500/25 hover:text-blue-400 w-32 flex text-white/50 border-2 rounded-lg items-center gap-2 p-2'>
                   <IconMessageCircle size={32}/>
                   <span className='font-DM-Sans'>{t('HERO.BUTTON')}</span>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex items-center justify-center shrink-0">

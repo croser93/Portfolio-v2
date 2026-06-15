@@ -70,7 +70,7 @@ const [menuOpen, setMenuOpen] = useState(false)
                 </span>
             </div>
 
-            <div className="relative flex items-center dark:bg-gray-900 light:bg-gray-300 rounded-full cursor-pointer overflow-hidden" onClick={() => i18n.changeLanguage(i18n.language === 'de' ? 'en' : 'de')}>
+            <div className="relative flex items-center dark:bg-gray-900 light:bg-gray-300 rounded-full cursor-pointer overflow-hidden" onClick={() => { const next = i18n.language === 'en' ? 'de' : 'en'; i18n.changeLanguage(next); localStorage.setItem('language', next) }}>
                 <div className={`absolute top-0 left-0 w-1/2 h-full bg-gray-500 rounded-full transition-transform duration-300 ease-in-out ${i18n.language === 'en' ? 'translate-x-full' : 'translate-x-0'}`} />
                 <span className={`relative z-10 px-1 transition-opacity duration-300 ${i18n.language === 'de' ? 'opacity-100' : 'opacity-0'}`}>
                     <img className="flag" src="/assets/svg/german_flag.svg" alt="DE" />
