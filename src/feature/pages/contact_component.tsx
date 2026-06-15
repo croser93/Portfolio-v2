@@ -1,10 +1,12 @@
 import './pages_css/contact_component.css'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { IconMail, IconMapPin  } from '@tabler/icons-react';
 
 const contact_component = () => {
     const { t } = useTranslation()
+    const navigate = useNavigate()
 
     const [contactData, setContactData] = useState({ name: '', email: '', message: '', checkBox: false })
     const [touched, setTouched] = useState({ name: false, email: false, message: false, checkBox: false })
@@ -43,7 +45,7 @@ const contact_component = () => {
             setMailSent(true)
             setContactData({ name: '', email: '', message: '', checkBox: false })
             setTouched({ name: false, email: false, message: false, checkBox: false })
-            setTimeout(() => setMailSent(false), 3000)
+            setTimeout(() => navigate('/'), 3000)
         } catch (error) {
             console.error(error)
         } finally {
@@ -148,7 +150,7 @@ const contact_component = () => {
                             <div className='dark:bg-blue-500/40 light:bg-black/10 dark:text-blue-400 light:text-black rounded-xl p-2'><IconMapPin size={32}/> </div>
                             <div className="flex flex-col justify-center p-2">
                                 <span className="font-medium dark:text-white/70 light:text-black">{t('CONTACT.LOCATION')}</span>
-                                <span className='dark:text-white/70 light:text-black/70 ' >Krummesse near Lübeck, Deutschland</span>
+                                <span className='dark:text-white/70 light:text-black/70'>Krummesse near Lübeck, Deutschland</span>
                             </div>
                         </div>
                     </div>
