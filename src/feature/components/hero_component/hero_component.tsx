@@ -61,7 +61,7 @@ const hero_component = () => {
             <div className="avatar-wrapper">
               <div className="arc arc-1" />
               <div className="arc arc-2" />
-              <img className="hero-avatar" src="/public/assets/img/profile_img/Profilimg.png" alt="" />
+              <img className="hero-avatar" src="/assets/img/profile_img/Profilimg.png" alt="" />
             </div>
           </div>
         </div>

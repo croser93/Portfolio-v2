@@ -34,8 +34,8 @@ const [menuOpen, setMenuOpen] = useState(false)
     <nav className="sticky top-0 z-50 border-b border-default backdrop-blur-md bg-black/70 light:bg-white/70">
       <div className="flex justify-between navbar:grid navbar:grid-cols-[1fr_auto_1fr] items-center px-10 py-4 mx-auto content-beg">
         <a href="/">
-          <img className="block dark:hidden w-10 h-10" src="/public/assets/svg/logo_dark.svg" alt="" />
-          <img className="hidden dark:block w-10 h-10" src="/public/assets/svg/logo_light.svg" alt="" />
+          <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="" />
+          <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="" />
         </a>
 
         <div className="hidden navbar:block" id="navbar-default">
@@ -73,10 +73,10 @@ const [menuOpen, setMenuOpen] = useState(false)
             <div className="relative flex items-center dark:bg-gray-900 light:bg-gray-300 rounded-full cursor-pointer overflow-hidden" onClick={() => i18n.changeLanguage(i18n.language === 'de' ? 'en' : 'de')}>
                 <div className={`absolute top-0 left-0 w-1/2 h-full bg-gray-500 rounded-full transition-transform duration-300 ease-in-out ${i18n.language === 'en' ? 'translate-x-full' : 'translate-x-0'}`} />
                 <span className={`relative z-10 px-1 transition-opacity duration-300 ${i18n.language === 'de' ? 'opacity-100' : 'opacity-0'}`}>
-                    <img className="flag" src="public/assets/svg/german_flag.svg" alt="DE" />
+                    <img className="flag" src="/assets/svg/german_flag.svg" alt="DE" />
                 </span>
                 <span className={`relative z-10 px-1 transition-opacity duration-300 ${i18n.language === 'en' ? 'opacity-100' : 'opacity-0'}`}>
-                    <img className="flag" src="public/assets/svg/kingdom_flag.svg" alt="EN" />
+                    <img className="flag" src="/assets/svg/kingdom_flag.svg" alt="EN" />
                 </span>
             </div>
 
@@ -85,19 +85,13 @@ const [menuOpen, setMenuOpen] = useState(false)
               <a href="https://in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={32}/></div></a>
             </div>
 
-            {/* Burger button */}
-            <button
-              className="navbar:hidden dark:text-white light:text-black"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Menu"
-            >
+
+            <button className="navbar:hidden dark:text-white light:text-black"  onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
               {menuOpen ? <IconX size={28} /> : <IconMenu2 size={28} />}
             </button>
-
         </div>
       </div>
 
-      {/* Mobile dropdown menu */}
       {menuOpen && (
         <div className="navbar:hidden border-t border-default px-10 pb-4">
           <ul className="font-medium flex flex-col gap-2 pt-4">

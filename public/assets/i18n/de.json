@@ -46,8 +46,6 @@
     "2_DIALOG": "Hellgate Shadowfall ist ein 2D Side-Scrolling Platformer der komplett ohne externe Game Engine gebaut wurde. Du spielst einen Night Elf Krieger der sich durch feindliche Welten kämpft, verschiedene Gegnertypen besiegt und am Ende dem Lord of Hellgate gegenübersteht. Das Spiel hat ein vollständiges Kampfsystem mit Gesundheit, Energie und Münzen, Soundeffekte, Fullscreen-Unterstützung und einen finalen Boss Fight. Gebaut mit HTML, CSS und JavaScript von Grund auf.",
     "3": "Nie mehr ratlos, was Sie kochen sollen! Diese clevere App schlägt Rezepte basierend auf Zutaten vor, die Sie bereits zu Hause haben. Das spart Zeit, reduziert Lebensmittelverschwendung und sorgt für neue Kochinspiration.",
     "3_DIALOG": "Code à Cuisine ist eine KI-gestützte Web App die dir auf Basis einer Zutat drei passende Rezeptvorschläge generiert. Du kannst dabei genau einstellen wie viele Portionen du brauchst, wie viel Zeit du hast und welche Küche oder Ernährungsweise du bevorzugst. Alle generierten Rezepte werden automatisch in einem globalen Kochbuch gespeichert. Gebaut mit Angular, TypeScript und Supabase für die Nutzerverwaltung die KI-Logik läuft über einen n8n Workflow mit Groq AI im Hintergrund."
-
-
   },
   "REFERENCES": {
     "TITLE": "Referrenzen",
