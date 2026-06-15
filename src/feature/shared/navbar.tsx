@@ -82,7 +82,7 @@ const [menuOpen, setMenuOpen] = useState(false)
 
             <div className="hidden navbar:flex gap-2">
               <a href="https://github.com/croser93" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub size={32}/></div></a>
-              <a href="https://in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={32}/></div></a>
+              <a href="https://linkedin.com/in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={32}/></div></a>
             </div>
 
 
@@ -112,7 +112,7 @@ const [menuOpen, setMenuOpen] = useState(false)
             </li>
             <li className="flex gap-3 pt-2">
               <a href="https://github.com/croser93" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub size={28}/></div></a>
-              <a href="https://in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={28}/></div></a>
+              <a href="https://linkedin.com/in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={28}/></div></a>
             </li>
           </ul>
         </div>
