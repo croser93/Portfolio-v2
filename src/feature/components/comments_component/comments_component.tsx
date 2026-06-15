@@ -56,6 +56,9 @@ const projects_component = () => {
                 <h2 className="text-3xl navbar:text-4xl py-6 font-Unbounded font-medium dark:text-white text-center navbar:text-left">
                     {t('REFERENCES.TITLE')}
                 </h2>
+                <div className='flex justify-center'>
+                    <span className='text-xl font-DM-Sans dark:text-white/70 light:text-gray-800 max-w-4xl text-center'>{t('REFERENCES.DESCRIPTION')}</span>
+                </div>
 
                 <div className="relative flex justify-center">
                     <div ref={emblaRef} className="overflow-hidden commentsContainer">

@@ -14,8 +14,8 @@ const footer = () => {
 
             <div className='flex flex-col items-center'>
                 <HashLink to="/#home">
-                    <img className="block dark:hidden w-10 h-10" src="/public/assets/svg/logo_dark.svg" alt="" />
-                    <img className="hidden dark:block w-10 h-10" src="/public/assets/svg/logo_light.svg" alt="" />
+                    <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="" />
+                    <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="" />
                 </HashLink>
                 <span className='dark:text-white light:text-black font-semibold'>© 2026 Maik Groth</span>
             </div>

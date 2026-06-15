@@ -7,8 +7,8 @@ const about_me_component = () => {
     type TimelineItem = {date: string, title: string, description: string, icon: React.ReactNode, status: "done" | "active" | "upcoming" }
 
     const timeline: TimelineItem[] = [
-        { date: "2026", title: "ABOUT_ME.FIRST_JOB", description: "ABOUT_ME.FIRST_JOB_TEXT", icon: <IconRocket size={16} />, status: "upcoming",},
-        { date: "03/2026", title: "ABOUT_ME.LEARNING_FULLSTACK", description: "ABOUT_ME.LEARNING_FULLSTACK_TEXT", icon: <IconCode size={16} />, status: "active",},
+        { date: "ABOUT_ME.PROGRESS", title: "ABOUT_ME.FIRST_JOB", description: "ABOUT_ME.FIRST_JOB_TEXT", icon: <IconRocket size={16} />, status: "upcoming",},
+        { date: "ABOUT_ME.PROGRESS", title: "ABOUT_ME.LEARNING_FULLSTACK", description: "ABOUT_ME.LEARNING_FULLSTACK_TEXT", icon: <IconCode size={16} />, status: "upcoming",},
         { date: "03/2026", title: "ABOUT_ME.FRONT_CERTIFICATE", description: "ABOUT_ME.FRONT_CERTIFICATE_TEXT", icon: <IconCertificate size={16} />, status: "done",},
         { date: "08/2025", title: "ABOUT_ME.FULL_TIME", description: "ABOUT_ME.FULL_TIME_TEXT", icon: <IconBriefcase size={16} />, status: "done",},
         { date: "10/2023", title: "ABOUT_ME.SERVICE_TECHNICIAN", description: "ABOUT_ME.SERVICE_TECHNICIAN_TEXT", icon: <IconTool size={16} />, status: "done",},
@@ -39,13 +39,13 @@ const lineStyles: Record<TimelineItem["status"], string> = {
                         {timeline.map((item, index) => (
                             <div key={index} className="flex gap-4">
                                 <div className="flex flex-col items-center">
-                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${dotStyles[item.status]} ${index === 0 ? 'pulse-line' : ''}`}>{item.icon}</div>
+                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${dotStyles[item.status]} ${index === 0 || index === 1 ? 'pulse-line' : ''}`}>{item.icon}</div>
                                     {index < timeline.length - 1 && (
-                                        <div className={`w-1 flex-1 my-1 rounded-4xl ${lineStyles[item.status]} ${index === 0 ? 'pulse-line' : ''}`} />
+                                        <div className={`w-1 flex-1 my-1 rounded-4xl ${lineStyles[item.status]} ${index === 0 || index === 1? 'pulse-line' : ''}`} />
                                     )}
                                 </div>
                                 <div className="pb-6">
-                                    <span className="text-s dark:text-blue-400 light:text-blue-800 light:font-medium font-DM-Sans">{item.date}</span>
+                                    <span className="text-s dark:text-blue-400 light:text-blue-800 light:font-medium font-DM-Sans">{t(item.date)}</span>
                                     <h4 className="dark:text-white light:text-black font-Unbounded leading-5 font-medium py-2">{t(item.title)}</h4>
                                     <p className="dark:text-white/70 light:text-gray-800 font-DM-Sans leading-none">{t(item.description)}</p>
                                 </div>

@@ -86,7 +86,7 @@ const { t } = useTranslation()
                         <li>Maik Groth</li>
                         <li>Lange Reihe 50</li>
                         <li>23628 Krumesse</li>
-                        <li>E-Mail: <a href="mailto:contact@maik-groth.com">contact@maik-groth.com</a></li>
+                        <li>E-Mail: <a target="_blank" className="dark:text-white light:text-black font-bold" href="mailto:contact@maik-groth.com">contact@maik-groth.com</a></li>
                     </ul>
 
                     <p>{t( "PRIVACY.SECTION_3.P_7")}</p>

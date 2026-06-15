@@ -1,41 +1,41 @@
 @font-face {
   font-family: 'DM Sans';
-  src: url('../public/assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('../assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DM Sans';
-  src: url('../public/assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('../assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('../public/assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('../assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('../public/assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('../assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Outfit';
-  src: url('../public/assets/fonts/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+  src: url('../assets/fonts/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Unbounded';
-  src: url('../public/assets/fonts/Unbounded/Unbounded-VariableFont_wght.ttf') format('truetype');
+  src: url('../assets/fonts/Unbounded/Unbounded-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }

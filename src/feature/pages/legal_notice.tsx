@@ -21,7 +21,7 @@ return (
 
             <div>
             <h4>{t( 'IMPRINT.BOARD')}</h4>
-            <span>Email: <a href="mailto:contact@maik-groth.com">contact@maik-groth.com</a></span>
+            <span>Email: <a target="_blank" className="dark:text-white light:text-black font-bold" href="mailto:contact@maik-groth.com">contact@maik-groth.com</a></span>
             </div>
 
             <div>
@@ -37,7 +37,7 @@ return (
             <h4>{t( 'IMPRINT.SECTION_2_TITLE')}</h4>
                 <div className="indemnity">
                     <span>
-                        <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link>{t('IMPRINT.SECTION_2_TEXT_1')} <a href="https://developerakademie.com">Developer Akademie GmbH</a>. 
+                        <Link className="dark:text-white light:text-black font-bold" to="/">{t('IMPRINT.PORTFOLIO')}</Link>{t('IMPRINT.SECTION_2_TEXT_1')} <a target="_blank" className="dark:text-white light:text-black font-bold"  href="https://developerakademie.com">Developer Akademie GmbH</a>. 
                         {t('IMPRINT.SECTION_2_TEXT_2')}
                     </span>
                 </div>
@@ -65,7 +65,7 @@ return (
                 <h4>{t( 'IMPRINT.SECTION_5_TITLE')}</h4>
                     <div>
                         <span>
-                            <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link> {t( 'IMPRINT.SECTION_5_TEXT_1')} <a href="https://developerakademie.com">Developer Akademie</a>{t('IMPRINT.SECTION_5_TEXT_2')} <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link>.
+                            <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link> {t( 'IMPRINT.SECTION_5_TEXT_1')} <a target="_blank" className="dark:text-white light:text-black font-bold" href="https://developerakademie.com">Developer Akademie</a>{t('IMPRINT.SECTION_5_TEXT_2')} <Link to="/">{t('IMPRINT.PORTFOLIO')}</Link>.
                         </span>
                     </div>
             </div>
@@ -74,10 +74,10 @@ return (
             <h4>{t( 'IMPRINT.SECTION_6_TITLE')}</h4>
                 <div className="indemnity">
                     <span>
-                        {t('IMPRINT.SECTION_6_TEXT_1')} <a href="https://developerakademie.com">Developer Akademie</a>{t('IMPRINT.SECTION_6_TEXT_2')} <Link to="/">{t( 'IMPRINT.PORTFOLIO')}</Link> {t('IMPRINT.SECTION_6_TEXT_3')}
+                        {t('IMPRINT.SECTION_6_TEXT_1')} <a target="_blank" className="dark:text-white light:text-black font-bold" href="https://developerakademie.com">Developer Akademie</a>{t('IMPRINT.SECTION_6_TEXT_2')} <Link to="/">{t( 'IMPRINT.PORTFOLIO')}</Link> {t('IMPRINT.SECTION_6_TEXT_3')}
                     </span>
                     <span>
-                        {t('IMPRINT.CONTACT_TEXT')}<a href="mailto:contact@maik-groth.com">contact@maik-groth.com</a>
+                        {t('IMPRINT.CONTACT_TEXT')}<a target="_blank" className="dark:text-white light:text-black font-bold" href="mailto:contact@maik-groth.com">contact@maik-groth.com</a>
                     </span>
                     <span>
                         {t('IMPRINT.DATE')}
