@@ -31,7 +31,8 @@
     "FRONT_CERTIFICATE_TEXT": "First milestone reached, solid foundation in modern Front-End Development.",
     "FULL_TIME_TEXT": "A deliberate career change, going full-time to make the transition as fast and solid as possible.",
     "SERVICE_TECHNICIAN_TEXT": "Independent diagnosis and repair of vehicles with a focus on fast and clean problem solving.",
-    "MASTER_AUTOMOTIVE_TEXT": "Successfully completed the Master Automotive Technician certification."
+    "MASTER_AUTOMOTIVE_TEXT": "Successfully completed the Master Automotive Technician certification.",
+    "PROGRESS":"In progress"
   },
   "SKILLS": {
   "TITLE": "Skills"
