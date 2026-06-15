@@ -12,7 +12,7 @@ export type CommentsItem = { name: string; comment: string; github:string;}
 const Projects: CommentsItem[] = [
     { name: 'Lucas Graf', comment: 'REFERENCES.1', github: 'https://github.com/lucasxgraf' },
     { name: 'Leon G. Leuning', comment: 'REFERENCES.2', github: 'https://github.com/213Leon213' },
-    { name: 'Comming soon', comment: 'Text comming soon', github: '/' },
+    { name: 'coming soon', comment: 'Text coming soon', github: '/' },
 ]
 
 const Card = ({ item, t }: { item: CommentsItem; t: (key: string) => string }) => (
