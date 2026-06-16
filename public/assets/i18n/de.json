@@ -10,7 +10,7 @@
     }
   },
     "HERO": {
-    "INTRODUCTION": "Hey Ich bin Maik und ich bin",
+    "INTRODUCTION": "Hey, ich bin Maik und ich bin",
     "TITLE": "Front-End",
     "TITLE1": "Entwickler",
     "DESCRIPTION": "und auf dem Weg zum Full-Stack Entwickler. Was mich antreibt? Ich will Dinge verstehen, nicht nur anwenden.",
@@ -19,9 +19,9 @@
   },
   "ABOUT_ME": {
     "TITLE": "Über Mich",
-    "DESCRIPTION": "Hey, ich bin Maik Front-End Entwickler mit einer Leidenschaft für Fehlersuche und Problemlösungen. Als Kfz-Mechatroniker habe ich gelernt, Systeme zu verstehen, Fehler zu finden und Lösungen zu entwickeln. Genau das möchte ich jetzt in Form von Code umsetzen. Aktuell stecke ich mitten im Backend Kurs und werde diesen in Kürze abschließen, um als Full-Stack Entwickler durchzustarten. Für neue Technologien und Herausforderungen kann ich mich immer begeistern",
-    "FIRST_JOB": "Erstes Arbeitsverhälntis",
-    "LEARNING_FULLSTACK": "Ausbildung zum FullStack Enwtickler",
+    "DESCRIPTION": "Hey, ich bin Maik Front-End Entwickler mit einer Leidenschaft für Fehlersuche und Problemlösungen. Als Kfz-Mechatroniker habe ich gelernt, Systeme zu verstehen, Fehler zu finden und Lösungen zu entwickeln. Genau das möchte ich jetzt in Form von Code umsetzen. Aktuell stecke ich mitten im Backend Kurs und werde diesen in Kürze abschließen, um als Full-Stack Entwickler durchzustarten. Für neue Technologien und Herausforderungen kann ich mich immer begeistern.",
+    "FIRST_JOB": "Erstes Arbeitsverhältnis",
+    "LEARNING_FULLSTACK": "Ausbildung zum FullStack Entwickler",
     "FRONT_CERTIFICATE": "Front-End Zertifikat",
     "FULL_TIME": "Vollzeit Ausbildung zum Entwickler",
     "SERVICE_TECHNICIAN": "Service Techniker",
