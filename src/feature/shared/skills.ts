@@ -28,9 +28,9 @@ export const skillIconMap: Record<string, React.ComponentType<{ size?: number; c
 export const Frontend: SkillItem[] = [
     { name: 'HTML',        Icon: Html5,          color: 'text-orange-500', hoverColor: 'hover:bg-orange-500/20 hover:border-orange-500/40' },
     { name: 'CSS',         Icon: Css3,            hoverColor: 'hover:bg-blue-500/20 hover:border-blue-500/40' },
-    { name: 'Javascript',  Icon: Javascript,      hoverColor: 'hover:bg-yellow-400/20 hover:border-yellow-400/40' },
+    { name: 'JavaScript',  Icon: Javascript,      hoverColor: 'hover:bg-yellow-400/20 hover:border-yellow-400/40' },
     { name: 'Angular',     Icon: AngularIcon,     hoverColor: 'hover:bg-red-500/20 hover:border-red-500/40' },
-    { name: 'Typescript',  Icon: TypescriptIcon,  hoverColor: 'hover:bg-blue-600/20 hover:border-blue-600/40' },
+    { name: 'TypeScript',  Icon: TypescriptIcon,  hoverColor: 'hover:bg-blue-600/20 hover:border-blue-600/40' },
     { name: 'React',       Icon: _React,          hoverColor: 'hover:bg-cyan-400/20 hover:border-cyan-400/40' },
     { name: 'SASS',        Icon: Sass,            hoverColor: 'hover:bg-pink-400/20 hover:border-pink-400/40' },
     { name: 'Tailwind',    Icon: TailwindIcon,    hoverColor: 'hover:bg-teal-400/20 hover:border-teal-400/40' },
@@ -49,7 +49,7 @@ export const Database: SkillItem[] = [
 
 export const Tools: SkillItem[] = [
     { name: 'Figma',   Icon: Figma,       hoverColor: 'hover:bg-white/10 hover:border-white/30' },
-    { name: 'Github',  Icon: GithubIcon,  hoverColor: 'hover:bg-gray-200/20 hover:border-gray-200/40' },
+    { name: 'GitHub',  Icon: GithubIcon,  hoverColor: 'hover:bg-gray-200/20 hover:border-gray-200/40' },
     { name: 'Git',     Icon: GitIcon,     hoverColor: 'hover:bg-orange-500/20 hover:border-orange-500/40' },
     { name: 'Postman', Icon: PostmanIcon, hoverColor: 'hover:bg-orange-500/20 hover:border-orange-500/40' },
     { name: 'n8n',     Icon: N8nIcon,     hoverColor: 'hover:bg-pink-400/20 hover:border-pink-400/40' },

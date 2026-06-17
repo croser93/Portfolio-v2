@@ -12,7 +12,7 @@ export type CommentsItem = { name: string; comment: string; github:string;}
 const Projects: CommentsItem[] = [
     { name: 'Lucas Graf', comment: 'REFERENCES.1', github: 'https://github.com/lucasxgraf' },
     { name: 'Leon G. Leuning', comment: 'REFERENCES.2', github: 'https://github.com/213Leon213' },
-    { name: 'Comming soon', comment: 'Text comming soon', github: '/' },
+    { name: 'coming soon', comment: 'Text coming soon', github: '/' },
 ]
 
 const Card = ({ item, t }: { item: CommentsItem; t: (key: string) => string }) => (
@@ -23,7 +23,7 @@ const Card = ({ item, t }: { item: CommentsItem; t: (key: string) => string }) =
             <p className="dark:text-gray-400 light:text-gray-800 font-semibold DM-Sans text-sm">{t(item.comment)}</p>
         </div>
         <div className="flex justify-center pb-6">
-            <a href={item.github} target='_blank'><GithubIcon size={40}/></a>
+            <a href={item.github} className='dark:brightness-0 dark:invert' target='_blank'><GithubIcon size={40}/></a>
         </div>
     </div>
 )
@@ -46,7 +46,7 @@ const projects_component = () => {
         const interval = setInterval(() => {
             const next = (emblaApi.selectedScrollSnap() + 1) % Projects.length
             emblaApi.scrollTo(next)
-        }, 7000)
+        }, 30000)
         return () => clearInterval(interval)
     }, [emblaApi])
 

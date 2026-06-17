@@ -4,13 +4,13 @@
       "HOME":"Start",
       "ABOUT": "Über Mich",
       "SKILLS": "Fähigkeiten",
-      "PROJECTS": "Portfolio",
-      "REFERENCES": "Referrenzen",
+      "PROJECTS": "Projekte",
+      "REFERENCES": "Referenzen",
       "CONTACT":"Kontakt"
     }
   },
     "HERO": {
-    "INTRODUCTION": "Hey Ich bin Maik und ich bin",
+    "INTRODUCTION": "Hey, ich bin Maik und ich bin",
     "TITLE": "Front-End",
     "TITLE1": "Entwickler",
     "DESCRIPTION": "und auf dem Weg zum Full-Stack Entwickler. Was mich antreibt? Ich will Dinge verstehen, nicht nur anwenden.",
@@ -19,9 +19,9 @@
   },
   "ABOUT_ME": {
     "TITLE": "Über Mich",
-    "DESCRIPTION": "Hey, ich bin Maik, Front-End Entwickler mit einer Leidenschaft für Fehlersuche und Problemlösungen. Als Kfz-Mechatroniker habe ich gelernt, Systeme zu verstehen, Fehler zu finden und Lösungen zu entwickeln. Genau das möchte ich jetzt in Form von Code umsetzen. Aktuell stecke ich mitten im Backend Kurs und werde diesen in Kürze abschließen, um als Full-Stack Entwickler durchzustarten. Für neue Technologien und Herausforderungen kann ich mich immer begeistern",
-    "FIRST_JOB": "Erstes Arbeitsverhälntis",
-    "LEARNING_FULLSTACK": "Ausbildung zum FullStack Enwtickler",
+    "DESCRIPTION": "Hey, ich bin Maik Front-End Entwickler mit einer Leidenschaft für Fehlersuche und Problemlösungen. Als Kfz-Mechatroniker habe ich gelernt, Systeme zu verstehen, Fehler zu finden und Lösungen zu entwickeln. Genau das möchte ich jetzt in Form von Code umsetzen. Aktuell stecke ich mitten im Backend Kurs und werde diesen in Kürze abschließen, um als Full-Stack Entwickler durchzustarten. Für neue Technologien und Herausforderungen kann ich mich immer begeistern.",
+    "FIRST_JOB": "Erstes Arbeitsverhältnis",
+    "LEARNING_FULLSTACK": "Ausbildung zum FullStack Entwickler",
     "FRONT_CERTIFICATE": "Front-End Zertifikat",
     "FULL_TIME": "Vollzeit Ausbildung zum Entwickler",
     "SERVICE_TECHNICIAN": "Service Techniker",
@@ -49,7 +49,7 @@
     "3_DIALOG": "Code à Cuisine ist eine KI-gestützte Web App die dir auf Basis einer Zutat drei passende Rezeptvorschläge generiert. Du kannst dabei genau einstellen wie viele Portionen du brauchst, wie viel Zeit du hast und welche Küche oder Ernährungsweise du bevorzugst. Alle generierten Rezepte werden automatisch in einem globalen Kochbuch gespeichert. Gebaut mit Angular, TypeScript und Supabase für die Nutzerverwaltung die KI-Logik läuft über einen n8n Workflow mit Groq AI im Hintergrund."
   },
   "REFERENCES": {
-    "TITLE": "Referrenzen",
+    "TITLE": "Referenzen",
     "DESCRIPTION": "Ich arbeite sowohl eigenständig als auch im Team sehr zuverlässig und strukturiert. Hier ein paar Eindrücke von Kolleginnen und Kollegen zur Zusammenarbeit mit mir.",
     "1": "Maik ist ein sehr leidenschaftlicher und motivierter Entwickler. Seine Arbeitsmoral und Engagement waren über die gesamte Projektlaufzeit sehr bemerkenswert. Die Aufgaben die Maik übernahm wurden sehr sorgfältig und stets zuverlässig bearbeitet. Zudem ist er ein Teamplayer, der ein gutes Arbeitsklima erschaffen und anderen mit Lösungsvorschlägen bei Problemen geholfen hat. Eine Bereicherung für jedes Dev-Team.",
     "2": "Die Arbeit mit dir war sehr gut. Du arbeitest zuverlässig, fleißig und bist ein echter Teamplayer. Besonders dein starkes CSS-Verständnis ist aufgefallen, vor allem bei der erfolgreichen Lösung eines kniffligen Fehlers. Dein Code war stets sauber und gut strukturiert, sodass man sich schnell einarbeiten konnte. Außerdem hast du durch deine positive Art zur Produktivität und einer guten Teamatmosphäre beigetragen."
@@ -66,11 +66,11 @@
     "PRIVACY_POLICY": "Datenschutzerklärung",
     "BUTTON": "Sende Nachricht",
     "ERR_NAME": "Bitte gib einen Namen ein",
-    "ERR_EMAIL": "Bitte gib eine E-mail ein",
+    "ERR_EMAIL": "Bitte gib eine gültige E-Mail Adresse ein",
     "ERR_MESSAGE": "Bitte gib eine Nachricht ein",
     "ERR_PRIVACY_POLICY": "Sie müssen die Datenschutzbestimmungen akzeptieren, bevor Sie die Nachricht absenden können.",
     "SUCCESS": "Nachricht erfolgreich versendet!",
-    "CONTACT_INFORMATION":"Kontak Information",
+    "CONTACT_INFORMATION":"Kontakt Information",
     "LOCATION":"Standort"
 
   },

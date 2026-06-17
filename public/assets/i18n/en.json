@@ -20,7 +20,8 @@
 
   "ABOUT_ME": {
     "TITLE": "About Me",
-    "DESCRIPTION": "Hey, I'm Maik, a Front-End Developer with a passion for troubleshooting and problem solving. As an automotive technician I learned to understand systems, find faults and develop solutions. That is exactly what I want to do now, but in the form of code. I am currently in the middle of my Back-End course and will be completing it soon to kickstart my career as a Full-Stack Developer. I am always excited about new technologies and challenges",    "FIRST_JOB": "First Job",
+    "DESCRIPTION": "Hey, I'm Maik a Front-End Developer with a passion for troubleshooting and problem solving. As an automotive technician I learned to understand systems, find faults and develop solutions. That is exactly what I want to do now, but in the form of code. I am currently in the middle of my Back-End course and will be completing it soon to kickstart my career as a Full-Stack Developer. I am always excited about new technologies and challenges.", 
+    "FIRST_JOB": "First Job",
     "LEARNING_FULLSTACK": "Full-Stack Developer Training",
     "FRONT_CERTIFICATE": "Front-End Certificate",
     "FULL_TIME": "Full-Time Developer Training",
@@ -38,7 +39,7 @@
   "TITLE": "Skills"
     },
   "PORTFOLIO": {
-    "TITLE": "Portfolio",
+    "TITLE": "Projects",
     "DESCRIPTION": "Explore a selection of my work here - Interact with projects to see my skills in action",
     "LIVE":"Go live",
     "1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
@@ -67,7 +68,7 @@
     "PRIVACY_POLICY_TEXT_2": "and agree to the processing of my data as outlined.",
     "BUTTON": "Send message",
     "ERR_NAME": "please enter a name",
-    "ERR_EMAIL": "please enter a email",
+    "ERR_EMAIL": "Please enter a valid email address ",
     "ERR_MESSAGE": "please enter a message",
     "ERR_PRIVACY_POLICY": "You need to accept the privacy policy before submitting.",
     "SUCCESS": "Message sent successfully!",

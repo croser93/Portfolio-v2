@@ -2,8 +2,6 @@ import {IconBrandGithub, IconBrandLinkedin, IconMail  } from '@tabler/icons-reac
 import { Link } from 'react-router-dom';
 import './navbar_footer.css'
 import { useTranslation } from "react-i18next"
-import { HashLink } from 'react-router-hash-link';
-
 
 
 const footer = () => {
@@ -13,10 +11,10 @@ const footer = () => {
         <div className='mx-auto flex flex-col items-center gap-6 px-4 py-6 navbar:px-16 navbar:flex-row navbar:justify-between navbar:py-4 content-beg'>
 
             <div className='flex flex-col items-center'>
-                <HashLink to="/#home">
+                <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                     <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="" />
                     <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="" />
-                </HashLink>
+                </a>
                 <span className='dark:text-white light:text-black font-semibold'>© 2026 Maik Groth</span>
             </div>
 

@@ -39,20 +39,21 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
                 <IconArrowBigRightLines size={20} />
             </button>
             <div
-                className="dialog-slide-up relative w-full max-w-2xl bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl overflow-hidden shadow-2xl"
+                className="dialog-slide-up relative w-full max-w-2xl bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl shadow-2xl"
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
             >
                 <button onClick={onClose} className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
                     <IconX size={18} />
                 </button>
-                <img className="w-full h-40 navbar:h-64 object-cover object-top-left" src={project.img} alt={project.name} />
-                <div className="px-6 navbar:px-8 py-7 overflow-y-auto max-h-[60vh]">
-                    <div className="card_head flex items-center gap-3 mb-3">
+                <div className="overflow-y-auto max-h-[80vh]">
+                <img className="w-full object-cover object-top-left rounded-2xl" src={project.img} alt={project.name} />
+                <div className="px-6 navbar:px-8 py-5 ">
+                    <div className="card_head flex items-center gap-3 mb-2">
                         <h2 className="text-xl navbar:text-2xl font-bold text-white items-center font-Unbounded">{project.name}</h2>
                         <span className="text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full font-DM-Sans">{project.category}</span>
                     </div>
-                    <p className="text-sm text-white/50 leading-relaxed mb-6 font-DM-Sans">{t(project.dialog_text)}</p>
+                    <p className="text-sm text-white/50 leading-relaxed mb-4 font-DM-Sans">{t(project.dialog_text)}</p>
                     <div className="h-px bg-white/10 mb-6" />
                     <div className="flex flex-col gap-5 mb-7">
                         <div>
@@ -80,6 +81,7 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
                         </a>
                     </div>
 
+                </div>
                 </div>
             </div>
         </div>
