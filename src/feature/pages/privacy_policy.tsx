@@ -53,7 +53,6 @@ const { t } = useTranslation()
                     <div className="privacy_subsection py-4">
                     <h4 className="py-2">{t( "PRIVACY.SECTION_2.SUB_1")}</h4>
                     <p>{t( "PRIVACY.SECTION_2.P_2")}</p>
-                    <p>{t( "PRIVACY.SECTION_2.P_3")}</p>
                     </div>
 
                     <div className="privacy_subsection py-4">
