@@ -66,7 +66,7 @@
     "PRIVACY_POLICY": "Datenschutzerklärung",
     "BUTTON": "Sende Nachricht",
     "ERR_NAME": "Bitte gib einen Namen ein",
-    "ERR_EMAIL": "Bitte gib eine E-mail ein",
+    "ERR_EMAIL": "Bitte gib eine gültige E-Mail Adresse ein",
     "ERR_MESSAGE": "Bitte gib eine Nachricht ein",
     "ERR_PRIVACY_POLICY": "Sie müssen die Datenschutzbestimmungen akzeptieren, bevor Sie die Nachricht absenden können.",
     "SUCCESS": "Nachricht erfolgreich versendet!",

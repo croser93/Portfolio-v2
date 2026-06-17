@@ -81,7 +81,7 @@ const contact_component = () => {
                     <form onSubmit={handleSubmit} autoComplete="off" className="flex mx-auto flex-col items-center gap-1 max-w-2xl">
 
                         <input
-                            className="contact-input " type="text" name="name" value={contactData.name}
+                            className={`contact-input ${touched.name ? (isValid.name ? 'is-valid' : 'is-invalid') : ''}`} type="text" name="name" value={contactData.name}
                             onChange={handleChange} onBlur={() => handleBlur('name')}
                             placeholder={t('CONTACT.NAME')} minLength={1} maxLength={40}
                             pattern="[a-zA-Z\s\-äöüÄÖÜß]*"
@@ -91,7 +91,7 @@ const contact_component = () => {
                         </div>
 
                         <input
-                            className="contact-input" type="email" name="email" value={contactData.email}
+                            className={`contact-input ${touched.email ? (isValid.email ? 'is-valid' : 'is-invalid') : ''}`} type="email" name="email" value={contactData.email}
                             onChange={handleChange} onBlur={() => handleBlur('email')}
                             placeholder={t('CONTACT.EMAIL')} minLength={5} maxLength={40}
                         />
@@ -100,7 +100,7 @@ const contact_component = () => {
                         </div>
 
                         <textarea
-                            className="contact-input" name="message" value={contactData.message}
+                            className={`contact-input ${touched.message ? (isValid.message ? 'is-valid' : 'is-invalid') : ''}`} name="message" value={contactData.message}
                             onChange={handleChange} onBlur={() => handleBlur('message')}
                             placeholder={t('CONTACT.MESSAGE')} minLength={5} maxLength={500}
                         />

@@ -68,7 +68,7 @@
     "PRIVACY_POLICY_TEXT_2": "and agree to the processing of my data as outlined.",
     "BUTTON": "Send message",
     "ERR_NAME": "please enter a name",
-    "ERR_EMAIL": "please enter a email",
+    "ERR_EMAIL": "Please enter a valid email address ",
     "ERR_MESSAGE": "please enter a message",
     "ERR_PRIVACY_POLICY": "You need to accept the privacy policy before submitting.",
     "SUCCESS": "Message sent successfully!",
