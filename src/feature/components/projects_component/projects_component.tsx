@@ -12,6 +12,8 @@ const Projects: ProjectItem[] = [
     { name: 'Join', img: '/assets/img/projects_img/Join.jpg', description: 'PORTFOLIO.1', language: ['HTML', 'CSS', 'Javascript', 'Firebase'], github: 'https://github.com/croser93/Join_Kanban_Manager.git', live: 'https://join.maik-groth.com', category: 'Web App', dialog_text: 'PORTFOLIO.1_DIALOG', imgpostion:"object-top-left" },
     { name: 'Hellgate Shadowfall', img: '/assets/img/projects_img/Hellgate Shadowfall.jpg', description: 'PORTFOLIO.2', language: ['HTML', 'CSS', 'Javascript'], github: 'https://github.com/croser93/2d-Game.git', live: 'https://hellgate-shadowfall.maik-groth.com', category: '2D Game', dialog_text: 'PORTFOLIO.2_DIALOG', imgpostion:"object-center" },
     { name: 'Code à Cuisine', img: '/assets/img/projects_img/CodeaCuisine.jpg', description: 'PORTFOLIO.3', language: ['Angular', 'SASS', 'Typescript', 'n8n', 'Supabase'], github: 'https://github.com/croser93/Code-a-Cuisine.git', live: 'https://code-a-cuisine.maik-groth.com', category: 'Web App' , dialog_text: 'PORTFOLIO.3_DIALOG', imgpostion:"object-top-left" },
+    { name: 'Coderr', img: '/assets/img/projects_img/Coderr.jpg', description: 'PORTFOLIO.4', language: ['Django', 'Python',], github: 'https://github.com/croser93/Coderr_BackEnd.git', live: 'https://coderr.maik-groth.com', category: 'Back End' , dialog_text: 'PORTFOLIO.4_DIALOG', imgpostion:"object-top-left" },
+
 ]
 
 const Card = ({ item, t, onClick }: { item: ProjectItem; t: (key: string)=> string ; onClick: () => void }) => (
