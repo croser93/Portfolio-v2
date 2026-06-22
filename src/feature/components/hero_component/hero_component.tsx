@@ -50,7 +50,7 @@ const hero_component = () => {
               {t('HERO.DESCRIPTION')}
             </p>
             <div className='flex justify-center navbar:justify-start'>
-              <Link to="contact" className="w-32 no-underline">
+              <Link to="contact" className="w-32 no-underline" aria-label='linkt to contact'>
                 <div className='contactBtn light:text-black hover:bg-blue-500/25 hover:text-blue-400 w-32 flex text-white/50 border-2 rounded-lg items-center gap-2 p-2'>
                   <IconMessageCircle size={32}/>
                   <span className='font-DM-Sans'>{t('HERO.BUTTON')}</span>
