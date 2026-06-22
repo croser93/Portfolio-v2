@@ -24,9 +24,9 @@ const footer = () => {
             </div>
 
             <div className="flex gap-4">
-                <a href="https://github.com/croser93" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub className="w-8 h-8"/></div></a>
-                <a href="https://linkedin.com/in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin className="w-8 h-8"/></div></a>
-                <a href="mailto:contact@maik-groth.com" target='_blank'><div className='icon-mail light:text-black hover:text-blue-400'><IconMail className="w-8 h-8"/></div></a>
+                <a href="https://github.com/croser93" aria-label="go to GitHub Maik Groth" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub className="w-8 h-8"/></div></a>
+                <a href="https://linkedin.com/in/maik-groth" aria-label="go to LinkedIn Maik Groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin className="w-8 h-8"/></div></a>
+                <a href="mailto:contact@maik-groth.com" aria-label="open E-Mail and send to contact-maik.groth.com" target='_blank'><div className='icon-mail light:text-black hover:text-blue-400'><IconMail className="w-8 h-8"/></div></a>
             </div>
 
         </div>

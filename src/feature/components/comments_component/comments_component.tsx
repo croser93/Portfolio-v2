@@ -23,7 +23,7 @@ const Card = ({ item, t }: { item: CommentsItem; t: (key: string) => string }) =
             <p className="dark:text-gray-400 light:text-gray-800 font-semibold DM-Sans text-sm">{t(item.comment)}</p>
         </div>
         <div className="flex justify-center pb-6">
-            <a href={item.github} className='dark:brightness-0 dark:invert' target='_blank'><GithubIcon size={40}/></a>
+            <a href={item.github} ariab-label={`go to Github profil ${item.name}`} className='dark:brightness-0 dark:invert' target='_blank'><GithubIcon size={40}/></a>
         </div>
     </div>
 )
