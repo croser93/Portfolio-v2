@@ -77,16 +77,17 @@ const projects_component = () => {
                         </div>
                     </div>
                     <button onClick={() => emblaApi?.scrollPrev()}
-                        className="hidden navbar:flex absolute left-0 bottom mt-4 -translate-y-1/2 dark:text-white light:text-black dark:bg-white/10 light:bg-black/10 hover:bg-white/20 rounded-full p-3 transition"> ◀
+                        className="hidden navbar:flex absolute left-0 bottom mt-4 -translate-y-1/2 dark:text-white light:text-black dark:bg-white/10 light:bg-black/10 hover:bg-white/20 rounded-full p-3 transition" aria-label='back-button'> ◀
                     </button>
                     <button onClick={() => emblaApi?.scrollNext()}
-                        className="hidden navbar:flex absolute right-0 bottom mt-4 -translate-y-1/2 dark:text-white light:text-black dark:bg-white/10 light:bg-black/10 hover:bg-white/20 rounded-full p-3 transition"> ▶
+                        className="hidden navbar:flex absolute right-0 bottom mt-4 -translate-y-1/2 dark:text-white light:text-black dark:bg-white/10 light:bg-black/10 hover:bg-white/20 rounded-full p-3 transition" aria-label='next-button'> ▶
                     </button>
                 </div>
 
                 <div className="flex justify-center gap-2 mt-4">
                     {Projects.map((_, i) => (
                         <button
+                            aria-label={`projekt-index ${i}`}
                             key={i}
                             onClick={() => emblaApi?.scrollTo(i)}
                             className={`h-1 rounded-full transition-all duration-300 ${i === selectedIndex ? 'w-8 dark:bg-white light:bg-black' : 'w-2 dark:bg-white/30 light:bg-black/30 '}`}

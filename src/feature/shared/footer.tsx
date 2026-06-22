@@ -12,8 +12,8 @@ const footer = () => {
 
             <div className='flex flex-col items-center'>
                 <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-                    <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="" />
-                    <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="" />
+                    <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="logo-mg-dark" />
+                    <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="logo-mg-white" />
                 </a>
                 <span className='dark:text-white light:text-black font-semibold'>© 2026 Maik Groth</span>
             </div>
@@ -24,9 +24,9 @@ const footer = () => {
             </div>
 
             <div className="flex gap-4">
-                <a href="https://github.com/croser93" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub className="w-8 h-8"/></div></a>
-                <a href="https://linkedin.com/in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin className="w-8 h-8"/></div></a>
-                <a href="mailto:contact@maik-groth.com" target='_blank'><div className='icon-mail light:text-black hover:text-blue-400'><IconMail className="w-8 h-8"/></div></a>
+                <a href="https://github.com/croser93" aria-label="go to GitHub Maik Groth" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub className="w-8 h-8"/></div></a>
+                <a href="https://linkedin.com/in/maik-groth" aria-label="go to LinkedIn Maik Groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin className="w-8 h-8"/></div></a>
+                <a href="mailto:contact@maik-groth.com" aria-label="open E-Mail and send to contact-maik.groth.com" target='_blank'><div className='icon-mail light:text-black hover:text-blue-400'><IconMail className="w-8 h-8"/></div></a>
             </div>
 
         </div>

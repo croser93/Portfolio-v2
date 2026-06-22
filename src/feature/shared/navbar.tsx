@@ -33,9 +33,9 @@ const [menuOpen, setMenuOpen] = useState(false)
   return (
     <nav className="sticky top-0 z-50 border-b border-default backdrop-blur-md bg-black/70 light:bg-white/70">
       <div className="flex justify-between navbar:grid navbar:grid-cols-[1fr_auto_1fr] items-center px-10 py-4 mx-auto content-beg">
-        <a href="/">
-          <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="" />
-          <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="" />
+        <a href="/" aria-label="go Home">
+          <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="logo-mg-dark" />
+          <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="logo-mg-light" />
         </a>
 
         <div className="hidden navbar:block" id="navbar-default">
@@ -81,12 +81,12 @@ const [menuOpen, setMenuOpen] = useState(false)
             </div>
 
             <div className="hidden navbar:flex gap-2">
-              <a href="https://github.com/croser93" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub size={32}/></div></a>
-              <a href="https://linkedin.com/in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={32}/></div></a>
+              <a href="https://github.com/croser93" aria-label="GitHub link to Maik Groth"  target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub size={32}/></div></a>
+              <a href="https://linkedin.com/in/maik-groth" aria-label="LinkedIn link to Maik Groth"  target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={32}/></div></a>
             </div>
 
 
-            <button className="navbar:hidden dark:text-white light:text-black"  onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+            <button className="navbar:hidden dark:text-white light:text-black"  onClick={() => setMenuOpen(!menuOpen)} aria-label="Burger-menu">
               {menuOpen ? <IconX size={28} /> : <IconMenu2 size={28} />}
             </button>
         </div>
@@ -96,23 +96,23 @@ const [menuOpen, setMenuOpen] = useState(false)
         <div className="navbar:hidden border-t border-default px-10 pb-4">
           <ul className="font-medium flex flex-col gap-2 pt-4">
             <li>
-              <HashLink to="/#home" scroll={scrollWithOffset} onClick={closeMenu} className="block aUnderline py-2 text-heading"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.HOME')}</span></HashLink>
+              <HashLink to="/#home" aria-label="go home" scroll={scrollWithOffset} onClick={closeMenu} className="block aUnderline py-2 text-heading"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.HOME')}</span></HashLink>
             </li>
             <li>
-              <HashLink to="/#about" scroll={scrollWithOffset} onClick={closeMenu} className="block aUnderline py-2 text-heading"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.ABOUT')}</span></HashLink>
+              <HashLink to="/#about" aria-label="go about-me section" scroll={scrollWithOffset} onClick={closeMenu} className="block aUnderline py-2 text-heading"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.ABOUT')}</span></HashLink>
             </li>
             <li>
-              <HashLink to="/#skills" scroll={scrollWithOffset} onClick={closeMenu} className="block aUnderline py-2 text-heading"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.SKILLS')}</span></HashLink>
+              <HashLink to="/#skills" aria-label="go skills section" scroll={scrollWithOffset} onClick={closeMenu} className="block aUnderline py-2 text-heading"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.SKILLS')}</span></HashLink>
             </li>
             <li>
-              <HashLink to="/#projects" scroll={scrollWithOffset} onClick={closeMenu} className="block aUnderline py-2 text-heading"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.PROJECTS')}</span></HashLink>
+              <HashLink to="/#projects" aria-label="go projects section" scroll={scrollWithOffset} onClick={closeMenu} className="block aUnderline py-2 text-heading"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.PROJECTS')}</span></HashLink>
             </li>
             <li>
-              <Link to="contact" onClick={closeMenu} className="block aUnderline py-2 text-heading"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.CONTACT')}</span></Link>
+              <Link to="contact" aria-label="go to contact page" onClick={closeMenu} className="block aUnderline py-2 text-heading"><span className='light:text-black font-DM-Sans font-medium'>{t('HEADER.NAV.CONTACT')}</span></Link>
             </li>
             <li className="flex gap-3 pt-2">
-              <a href="https://github.com/croser93" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub size={28}/></div></a>
-              <a href="https://linkedin.com/in/maik-groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={28}/></div></a>
+              <a href="https://github.com/croser93" aria-label="GitHub link to Maik Groth" target='_blank'><div className='icon-github light:text-black hover:text-blue-400'><IconBrandGithub size={28}/></div></a>
+              <a href="https://linkedin.com/in/maik-groth" aria-label="LinkedIn link to Maik Groth" target='_blank'><div className='icon-linkedin light:text-black hover:text-blue-400'><IconBrandLinkedin size={28}/></div></a>
             </li>
           </ul>
         </div>

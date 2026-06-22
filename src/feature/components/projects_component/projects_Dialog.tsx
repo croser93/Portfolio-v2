@@ -32,10 +32,10 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-5 bg-black/75 backdrop-blur-sm">
-            <button onClick={onPrev} className="hidden navbar:flex fixed left-24 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
+            <button aria-label='back-button' onClick={onPrev} className="hidden navbar:flex fixed left-24 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
                 <IconArrowBigLeftLines size={20} />
             </button>
-            <button onClick={onNext} className="hidden navbar:flex fixed right-24 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
+            <button aria-label='next-button' onClick={onNext} className="hidden navbar:flex fixed right-24 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
                 <IconArrowBigRightLines size={20} />
             </button>
             <div
@@ -43,7 +43,7 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
             >
-                <button onClick={onClose} className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
+                <button aria-label='close-button' onClick={onClose} className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
                     <IconX size={18} />
                 </button>
                 <div className="overflow-y-auto max-h-[80vh]">
@@ -73,10 +73,10 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
                     </div>
 
                     <div className="flex gap-3 flex-wrap">
-                        <a href={project.live} target="_blank" className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors font-DM-Sans">
+                        <a href={project.live} aria-label='go to live Demo' target="_blank" className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors font-DM-Sans">
                             <IconArrowUpRight size={24} /> {t('PORTFOLIO.LIVE')}
                         </a>
-                        <a href={project.github} target="_blank" className="flex items-center gap-2 px-5 py-2.5 bg-transparent border border-white/20 hover:bg-white/5 hover:border-white/30 text-white/70 hover:text-white text-sm font-medium rounded-lg transition-colors font-DM-Sans">
+                        <a href={project.github} aria-label='go to GitHub repository' target="_blank" className="flex items-center gap-2 px-5 py-2.5 bg-transparent border border-white/20 hover:bg-white/5 hover:border-white/30 text-white/70 hover:text-white text-sm font-medium rounded-lg transition-colors font-DM-Sans">
                             <span className="brightness-0 invert"><GithubIcon size={24} /></span> GitHub
                         </a>
                     </div>

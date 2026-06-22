@@ -23,7 +23,7 @@ const Card = ({ item, t }: { item: CommentsItem; t: (key: string) => string }) =
             <p className="dark:text-gray-400 light:text-gray-800 font-semibold DM-Sans text-sm">{t(item.comment)}</p>
         </div>
         <div className="flex justify-center pb-6">
-            <a href={item.github} className='dark:brightness-0 dark:invert' target='_blank'><GithubIcon size={40}/></a>
+            <a href={item.github} aria-label={`go to Github profil ${item.name}`} className='dark:brightness-0 dark:invert' target='_blank'><GithubIcon size={40}/></a>
         </div>
     </div>
 )
@@ -75,6 +75,7 @@ const projects_component = () => {
                 <div className="flex justify-center gap-2 mt-4">
                     {Projects.map((_, i) => (
                         <button
+                            aria-label={`comment-index ${i}`}
                             key={i}
                             onClick={() => emblaApi?.scrollTo(i)}
                             className={`w-3 h-3 rounded-full transition-all duration-300 ${i === selectedIndex ? ' w-2 dark:bg-white light:bg-black ring-2 dark:ring-blue-500/70 light:ring-white/70' : 'w-2 bg-white/50'}`}
