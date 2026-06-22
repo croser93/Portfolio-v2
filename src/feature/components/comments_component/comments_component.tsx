@@ -75,6 +75,7 @@ const projects_component = () => {
                 <div className="flex justify-center gap-2 mt-4">
                     {Projects.map((_, i) => (
                         <button
+                            aria-label={`comment-index ${i}`}
                             key={i}
                             onClick={() => emblaApi?.scrollTo(i)}
                             className={`w-3 h-3 rounded-full transition-all duration-300 ${i === selectedIndex ? ' w-2 dark:bg-white light:bg-black ring-2 dark:ring-blue-500/70 light:ring-white/70' : 'w-2 bg-white/50'}`}

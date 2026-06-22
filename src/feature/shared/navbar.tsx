@@ -34,8 +34,8 @@ const [menuOpen, setMenuOpen] = useState(false)
     <nav className="sticky top-0 z-50 border-b border-default backdrop-blur-md bg-black/70 light:bg-white/70">
       <div className="flex justify-between navbar:grid navbar:grid-cols-[1fr_auto_1fr] items-center px-10 py-4 mx-auto content-beg">
         <a href="/">
-          <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="" />
-          <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="" />
+          <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="logo-mg-dark" />
+          <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="logo-mg-light" />
         </a>
 
         <div className="hidden navbar:block" id="navbar-default">
@@ -86,7 +86,7 @@ const [menuOpen, setMenuOpen] = useState(false)
             </div>
 
 
-            <button className="navbar:hidden dark:text-white light:text-black"  onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+            <button className="navbar:hidden dark:text-white light:text-black"  onClick={() => setMenuOpen(!menuOpen)} aria-label="Burger-menu">
               {menuOpen ? <IconX size={28} /> : <IconMenu2 size={28} />}
             </button>
         </div>

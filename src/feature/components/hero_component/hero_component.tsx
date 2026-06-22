@@ -60,7 +60,7 @@ const hero_component = () => {
           </div>
           <div className="flex items-center justify-center shrink-0">
             <div className="avatar-wrapper">
-              <img className="hero-avatar" src="/assets/img/profile_img/Profilimg.png" alt="" />
+              <img className="hero-avatar" src="/assets/img/profile_img/Profilimg.png" alt="profil-img" />
             </div>
           </div>
         </div>

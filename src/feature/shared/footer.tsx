@@ -12,8 +12,8 @@ const footer = () => {
 
             <div className='flex flex-col items-center'>
                 <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-                    <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="" />
-                    <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="" />
+                    <img className="block dark:hidden w-10 h-10" src="/assets/svg/logo_dark.svg" alt="logo-mg-dark" />
+                    <img className="hidden dark:block w-10 h-10" src="/assets/svg/logo_light.svg" alt="logo-mg-white" />
                 </a>
                 <span className='dark:text-white light:text-black font-semibold'>© 2026 Maik Groth</span>
             </div>

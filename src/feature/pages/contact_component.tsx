@@ -124,7 +124,7 @@ const contact_component = () => {
                         </div>
 
                         <div className="flex justify-center mt-4">
-                            <button
+                            <button aria-label='submit-button'
                                 type="submit"
                                 disabled={isSending || !isValid.name || !isValid.email || !isValid.message}
                                 className="contact-btn dark:text-white/70 light:text-black/70"

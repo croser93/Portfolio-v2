@@ -32,10 +32,10 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-5 bg-black/75 backdrop-blur-sm">
-            <button onClick={onPrev} className="hidden navbar:flex fixed left-24 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
+            <button aria-label='back-button' onClick={onPrev} className="hidden navbar:flex fixed left-24 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
                 <IconArrowBigLeftLines size={20} />
             </button>
-            <button onClick={onNext} className="hidden navbar:flex fixed right-24 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
+            <button aria-label='next-button' onClick={onNext} className="hidden navbar:flex fixed right-24 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
                 <IconArrowBigRightLines size={20} />
             </button>
             <div
@@ -43,7 +43,7 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
             >
-                <button onClick={onClose} className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
+                <button aria-label='close-button' onClick={onClose} className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 border border-white/10 text-white hover:bg-blue-500/25 transition-colors">
                     <IconX size={18} />
                 </button>
                 <div className="overflow-y-auto max-h-[80vh]">
