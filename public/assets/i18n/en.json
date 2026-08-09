@@ -49,8 +49,9 @@
     "3": "Never wonder what to cook again! This smart app suggests recipes based on ingredients you already have saving time, reducing waste, and sparking fresh cooking inspiration.",
     "3_DIALOG": "Code à Cuisine is an AI-powered web app that generates three recipe suggestions based on an ingredient you provide. You can filter by portions, cooking time, cuisine type and dietary preferences. Every generated recipe gets saved automatically to a global cookbook. Built with Angular, TypeScript and Supabase for user management – the AI logic runs through an n8n workflow powered by Groq AI.",
     "4": "Coderr is the matching backend for an already existing frontend project. Built with Python, Django and Django REST Framework, it provides the complete API logic.",
-    "4_DIALOG": "Coderr is a platform where business users can list their services as offers and customers can order and review those offers. This backend provides the complete REST API that powers the existing frontend with all its features – from registration and login to offer and order management and a full review system. Built with Python, Django and Django REST Framework, using token-based authentication."
-
+    "4_DIALOG": "Coderr is a platform where business users can list their services as offers and customers can order and review those offers. This backend provides the complete REST API that powers the existing frontend with all its features – from registration and login to offer and order management and a full review system. Built with Python, Django and Django REST Framework, using token-based authentication.",
+    "5": "Quizly is the matching backend to an already existing frontend project. Built with Python, Django, and Django REST Framework, it automatically turns YouTube videos into ready-to-use multiple-choice quizzes.",
+    "5_DIALOG": "Quizly is a platform where users can generate a quiz automatically from any YouTube URL. This backend downloads the video's audio track, transcribes it using OpenAI Whisper, and then has Google Gemini generate a title, description, and ten multiple-choice questions. Users can list, retrieve, edit, and delete their own quizzes. Built with Python, Django, and Django REST Framework, authentication runs via JWT stored in HttpOnly cookies."
   },
   "REFERENCES": {
     "TITLE": "References",

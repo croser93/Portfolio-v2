@@ -73,9 +73,11 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
                     </div>
 
                     <div className="flex gap-3 flex-wrap">
-                        <a href={project.live} aria-label='go to live Demo' target="_blank" className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors font-DM-Sans">
-                            <IconArrowUpRight size={24} /> {t('PORTFOLIO.LIVE')}
-                        </a>
+                        {project.live_test && (
+                            <a href={project.live} aria-label='go to live Demo' target="_blank" className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors font-DM-Sans">
+                                <IconArrowUpRight size={24} /> {t('PORTFOLIO.LIVE')}
+                            </a>
+                        )}
                         <a href={project.github} aria-label='go to GitHub repository' target="_blank" className="flex items-center gap-2 px-5 py-2.5 bg-transparent border border-white/20 hover:bg-white/5 hover:border-white/30 text-white/70 hover:text-white text-sm font-medium rounded-lg transition-colors font-DM-Sans">
                             <span className="brightness-0 invert"><GithubIcon size={24} /></span> GitHub
                         </a>
