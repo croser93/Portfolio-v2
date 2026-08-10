@@ -14,6 +14,7 @@ const Projects: ProjectItem[] = [
     { name: 'Code à Cuisine', img: '/assets/img/projects_img/CodeaCuisine.jpg', description: 'PORTFOLIO.3', language: ['Angular', 'SASS', 'Typescript', 'n8n', 'Supabase'], github: 'https://github.com/croser93/Code-a-Cuisine.git', live: 'https://code-a-cuisine.maik-groth.com', category: 'Web App' , dialog_text: 'PORTFOLIO.3_DIALOG', imgpostion:"object-top-left" , live_test:true},
     { name: 'Coderr', img: '/assets/img/projects_img/Coderr.jpg', description: 'PORTFOLIO.4', language: ['Django', 'Python',], github: 'https://github.com/croser93/Coderr_BackEnd.git', live: 'https://coderr.maik-groth.com', category: 'Back End' , dialog_text: 'PORTFOLIO.4_DIALOG', imgpostion:"object-top-left" , live_test:true},
     { name: 'Quizly', img: '/assets/img/projects_img/quizly.jpg', description: 'PORTFOLIO.5', language: ['Django', 'Python',], github: 'https://github.com/croser93/Quizly_BackEnd.git', live: '', category: 'Back End' , dialog_text: 'PORTFOLIO.5_DIALOG', imgpostion:"object-center" , live_test:false},
+    { name: 'Videoflix', img: '/assets/img/projects_img/videoflix.jpg', description: 'PORTFOLIO.6', language: ['Django', 'Python',], github: 'https://github.com/croser93/Videoflix_BackEnd.git', live: '', category: 'PORTFOLIO.SOON' , dialog_text: 'PORTFOLIO.6_DIALOG', imgpostion:"object-center" , live_test:false},
 
 ]
 
@@ -50,7 +51,7 @@ const projects_component = () => {
 
     useEffect(() => {
         if (!emblaApi || dialogOpen) return
-        const interval = setInterval(() => emblaApi.scrollNext(), 5000)
+        const interval = setInterval(() => emblaApi.scrollNext(), 8000)
         return () => clearInterval(interval)
     }, [emblaApi, dialogOpen])
 
