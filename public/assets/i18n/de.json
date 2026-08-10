@@ -52,7 +52,8 @@
     "5": "Quizly ist das passende Backend zu einem bereits bestehenden Frontend-Projekt. Umgesetzt mit Python, Django und Django REST Framework, verwandelt es YouTube-Videos automatisiert in fertige Multiple-Choice-Quizze.",
     "5_DIALOG": "Quizly ist eine Plattform auf der Nutzer aus einer beliebigen YouTube-URL automatisch ein Quiz erstellen lassen können. Dieses Backend lädt die Audiospur des Videos herunter, transkribiert sie mit OpenAI Whisper und lässt anschließend von Google Gemini einen Titel, eine Beschreibung sowie zehn Multiple-Choice-Fragen generieren. Nutzer können ihre erstellten Quizze auflisten, abrufen, bearbeiten und löschen. Gebaut mit Python, Django und Django REST Framework, die Authentifizierung läuft über JWT in HttpOnly-Cookies.",
     "6": "Videoflix ist das passende Backend zu einem bereits bestehenden Frontend-Projekt. Umgesetzt mit Python, Django und Django REST Framework, stellt es eine Netflix-artige Video-Streaming-Plattform bereit (aktuell noch in Entwicklung).",
-    "6_DIALOG": "Videoflix ist eine Video-Streaming-Plattform. Dieses Backend stellt die komplette REST API bereit, die das bereits bestehende Frontend mit allen Funktionen versorgt von Nutzer-Authentifizierung über Video-Management bis hin zu adaptivem HLS-Video-Streaming. Gebaut mit Python, Django und Django REST Framework. (aktuell noch in Entwicklung)"
+    "6_DIALOG": "Videoflix ist eine Video-Streaming-Plattform. Dieses Backend stellt die komplette REST API bereit, die das bereits bestehende Frontend mit allen Funktionen versorgt von Nutzer-Authentifizierung über Video-Management bis hin zu adaptivem HLS-Video-Streaming. Gebaut mit Python, Django und Django REST Framework. (aktuell noch in Entwicklung)",
+    "SOON":" Noch in der Entwicklung"
   },
   "REFERENCES": {
     "TITLE": "Referenzen",

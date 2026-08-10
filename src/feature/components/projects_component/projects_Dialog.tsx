@@ -51,7 +51,7 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
                 <div className="px-6 navbar:px-8 py-5 ">
                     <div className="card_head flex items-center gap-3 mb-2">
                         <h2 className="text-xl navbar:text-2xl font-bold text-white items-center font-Unbounded">{project.name}</h2>
-                        <span className="text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full font-DM-Sans">{project.category}</span>
+                        <span className="text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full font-DM-Sans">{t(project.category)}</span>
                     </div>
                     <p className="text-sm text-white/50 leading-relaxed mb-4 font-DM-Sans">{t(project.dialog_text)}</p>
                     <div className="h-px bg-white/10 mb-6" />
