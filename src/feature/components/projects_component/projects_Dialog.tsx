@@ -74,7 +74,14 @@ const projects_Dialog = ({ onClose, project, onPrev, onNext }: {
 
                     <div className="flex gap-3 flex-wrap">
                         {project.live_test && (
-                            <a href={project.live} aria-label='go to live Demo' target="_blank" className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors font-DM-Sans">
+                            <a
+                                href={project.coming_soon ? undefined : project.live}
+                                aria-label='go to live Demo'
+                                aria-disabled={project.coming_soon}
+                                target="_blank"
+                                onClick={(e) => { if (project.coming_soon) e.preventDefault() }}
+                                className={`flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-lg transition-colors font-DM-Sans ${project.coming_soon ? 'bg-blue-950/60 text-white/40 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}
+                            >
                                 <IconArrowUpRight size={24} /> {t('PORTFOLIO.LIVE')}
                             </a>
                         )}
