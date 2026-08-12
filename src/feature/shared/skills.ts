@@ -1,4 +1,4 @@
-import { _React, AngularIcon, Css3, DjangoIcon, DockerIcon, Figma, FirebaseIcon, GithubIcon, Javascript, N8nIcon, PostmanIcon, Python, Sass, SqliteIcon, SupabaseIcon, TailwindIcon, TypescriptIcon, GitIcon } from "@dev.icons/react"
+import { _React, AngularIcon, Postgresql, Css3, DjangoIcon, DockerIcon ,Figma, FirebaseIcon, GithubIcon, Javascript, N8nIcon, PostmanIcon, Python, Sass, SqliteIcon, SupabaseIcon, TailwindIcon, TypescriptIcon, GitIcon } from "@dev.icons/react"
 import { Html5 } from "@dev.icons/react/mono";
 
 export type SkillItem = { name: string; Icon: React.ComponentType<{ size?: number; className?: string }>; color?: string; hoverColor: string }
@@ -23,6 +23,7 @@ export const skillIconMap: Record<string, React.ComponentType<{ size?: number; c
     'Postman':     PostmanIcon,
     'n8n':         N8nIcon,
     'Docker':      DockerIcon,
+    'Postgresql': Postgresql,
 }
 
 export const Frontend: SkillItem[] = [
@@ -43,8 +44,9 @@ export const Backend: SkillItem[] = [
 
 export const Database: SkillItem[] = [
     { name: 'Supabase', Icon: SupabaseIcon, hoverColor: 'hover:bg-green-400/20 hover:border-green-400/40' },
-    { name: 'Firebase', Icon: FirebaseIcon, hoverColor: 'hover:bg-orange-500/20 hover:border-orange-500/40' },
     { name: 'SQLite',   Icon: SqliteIcon,   hoverColor: 'hover:bg-blue-500/20 hover:border-blue-500/40' },
+    { name: 'Firebase', Icon: FirebaseIcon, hoverColor: 'hover:bg-orange-500/20 hover:border-orange-500/40' },
+    { name: 'Postgresql', Icon: Postgresql,    hoverColor: 'hover:bg-blue-500/20 hover:border-blue-500/40' },
 ]
 
 export const Tools: SkillItem[] = [
