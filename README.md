@@ -2,12 +2,14 @@
 
 My personal portfolio website — built to present my projects, skills, and background as a Front-End Developer on my way to Full-Stack.
 
-![Live](https://img.shields.io/website?url=https%3A%2F%2Fmaik-groth.com&label=live)
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
-![License](https://img.shields.io/badge/license-Private-lightgrey)
+**Check it out on [maik-groth.com](https://maik-groth.com)**
+
+![Live](https://img.shields.io/website?url=https%3A%2F%2Fmaik-groth.com&label=live&style=for-the-badge)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/License-Private-E11D48?style=for-the-badge)
 
 ## About Me
 
@@ -62,9 +64,6 @@ Portfolio/
 - **References** – testimonials/comments
 - **Contact** – serverless contact form (Vercel + Nodemailer)
 
-## Deployment
-
-Hosted on [Vercel](https://vercel.com), including SPA rewrites (`vercel.json`) and a serverless mail endpoint (`api/sendMail.js`).
 
 ## License
 
