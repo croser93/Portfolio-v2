@@ -9,31 +9,29 @@
       "CONTACT":"Contact"
     }
   }, 
-  "HERO"
-  : {
-    "INTRODUCTION": "Hey, I'm Maik and a",
-    "TITLE": "Front-End",
+  "HERO": {
+    "INTRODUCTION": "Hey, I'm Maik and I'm a",
+    "TITLE": "Full-Stack",
     "TITLE1": "Developer",
-    "DESCRIPTION": "on my way to becoming a Full-Stack Developer. What drives me? I want to understand things, not just use them.",
+    "DESCRIPTION": "What drives me? I want to understand things, not just apply them.",
     "BUTTON": "Contact"
   },
-
   "ABOUT_ME": {
     "TITLE": "About Me",
-    "DESCRIPTION": "Hey, I'm Maik a Front-End Developer with a passion for troubleshooting and problem solving. As an automotive technician I learned to understand systems, find faults and develop solutions. That is exactly what I want to do now, but in the form of code. I am currently in the middle of my Back-End course and will be completing it soon to kickstart my career as a Full-Stack Developer. I am always excited about new technologies and challenges.", 
+    "DESCRIPTION": "Hey, I'm Maik, a Full-Stack Developer with a passion for troubleshooting and problem-solving. As an automotive mechatronics technician, I learned to understand systems, identify issues, and develop solutions. That's exactly what I now apply in the form of code. I've completed my training as a Full-Stack Developer and am ready for my first real-world role. I'm always excited about new technologies and challenges.",
     "FIRST_JOB": "First Job",
-    "LEARNING_FULLSTACK": "Full-Stack Developer Training",
+    "LEARNING_FULLSTACK": "Full-Stack Developer",
     "FRONT_CERTIFICATE": "Front-End Certificate",
     "FULL_TIME": "Full-Time Developer Training",
     "SERVICE_TECHNICIAN": "Service Technician",
     "MASTER_AUTOMOTIVE": "Master Automotive Technician",
     "FIRST_JOB_TEXT": "Ready for the next step and actively looking for my first position as a developer.",
-    "LEARNING_FULLSTACK_TEXT": "Full-Stack foundation completed, ready for real-world application.",
-    "FRONT_CERTIFICATE_TEXT": "First milestone reached, solid foundation in modern Front-End Development.",
-    "FULL_TIME_TEXT": "A deliberate career change, going full-time to make the transition as fast and solid as possible.",
-    "SERVICE_TECHNICIAN_TEXT": "Independent diagnosis and repair of vehicles with a focus on fast and clean problem solving.",
-    "MASTER_AUTOMOTIVE_TEXT": "Successfully completed the Master Automotive Technician certification.",
-    "PROGRESS":"In progress"
+    "LEARNING_FULLSTACK_TEXT": "Completed Full-Stack training, ready for the first real-world role.",
+    "FRONT_CERTIFICATE_TEXT": "Reached the first milestone, building a solid foundation in modern front-end development.",
+    "FULL_TIME_TEXT": "A deliberate full-time career change to make the transition as fast and solid as possible.",
+    "SERVICE_TECHNICIAN_TEXT": "Independent diagnosis and repair of vehicles with a focus on fast and clean problem-solving.",
+    "MASTER_AUTOMOTIVE_TEXT": "Successfully completed further training as a Master Automotive Technician.",
+    "PROGRESS": "Open"
   },
   "SKILLS": {
   "TITLE": "Skills"

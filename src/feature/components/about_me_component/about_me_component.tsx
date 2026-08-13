@@ -8,8 +8,7 @@ const about_me_component = () => {
 
     const timeline: TimelineItem[] = [
         { date: "ABOUT_ME.PROGRESS", title: "ABOUT_ME.FIRST_JOB", description: "ABOUT_ME.FIRST_JOB_TEXT", icon: <IconRocket size={16} />, status: "upcoming",},
-        { date: "ABOUT_ME.PROGRESS", title: "ABOUT_ME.LEARNING_FULLSTACK", description: "ABOUT_ME.LEARNING_FULLSTACK_TEXT", icon: <IconCode size={16} />, status: "upcoming",},
-        { date: "03/2026", title: "ABOUT_ME.FRONT_CERTIFICATE", description: "ABOUT_ME.FRONT_CERTIFICATE_TEXT", icon: <IconCertificate size={16} />, status: "done",},
+        { date: "08/2026", title: "ABOUT_ME.LEARNING_FULLSTACK", description: "ABOUT_ME.LEARNING_FULLSTACK_TEXT", icon: <IconCode size={16} />, status: "done",},
         { date: "08/2025", title: "ABOUT_ME.FULL_TIME", description: "ABOUT_ME.FULL_TIME_TEXT", icon: <IconBriefcase size={16} />, status: "done",},
         { date: "10/2023", title: "ABOUT_ME.SERVICE_TECHNICIAN", description: "ABOUT_ME.SERVICE_TECHNICIAN_TEXT", icon: <IconTool size={16} />, status: "done",},
         { date: "09/2021", title: "ABOUT_ME.MASTER_AUTOMOTIVE", description: "ABOUT_ME.MASTER_AUTOMOTIVE_TEXT", icon: <IconBook2  size={16} />, status: "done",},
@@ -30,18 +29,18 @@ const lineStyles: Record<TimelineItem["status"], string> = {
     return (
         <section id="about" className="about-me border-t-4 border-white/20 px-6 navbar:px-24 py-10 navbar:py-18">
             <div className='mx-auto content-beg'>
-                <h2 className="text-3xl navbar:text-4xl py-6 font-Unbounded font-medium dark:text-white text-center navbar:text-left">{t('ABOUT_ME.TITLE')}</h2>
                 <div className="grid py-6 grid-cols-1 gap-8 navbar:grid-cols-2 navbar:gap-14">
                     <div> 
+                        <h2 className="text-3xl navbar:text-4xl py-6 font-Unbounded font-medium dark:text-white text-center navbar:text-left">{t('ABOUT_ME.TITLE')}</h2>
                         <h3 className="text-xl font-DM-Sans dark:text-white/70 light:text-gray-800">{t('ABOUT_ME.DESCRIPTION')}</h3>
                     </div>
                     <div className="flex flex-col">
                         {timeline.map((item, index) => (
                             <div key={index} className="flex gap-4">
                                 <div className="flex flex-col items-center">
-                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${dotStyles[item.status]} ${index === 0 || index === 1 ? 'pulse-line' : ''}`}>{item.icon}</div>
+                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${dotStyles[item.status]} ${index === 0  ? 'pulse-line' : ''}`}>{item.icon}</div>
                                     {index < timeline.length - 1 && (
-                                        <div className={`w-1 flex-1 my-1 rounded-4xl ${lineStyles[item.status]} ${index === 0 || index === 1? 'pulse-line' : ''}`} />
+                                        <div className={`w-1 flex-1 my-1 rounded-4xl ${lineStyles[item.status]} ${index === 0 ? 'pulse-line' : ''}`} />
                                     )}
                                 </div>
                                 <div className="pb-6">
