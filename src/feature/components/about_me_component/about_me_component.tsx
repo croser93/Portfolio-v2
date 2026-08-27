@@ -1,6 +1,6 @@
 import './about_me_component.css'
 import { useTranslation } from "react-i18next"
-import {IconRocket, IconCertificate, IconCode, IconBriefcase, IconTool, IconBook2 } from "@tabler/icons-react"
+import {IconRocket, IconCode, IconBriefcase, IconTool, IconBook2 } from "@tabler/icons-react"
 
 const about_me_component = () => {
     const { t } = useTranslation()
